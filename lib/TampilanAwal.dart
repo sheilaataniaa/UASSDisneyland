@@ -1,95 +1,83 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'Transisi1.dart';
 
 class TampilanAwal extends StatelessWidget {
-  const TampilanAwal({super.key});
+  const TampilanAwal ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // Navigasi otomatis setelah 3 detik
+    Future.delayed(const Duration(seconds: 3), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => Transisi1()),
+      );
+    });
+
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          color: Color(0xFF72BBE4),
-        ),
-        child: Container(
-          padding: const EdgeInsets.fromLTRB(0, 215, 0, 57),
-          child: Stack(
-            clipBehavior: Clip.none,
-            children: [
-              SizedBox(
-                width: 279,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(0, 0, 0, 210),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(206),
-                          image: const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage(
-                              'assets\image\logo1.png',
-                            ),
-                          ),
-                        ),
-                        child: const SizedBox(
-                          width: 279,
-                          height: 297,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.fromLTRB(53.9, 0, 0, 0),
-                      child: Text(
-                        'Magic',
-                        style: GoogleFonts.getFont(
-                          'Rosarivo',
-                          fontWeight: FontWeight.w400,
-                          fontSize: 52,
-                          color: const Color(0xFFEFE3C8),
-                        ),
-                      ),
-                    ),
-                  ],
+        width: double.infinity,
+        height: double.infinity,
+        color: Color(0xFF71BBE4),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Positioned(
+              top: MediaQuery.of(context).size.height * 0.25,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: MediaQuery.of(context).size.height * 0.35,
+                decoration: ShapeDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/logo1.png'),
+                    fit: BoxFit.fill,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(206),
+                  ),
                 ),
               ),
-              Positioned(
-                left: 94,
-                bottom: 113,
-                child: SizedBox(
-                  height: 56,
-                  child: Text(
+            ),
+            Positioned(
+              bottom: MediaQuery.of(context).size.height * 0.1,
+              child: Column(
+                children: [
+                  Text(
                     'Shu’s',
-                    style: GoogleFonts.getFont(
-                      'Rosarivo',
-                      fontWeight: FontWeight.w400,
+                    style: TextStyle(
+                      fontFamily: GoogleFonts.rosarivo().fontFamily,
+                      color: Color(0x7F002DA2),
                       fontSize: 40,
-                      color: const Color(0x80002EA3),
+                      fontWeight: FontWeight.w400,
                     ),
+                  ),
+                  Text(
+                    'Magic',
+                    style: TextStyle(
+                      fontFamily: GoogleFonts.rosarivo().fontFamily,
+                      color: Color(0xFFEFE3C8),
+                      fontSize: 55,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              top: MediaQuery.of(context).size.height * 0.4,
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.8,
+                height: MediaQuery.of(context).size.height * 0.3,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/logo2.png'),
+                    fit: BoxFit.fill,
                   ),
                 ),
               ),
-              Positioned(
-                bottom: 256,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(
-                        'assets\image\logo2.png',
-                      ),
-                    ),
-                  ),
-                  child: const SizedBox(
-                    width: 300,
-                    height: 248,
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
