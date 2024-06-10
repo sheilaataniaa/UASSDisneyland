@@ -62,7 +62,7 @@ class Sovenir extends StatelessWidget {
                           height: 118,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/127x118"),
+                              image: AssetImage("images/jaket.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -140,7 +140,7 @@ class Sovenir extends StatelessWidget {
                           height: 122,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/116x122"),
+                              image: AssetImage("images/gantungan.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -218,7 +218,7 @@ class Sovenir extends StatelessWidget {
                           height: 128.36,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/124x128"),
+                              image: AssetImage("images/baju.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -296,7 +296,7 @@ class Sovenir extends StatelessWidget {
                           height: 128,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/128x128"),
+                              image: AssetImage("images/topi.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -374,7 +374,7 @@ class Sovenir extends StatelessWidget {
                           height: 119,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/116x119"),
+                              image: AssetImage("images/payung.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -452,7 +452,7 @@ class Sovenir extends StatelessWidget {
                           height: 124,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/125x124"),
+                              image: AssetImage("images/sendal.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -595,7 +595,7 @@ class Sovenir extends StatelessWidget {
                           height: 80.18,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/132x80"),
+                              image: AssetImage("images/troli.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
