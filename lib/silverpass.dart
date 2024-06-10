@@ -1,7 +1,3 @@
-
-
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -43,7 +39,7 @@ class SapphireAnnualPass extends StatelessWidget {
                 top: 170,
                 child: Container(
                   width: 316,
-                  height: 442.19,
+                  height: 500, // Increased height to ensure the text fits
                   child: Stack(
                     children: [
                       Positioned(
@@ -53,41 +49,35 @@ class SapphireAnnualPass extends StatelessWidget {
                           width: 309,
                           height: 43.29,
                           child: Text(
-                            'DIAMOND PASS ',
+                            'DIAMOND PASS',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 30,
                               fontFamily: 'Abril Fatface',
                               fontWeight: FontWeight.w400,
-                              height: 0.04,
+                              height: 1.2,
                             ),
                           ),
                         ),
                       ),
-
-
-
-
-
-
-
                       Positioned(
                         left: 5,
-                        top: 338,
+                        top: 380, // Adjusted position to fit within the container
                         child: SizedBox(
                           width: 311,
-                          height: 104.19,
+                          height: 140, // Increased height to ensure the text fits
                           child: Text(
-                            'Tingkatkan pengalaman Anda di Tokyo DisneySea dengan Sapphire Annual Pass.Manfaat termasuk akses FastPass+, diskon 15% di restoran dan toko suvenir, parkir VIP, akses ke lounge eksklusif, dan undangan meet-and-greet dengan karakter Disney.',
+                            'Tingkatkan pengalaman Anda di Tokyo DisneySea dengan Sapphire Annual Pass. Manfaat termasuk akses FastPass+, diskon 15% di restoran dan toko suvenir, parkir VIP, akses ke lounge eksklusif, dan undangan meet-and-greet dengan karakter Disney.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16,
                               fontFamily: 'Abhaya Libre Medium',
                               fontWeight: FontWeight.w500,
-                              height: 0.09,
+                              height: 1.5,
                             ),
+                            softWrap: true,
                           ),
                         ),
                       ),
@@ -95,13 +85,6 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-
-
-
-
-
-
-
               Positioned(
                 left: 104,
                 top: 707,
@@ -124,12 +107,6 @@ class SapphireAnnualPass extends StatelessWidget {
                           ),
                         ),
                       ),
-
-
-
-
-
-
                       Positioned(
                         left: 12,
                         top: 13,
@@ -144,7 +121,7 @@ class SapphireAnnualPass extends StatelessWidget {
                               fontSize: 16,
                               fontFamily: 'Gabriela',
                               fontWeight: FontWeight.w400,
-                              height: 0.08,
+                              height: 1.5,
                             ),
                           ),
                         ),
@@ -153,15 +130,6 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-
-
-
-
-
-
-
-
-
               Positioned(
                 left: 0,
                 top: 0,
@@ -175,15 +143,37 @@ class SapphireAnnualPass extends StatelessWidget {
                       colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                     ),
                   ),
+                  child: Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'DisneySea',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontFamily: 'Gabriela',
+                            fontWeight: FontWeight.w400,
+                            height: 1.5,
+                          ),
+                        ),
+                        Text(
+                          'Sambut Keajaiban & Raih Petualanganmu',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: 'Gabriela',
+                            fontWeight: FontWeight.w400,
+                            height: 1.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 ),
               ),
-
-
-
-
-
-
-
               Positioned(
                 left: 39,
                 top: 170,
@@ -201,11 +191,6 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-
-
-
-
-
               Positioned(
                 left: 97,
                 top: 137,
@@ -217,15 +202,10 @@ class SapphireAnnualPass extends StatelessWidget {
                     fontSize: 20,
                     fontFamily: 'Gabriela',
                     fontWeight: FontWeight.w400,
-                    height: 0.05,
+                    height: 1.5,
                   ),
                 ),
               ),
-
-
-
-
-
             ],
           ),
         ),
