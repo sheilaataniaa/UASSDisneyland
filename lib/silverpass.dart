@@ -11,6 +11,7 @@ class silverpass extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
@@ -222,5 +223,3 @@ class SapphireAnnualPass extends StatelessWidget {
     );
   }
 }
-
-
