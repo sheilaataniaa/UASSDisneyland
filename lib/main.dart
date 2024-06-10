@@ -2,7 +2,7 @@ import 'package:disneysea/diamonpass.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
-import 'tampilanawal.dart';
+import 'package:disneysea/diamonpass.dart';
 
 void main() {
   runApp(const MyApp());

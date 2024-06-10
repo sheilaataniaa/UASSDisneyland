@@ -65,6 +65,13 @@ class SapphireAnnualPass extends StatelessWidget {
                           ),
                         ),
                       ),
+
+
+
+
+
+
+                      
                       Positioned(
                         left: 5,
                         top: 338,
@@ -88,6 +95,13 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
+
+
               Positioned(
                 left: 104,
                 top: 707,
@@ -110,6 +124,12 @@ class SapphireAnnualPass extends StatelessWidget {
                           ),
                         ),
                       ),
+
+
+
+
+
+
                       Positioned(
                         left: 12,
                         top: 13,
@@ -133,6 +153,15 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
+
+
+
+
               Positioned(
                 left: 0,
                 top: 0,
@@ -148,6 +177,13 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
+
+
               Positioned(
                 left: 39,
                 top: 170,
@@ -156,7 +192,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   height: 323,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/327x323"),
+                      image: NetworkImage("images/silverpass.png"),
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
@@ -165,6 +201,11 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
               Positioned(
                 left: 97,
                 top: 137,
@@ -180,6 +221,11 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
             ],
           ),
         ),
