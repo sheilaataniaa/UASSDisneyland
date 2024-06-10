@@ -1,10 +1,9 @@
-
-
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const sovenir());
 }
+
 
 class sovenir extends StatelessWidget {
   const sovenir({super.key});
@@ -17,14 +16,14 @@ class sovenir extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          DiamondAnnualPass(),
+          Sovenir(),
         ]),
       ),
     );
   }
 }
 
-class DiamondAnnualPass extends StatelessWidget {
+class Sovenir extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -37,88 +36,465 @@ class DiamondAnnualPass extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 50,
-                top: 84,
-                child: Stack(
-                  children: [
-                    Positioned(
-                      left: 2,
-                      top: 0,
-                      child: SizedBox(
-                        width: 309,
-                        height: 43.29,
-                        child: Text(
-                          'DIAMOND PASS ',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 30,
-                            fontFamily: 'Abril Fatface',
-                            fontWeight: FontWeight.w400,
-                            height: 0.04,
-                          ),
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      left: 0,
-                      top: 423,
-                      child: SizedBox(
-                        width: 311,
-                        height: 104.19,
-                        child: Text(
-                          'Nikmati kemewahan dengan Diamond Annual Pass di Tokyo DisneySea. Fasilitas mencakup akses tanpa antri, diskon 20% di restoran dan toko suvenir, parkir VIP dengan valet, akses ke lounge mewah, paket foto gratis, undangan acara VIP, dan layanan concierge pribadi.',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16,
-                            fontFamily: 'Abhaya Libre Medium',
-                            fontWeight: FontWeight.w500,
-                            height: 0.09,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                left: 104,
-                top: 708,
+                left: -12,
+                top: 609,
                 child: Container(
-                  width: 184.34,
-                  height: 49,
+                  width: 231,
+                  height: 200,
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
+                        left: 31,
                         top: 0,
                         child: Container(
-                          width: 184.34,
-                          height: 49,
+                          width: 169,
+                          height: 200,
                           decoration: ShapeDecoration(
-                            color: Color(0xFF24BAEC),
+                            color: Color(0xFF9ED6FF),
                             shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
+                              borderRadius: BorderRadius.circular(20),
                             ),
                           ),
                         ),
                       ),
                       Positioned(
-                        left: 12,
-                        top: 13,
+                        left: 0,
+                        top: 166,
                         child: SizedBox(
-                          width: 160,
-                          height: 17,
+                          width: 231,
+                          height: 34,
                           child: Text(
-                            'BUY Rp. 2.500.000',
+                            'Rp.200.000',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                              color: Colors.white,
+                              color: Color(0xFF001A3E),
                               fontSize: 16,
-                              fontFamily: 'Gabriela',
+                              fontFamily: 'Averia Gruesa Libre',
                               fontWeight: FontWeight.w400,
-                              height: 0.08,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 52,
+                        top: 41,
+                        child: Container(
+                          width: 127,
+                          height: 118,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/127x118"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 10,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Jacket',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 173,
+                top: 609,
+                child: Container(
+                  width: 231,
+                  height: 202,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 26,
+                        top: 0,
+                        child: Container(
+                          width: 169,
+                          height: 200,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF9ED6FF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 168,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Rp.50.000',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 57,
+                        top: 39,
+                        child: Container(
+                          width: 116,
+                          height: 122,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/116x122"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 32,
+                        top: 10,
+                        child: SizedBox(
+                          width: 157,
+                          height: 23,
+                          child: Text(
+                            'Keychain',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 173,
+                top: 383,
+                child: Container(
+                  width: 231,
+                  height: 202,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 31,
+                        top: 0,
+                        child: Container(
+                          width: 169,
+                          height: 199.01,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF9ED6FF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 168.17,
+                        child: SizedBox(
+                          width: 231,
+                          height: 33.83,
+                          child: Text(
+                            'Rp.175.000',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 54,
+                        top: 39.80,
+                        child: Container(
+                          width: 124,
+                          height: 128.36,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/124x128"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 12.94,
+                        child: SizedBox(
+                          width: 231,
+                          height: 33.83,
+                          child: Text(
+                            'T-Shirt',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 168,
+                top: 157,
+                child: Container(
+                  width: 231,
+                  height: 200,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 31,
+                        top: 0,
+                        child: Container(
+                          width: 169,
+                          height: 200,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF9ED6FF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 166,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Rp.75.000',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 54,
+                        top: 32,
+                        child: Container(
+                          width: 128,
+                          height: 128,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/128x128"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 10,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'TOPI',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: -12,
+                top: 157,
+                child: Container(
+                  width: 231,
+                  height: 200,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 31,
+                        top: 0,
+                        child: Container(
+                          width: 169,
+                          height: 200,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF9ED6FF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 166,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Rp.120.000',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 56,
+                        top: 41,
+                        child: Container(
+                          width: 116,
+                          height: 119,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/116x119"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 10,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'PAYUNG ',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: -12,
+                top: 383,
+                child: Container(
+                  width: 231,
+                  height: 200,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 31,
+                        top: 0,
+                        child: Container(
+                          width: 169,
+                          height: 200,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFF9ED6FF),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 166,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Rp.100.000',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 55,
+                        top: 32,
+                        child: Container(
+                          width: 125,
+                          height: 124,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/125x124"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 10,
+                        child: SizedBox(
+                          width: 231,
+                          height: 34,
+                          child: Text(
+                            'Sandal',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Color(0xFF001A3E),
+                              fontSize: 16,
+                              fontFamily: 'Averia Gruesa Libre',
+                              fontWeight: FontWeight.w400,
+                              height: 0.09,
                             ),
                           ),
                         ),
@@ -143,34 +519,111 @@ class DiamondAnnualPass extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 42,
-                top: 170,
-                child: Container(
-                  width: 327,
-                  height: 323,
-                  decoration: ShapeDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/327x323"),
-                      fit: BoxFit.fill,
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(34),
+                left: 69,
+                top: 84,
+                child: SizedBox(
+                  width: 255,
+                  height: 28,
+                  child: Text(
+                    'Sambut Keajaiban & Raih Petualangan ',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                      fontFamily: 'Rosarivo',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
                     ),
                   ),
                 ),
               ),
               Positioned(
-                left: 98,
-                top: 137,
-                child: Text(
-                  'Diamond Annual Pass',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontFamily: 'Gabriela',
-                    fontWeight: FontWeight.w400,
-                    height: 0.05,
+                left: 83,
+                top: 40,
+                child: SizedBox(
+                  width: 250,
+                  height: 43,
+                  child: Text(
+                    'DISNEYSEA',
+                    style: TextStyle(
+                      color: Color(0x7F002DA2),
+                      fontSize: 38,
+                      fontFamily: 'Rosarivo',
+                      fontWeight: FontWeight.w400,
+                      height: 0,
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 25,
+                top: 44,
+                child: Container(
+                  width: 39,
+                  height: 37,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 39,
+                          height: 37,
+                          decoration: ShapeDecoration(
+                            color: Color(0xFFF6F6F8),
+                            shape: OvalBorder(),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 8.86,
+                        top: 8.41,
+                        child: Container(
+                          width: 21.27,
+                          height: 20.18,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(),
+                          child: FlutterLogo(),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 286,
+                top: 22,
+                child: Container(
+                  width: 131.78,
+                  height: 80.18,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 46.51,
+                        top: 20.25,
+                        child: Container(
+                          width: 39.53,
+                          height: 38.88,
+                          decoration: ShapeDecoration(
+                            color: Colors.white,
+                            shape: OvalBorder(),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 131.78,
+                          height: 80.18,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: NetworkImage("https://via.placeholder.com/132x80"),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),

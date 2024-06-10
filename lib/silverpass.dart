@@ -1,3 +1,4 @@
+import 'package:disneysea/diamonpass.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -92,7 +93,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => BuyPage()),
+                      MaterialPageRoute(builder: (context) => DiamondPass()),
                     );
                   },
                   child: Container(
@@ -222,16 +223,4 @@ class SapphireAnnualPass extends StatelessWidget {
   }
 }
 
-class BuyPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Buy Page'),
-      ),
-      body: Center(
-        child: Text('Welcome to the Buy Page!'),
-      ),
-    );
-  }
-}
+

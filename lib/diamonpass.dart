@@ -1,3 +1,4 @@
+import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -94,7 +95,7 @@ class DiamondAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => BuyPage()),
+                      MaterialPageRoute(builder: (context) => Sovenir()),
                     );
                   },
                   child: Container(
