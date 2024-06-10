@@ -192,7 +192,7 @@ class PearlAnnualPass extends StatelessWidget {
                   height: 323,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/diamondpas.png"), // Ini benar
+                      image: AssetImage("images/pearlpas.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
