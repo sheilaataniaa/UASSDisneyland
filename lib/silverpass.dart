@@ -88,45 +88,53 @@ class SapphireAnnualPass extends StatelessWidget {
               Positioned(
                 left: 104,
                 top: 707,
-                child: Container(
-                  width: 184.34,
-                  height: 49,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 184.34,
-                          height: 49,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFF24BAEC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BuyPage()),
+                    );
+                  },
+                  child: Container(
+                    width: 184.34,
+                    height: 49,
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: Container(
+                            width: 184.34,
+                            height: 49,
+                            decoration: ShapeDecoration(
+                              color: Color(0xFF24BAEC),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 12,
-                        top: 13,
-                        child: SizedBox(
-                          width: 160,
-                          height: 22,
-                          child: Text(
-                            'BUY Rp. 1.500.000',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Gabriela',
-                              fontWeight: FontWeight.w400,
-                              height: 1.5,
+                        Positioned(
+                          left: 12,
+                          top: 13,
+                          child: SizedBox(
+                            width: 160,
+                            height: 22,
+                            child: Text(
+                              'BUY Rp. 1.500.000',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontFamily: 'Gabriela',
+                                fontWeight: FontWeight.w400,
+                                height: 1.5,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -210,6 +218,20 @@ class SapphireAnnualPass extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class BuyPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Page'),
+      ),
+      body: Center(
+        child: Text('Welcome to the Buy Page!'),
+      ),
     );
   }
 }
