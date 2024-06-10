@@ -205,7 +205,7 @@ class DiamondAnnualPass extends StatelessWidget {
                 left: 97,
                 top: 137,
                 child: Text(
-                  'Sapphire Annual Pass',
+                  'Diamond Annual Pass',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.black,
