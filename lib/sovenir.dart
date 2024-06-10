@@ -1,27 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const sovenir());
-}
-
-
-class sovenir extends StatelessWidget {
-  const sovenir({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-      ),
-      home: Scaffold(
-        body: ListView(children: [
-          Sovenir(),
-        ]),
-      ),
-    );
-  }
-}
 
 class Sovenir extends StatelessWidget {
   @override
