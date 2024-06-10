@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 void main() {
@@ -37,100 +35,6 @@ class PearlAnnualPass extends StatelessWidget {
           child: Stack(
             children: [
               Positioned(
-                left: 102,
-                top: 702,
-                child: Container(
-                  width: 184.34,
-                  height: 49,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 184.34,
-                          height: 49,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFF24BAEC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(16),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 12,
-                        top: 13,
-                        child: SizedBox(
-                          width: 160,
-                          height: 17,
-                          child: Text(
-                            'BUY Rp. 1.000.000',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontFamily: 'Gabriela',
-                              fontWeight: FontWeight.w400,
-                              height: 0.08,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                left: 39,
-                top: 170,
-                child: Container(
-                  height: 448.19,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 344,
-                        child: SizedBox(
-                          width: 311,
-                          height: 104.19,
-                          child: Text(
-                            'Nikmati akses setahun penuh ke Tokyo DisneySea dengan Pearl Annual Pass. Dapatkan akses tak terbatas ke semua wahana dan atraksi, diskon 10% di restoran dan toko suvenir, parkir reguler gratis, dan prioritas akses ke acara khusus.',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 16,
-                              fontFamily: 'Abhaya Libre Medium',
-                              fontWeight: FontWeight.w500,
-                              height: 0.09,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 3,
-                        top: 0,
-                        child: SizedBox(
-                          width: 309,
-                          height: 43.29,
-                          child: Text(
-                            'Pearl Annual Pass',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontFamily: 'Abril Fatface',
-                              fontWeight: FontWeight.w400,
-                              height: 0.04,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
                 left: 0,
                 top: 0,
                 child: Container(
@@ -158,7 +62,6 @@ class PearlAnnualPass extends StatelessWidget {
                       fontSize: 14,
                       fontFamily: 'Rosarivo',
                       fontWeight: FontWeight.w400,
-                      height: 0,
                     ),
                   ),
                 ),
@@ -176,7 +79,6 @@ class PearlAnnualPass extends StatelessWidget {
                       fontSize: 38,
                       fontFamily: 'Rosarivo',
                       fontWeight: FontWeight.w400,
-                      height: 0,
                     ),
                   ),
                 ),
@@ -244,7 +146,7 @@ class PearlAnnualPass extends StatelessWidget {
                           height: 80.18,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("images/pearlpas.png"), // Ini benar
+                              image: AssetImage("images/pearlpas.png"),
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -282,7 +184,92 @@ class PearlAnnualPass extends StatelessWidget {
                     fontSize: 20,
                     fontFamily: 'Gabriela',
                     fontWeight: FontWeight.w400,
-                    height: 0.05,
+                    height: 1.5,
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 39,
+                top: 510,
+                child: Container(
+                  height: 200,
+                  width: 316,
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        left: 0,
+                        top: 20,
+                        child: SizedBox(
+                          width: 311,
+                          height: 104.19,
+                          child: Text(
+                            'Nikmati akses setahun penuh ke Tokyo DisneySea dengan Pearl Annual Pass. Dapatkan akses tak terbatas ke semua wahana dan atraksi, diskon 10% di restoran dan toko suvenir, parkir reguler gratis, dan prioritas akses ke acara khusus.',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16,
+                              fontFamily: 'Abhaya Libre Medium',
+                              fontWeight: FontWeight.w500,
+                              height: 1.5,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Positioned(
+                        left: 3,
+                        top: 0,
+                        child: SizedBox(
+                          width: 309,
+                          height: 43.29,
+                          child: Text(
+                            'Pearl Annual Pass',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontFamily: 'Abril Fatface',
+                              fontWeight: FontWeight.w400,
+                              height: 1.5,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 102,
+                top: 702,
+                child: InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BuyPage()),
+                    );
+                  },
+                  child: Container(
+                    width: 184.34,
+                    height: 49,
+                    decoration: ShapeDecoration(
+                      color: Color(0xFF24BAEC),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'BUY Rp. 1.000.000',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          fontFamily: 'Gabriela',
+                          fontWeight: FontWeight.w400,
+                          height: 1.5,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -290,6 +277,20 @@ class PearlAnnualPass extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+}
+
+class BuyPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Buy Page'),
+      ),
+      body: Center(
+        child: Text('Welcome to the Buy Page!'),
+      ),
     );
   }
 }

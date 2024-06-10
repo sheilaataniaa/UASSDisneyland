@@ -1,4 +1,5 @@
 import 'package:disneysea/diamonpass.dart';
+import 'package:disneysea/pearlpass.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: silverpass(),
+      home: DiamondPass(),
     );
   }
 }
