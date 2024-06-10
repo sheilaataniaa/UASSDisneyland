@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const pearlpass());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class pearlpass extends StatelessWidget {
+  const pearlpass({super.key});
 
   @override
   Widget build(BuildContext context) {

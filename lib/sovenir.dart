@@ -3,11 +3,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const sovenir());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class sovenir extends StatelessWidget {
+  const sovenir({super.key});
 
   @override
   Widget build(BuildContext context) {

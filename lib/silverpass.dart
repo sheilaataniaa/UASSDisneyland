@@ -5,11 +5,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const silverpass());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class silverpass extends StatelessWidget {
+  const silverpass({super.key});
 
   @override
   Widget build(BuildContext context) {
