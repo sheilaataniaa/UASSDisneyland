@@ -4,11 +4,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const diamondpass());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class diamondpass extends StatelessWidget {
+  const diamondpass({super.key});
 
   @override
   Widget build(BuildContext context) {
