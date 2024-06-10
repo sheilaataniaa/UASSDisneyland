@@ -244,7 +244,7 @@ class PearlAnnualPass extends StatelessWidget {
                           height: 80.18,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/132x80"),
+                              image: AssetImage("images/pearlpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),

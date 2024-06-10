@@ -151,7 +151,7 @@ class DiamondAnnualPass extends StatelessWidget {
                   height: 323,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/327x323"),
+                      image: AssetImage("images/diamondpas.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(

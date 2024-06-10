@@ -71,7 +71,7 @@ class SapphireAnnualPass extends StatelessWidget {
 
 
 
-                      
+
                       Positioned(
                         left: 5,
                         top: 338,
@@ -79,7 +79,7 @@ class SapphireAnnualPass extends StatelessWidget {
                           width: 311,
                           height: 104.19,
                           child: Text(
-                            'Tingkatkan pengalaman Anda di Tokyo DisneySea dengan Sapphire Annual Pass. Manfaat termasuk akses FastPass+, diskon 15% di restoran dan toko suvenir, parkir VIP, akses ke lounge eksklusif, dan undangan meet-and-greet dengan karakter Disney.',
+                            'Tingkatkan pengalaman Anda di Tokyo DisneySea dengan Sapphire Annual Pass.Manfaat termasuk akses FastPass+, diskon 15% di restoran dan toko suvenir, parkir VIP, akses ke lounge eksklusif, dan undangan meet-and-greet dengan karakter Disney.',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Colors.black,
@@ -135,7 +135,7 @@ class SapphireAnnualPass extends StatelessWidget {
                         top: 13,
                         child: SizedBox(
                           width: 160,
-                          height: 17,
+                          height: 22,
                           child: Text(
                             'BUY Rp. 1.500.000',
                             textAlign: TextAlign.center,
@@ -192,7 +192,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   height: 323,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("images/silverpass.png"),
+                      image: AssetImage("images/silverpas.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
