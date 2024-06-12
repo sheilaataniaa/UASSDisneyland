@@ -10,6 +10,7 @@ class hpdisney extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
@@ -69,7 +70,7 @@ class Homepage extends StatelessWidget {
                           height: 136,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("images/merchandise.png"), // Ini benar
+                              image: AssetImage("images/pearlpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -121,7 +122,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: AssetImage("images/diamondpass.png"), // Ini benar
+                              image: AssetImage("images/silverpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -176,7 +177,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: AssetImage("images/silverpass.png"), // Ini benar
+                              image: AssetImage("images/silverpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -253,7 +254,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: AssetImage("images/merchandise.png"), // Ini benar
+                              image: AssetImage("images/pearlpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -551,142 +552,68 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: -5,
-                top: -5,
-                child: Container(
-                  width: 401,
-                  height: 129,
-                  decoration: ShapeDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(-0.01, 1.00),
-                      end: Alignment(0.01, -1),
-                      colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
+
+
+
+
+              Container(
+              width: double.infinity,
+              height: 124,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
-              Positioned(
-                left: 65,
-                top: 84,
-                child: SizedBox(
-                  width: 255,
-                  height: 28,
-                  child: Text(
-                    'Sambut Keajaiban & Raih Petualangan ',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontFamily: 'Rosarivo',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
-                    ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 16,
+                    top: 44,
+                    child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 79,
-                top: 40,
-                child: SizedBox(
-                  width: 250,
-                  height: 43,
-                  child: Text(
-                    'DISNEYSEA',
-                    style: TextStyle(
-                      color: Color(0x7F002DA2),
-                      fontSize: 38,
-                      fontFamily: 'Rosarivo',
-                      fontWeight: FontWeight.w400,
-                      height: 0,
+                  Positioned(
+                    left: 83,
+                    top: 40,
+                    child: Text(
+                      'DISNEYSEA',
+                      style: TextStyle(
+                        color: Color(0x7F002DA2),
+                        fontSize: 38,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
+                      ),
                     ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 21,
-                top: 44,
-                child: Container(
-                  width: 39,
-                  height: 37,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 39,
-                          height: 37,
-                          decoration: ShapeDecoration(
-                            color: Color(0xFFF6F6F8),
-                            shape: OvalBorder(),
-                          ),
-                        ),
+                  Positioned(
+                    left: 69,
+                    top: 84,
+                    child: Text(
+                      'Sambut Keajaiban & Raih Petualangan',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
                       ),
-                      Positioned(
-                        left: 8.86,
-                        top: 8.41,
-                        child: Container(
-                          width: 21.27,
-                          height: 20.18,
-                          clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(),
-                          child: FlutterLogo(),
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-              ),
-              Positioned(
-                left: 282,
-                top: 22,
-                child: Container(
-                  width: 1123,
-                  height: 761,
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 46.51,
-                        top: 20.25,
-                        child: Container(
-                          width: 39.53,
-                          height: 38.88,
-                          decoration: ShapeDecoration(
-                            color: Colors.white,
-                            shape: OvalBorder(),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 0,
-                        top: 0,
-                        child: Container(
-                          width: 131.78,
-                          height: 80.18,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                             image: AssetImage("images/troli.png"), // Ini benar
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 907,
-                        top: 596,
-                        child: Container(
-                          width: 216,
-                          height: 165,
-                          padding: const EdgeInsets.all(10),
-                        ),
-                      ),
-                    ],
+                  Positioned(
+                    right: 16,
+                    top: 44,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 20,
+                      child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
+                    ),
                   ),
-                ),
+                ],
               ),
+            ),
+
+
+            
             ],
           ),
         ),
