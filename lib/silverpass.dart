@@ -140,8 +140,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-              
-            Container(
+              Container(
               width: double.infinity,
               height: 124,
               decoration: BoxDecoration(
@@ -196,7 +195,6 @@ class SapphireAnnualPass extends StatelessWidget {
                 ],
               ),
             ),
-
               Positioned(
                 left: 39,
                 top: 170,
