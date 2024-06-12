@@ -96,7 +96,7 @@ class PearlAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SapphireAnnualPass()),
+                      MaterialPageRoute(builder: (context) => SilverPass()),
                     );
                   },
                   child: Container(
