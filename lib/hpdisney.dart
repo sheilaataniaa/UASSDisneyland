@@ -69,7 +69,7 @@ class Homepage extends StatelessWidget {
                           height: 136,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/181x136"),
+                              image: AssetImage("images/merchandise.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -121,7 +121,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/217x122"),
+                              image: AssetImage("images/diamondpass.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -176,7 +176,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/217x122"),
+                              image: AssetImage("images/silverpass.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -253,7 +253,7 @@ class Homepage extends StatelessWidget {
                           height: 122,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/225x122"),
+                              image: AssetImage("images/merchandise.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -402,7 +402,7 @@ class Homepage extends StatelessWidget {
                           height: 46,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/197x46"),
+                              image: AssetImage("images/tmrw.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -478,7 +478,7 @@ class Homepage extends StatelessWidget {
                           height: 70,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/153x70"),
+                              image: AssetImage("images/blu.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),
@@ -504,7 +504,7 @@ class Homepage extends StatelessWidget {
                           height: 229,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/374x229"),
+                              image: AssetImage("images/hp1.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -521,7 +521,7 @@ class Homepage extends StatelessWidget {
                           height: 229,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/376x229"),
+                              image: AssetImage("images/hp2.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -538,7 +538,7 @@ class Homepage extends StatelessWidget {
                           height: 229,
                           decoration: ShapeDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/396x229"),
+                              image: AssetImage("images/hp3.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                             shape: RoundedRectangleBorder(
@@ -668,7 +668,7 @@ class Homepage extends StatelessWidget {
                           height: 80.18,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: NetworkImage("https://via.placeholder.com/132x80"),
+                             image: AssetImage("images/troli.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
                           ),

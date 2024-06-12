@@ -2,6 +2,7 @@ import 'package:disneysea/addtocart.dart';
 import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
 import 'package:disneysea/diamonpass.dart';
+import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/pearlpass.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/shusoceanhomepage.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: PearlPass(),
+      home: hpdisney(),
     );
   }
 }
