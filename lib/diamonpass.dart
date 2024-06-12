@@ -142,50 +142,77 @@ class DiamondAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 0,
-                top: 0,
-                child: Container(
-                  width: 393,
-                  height: 124,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(-0.01, 1.00),
-                      end: Alignment(0.01, -1),
-                      colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
-                    ),
-                  ),
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'DisneySea',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontFamily: 'Gabriela',
-                            fontWeight: FontWeight.w400,
-                            height: 1.5,
-                          ),
-                        ),
-                        Text(
-                          'Sambut Keajaiban & Raih Petualanganmu',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Gabriela',
-                            fontWeight: FontWeight.w400,
-                            height: 1.5,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+
+
+
+
+
+             
+            Container(
+              width: double.infinity,
+              height: 124,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 16,
+                    top: 44,
+                    child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                  ),
+                  Positioned(
+                    left: 83,
+                    top: 40,
+                    child: Text(
+                      'DISNEYSEA',
+                      style: TextStyle(
+                        color: Color(0x7F002DA2),
+                        fontSize: 38,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 69,
+                    top: 84,
+                    child: Text(
+                      'Sambut Keajaiban & Raih Petualangan',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    right: 16,
+                    top: 44,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 20,
+                      child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+
+
+
+
+
+
+
+
+
               Positioned(
                 left: 39,
                 top: 170,

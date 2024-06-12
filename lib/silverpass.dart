@@ -1,23 +1,23 @@
-import 'package:disneysea/diamonpass.dart';
+import 'package:disneysea/diamonpass.dart'; // Import file containing DiamondPass widget
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const silverpass());
+  runApp(const SilverPass()); // Run the SilverPass widget as the main entry point
 }
 
-class silverpass extends StatelessWidget {
-  const silverpass({super.key});
+class SilverPass extends StatelessWidget {
+  const SilverPass({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false, // This line removes the debug banner
+      debugShowCheckedModeBanner: false, // Disable debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47), // Set background color
       ),
       home: Scaffold(
         body: ListView(children: [
-          SapphireAnnualPass(),
+          SapphireAnnualPass(), // Display SapphireAnnualPass widget inside a ListView
         ]),
       ),
     );
@@ -33,7 +33,7 @@ class SapphireAnnualPass extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: BoxDecoration(color: Colors.white), // Set container background color to white
           child: Stack(
             children: [
               Positioned(
@@ -94,7 +94,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DiamondPass()),
+                      MaterialPageRoute(builder: (context) => DiamondPass()), // Navigate to DiamondPass widget on tap
                     );
                   },
                   child: Container(
@@ -140,50 +140,63 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                left: 0,
-                top: 0,
-                child: Container(
-                  width: 393,
-                  height: 124,
-                  decoration: BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment(-0.01, 1.00),
-                      end: Alignment(0.01, -1),
-                      colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
-                    ),
-                  ),
-                  child: Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'DisneySea',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontFamily: 'Gabriela',
-                            fontWeight: FontWeight.w400,
-                            height: 1.5,
-                          ),
-                        ),
-                        Text(
-                          'Sambut Keajaiban & Raih Petualanganmu',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 16,
-                            fontFamily: 'Gabriela',
-                            fontWeight: FontWeight.w400,
-                            height: 1.5,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+              
+            Container(
+              width: double.infinity,
+              height: 124,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
+              child: Stack(
+                children: [
+                  Positioned(
+                    left: 16,
+                    top: 44,
+                    child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                  ),
+                  Positioned(
+                    left: 83,
+                    top: 40,
+                    child: Text(
+                      'DISNEYSEA',
+                      style: TextStyle(
+                        color: Color(0x7F002DA2),
+                        fontSize: 38,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 69,
+                    top: 84,
+                    child: Text(
+                      'Sambut Keajaiban & Raih Petualangan',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                        fontFamily: 'Rosarivo',
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    right: 16,
+                    top: 44,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 20,
+                      child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
               Positioned(
                 left: 39,
                 top: 170,
@@ -192,7 +205,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   height: 323,
                   decoration: ShapeDecoration(
                     image: DecorationImage(
-                      image: AssetImage("images/silverpas.png"), // Ini benar
+                      image: AssetImage("images/silverpas.png"), // Set image asset
                       fit: BoxFit.fill,
                     ),
                     shape: RoundedRectangleBorder(
