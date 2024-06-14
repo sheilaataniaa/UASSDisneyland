@@ -11,7 +11,7 @@ class TampilanAwal extends StatelessWidget {
     Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Transisi1()),
+        MaterialPageRoute(builder: (context) => const Transisi1()),
       );
     });
 
@@ -22,7 +22,7 @@ class TampilanAwal extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        color: Color(0xFF71BBE4),
+        color: const Color(0xFF71BBE4),
         child: Stack(
           alignment: Alignment.center,
           children: [
@@ -35,7 +35,7 @@ class TampilanAwal extends StatelessWidget {
                     'Shu’s',
                     style: TextStyle(
                       fontFamily: GoogleFonts.rosarivo().fontFamily,
-                      color: Color(0x7F002DA2),
+                      color: const Color(0x7F002DA2),
                       fontSize: 40,
                       fontWeight: FontWeight.w400,
                     ),
@@ -44,7 +44,7 @@ class TampilanAwal extends StatelessWidget {
                     'Magic',
                     style: TextStyle(
                       fontFamily: GoogleFonts.rosarivo().fontFamily,
-                      color: Color(0xFFEFE3C8),
+                      color: const Color(0xFFEFE3C8),
                       fontSize: 55,
                       fontWeight: FontWeight.w400,
                     ),
@@ -55,7 +55,7 @@ class TampilanAwal extends StatelessWidget {
             // Stack of images
             Positioned(
               top: screenHeight * 0.1,
-              child: Container(
+              child: SizedBox(
                 width: screenWidth * 0.9,
                 height: screenHeight * 0.7,
                 child: Stack(
@@ -67,7 +67,7 @@ class TampilanAwal extends StatelessWidget {
                       child: Container(
                         width: screenWidth * 0.8,
                         height: screenHeight * 0.35,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/kelompok.png'),
                             fit: BoxFit.contain,
@@ -82,7 +82,7 @@ class TampilanAwal extends StatelessWidget {
                         width: screenWidth * 0.6,
                         height: screenWidth * 0.6,
                         decoration: ShapeDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             image: AssetImage('images/logo1.png'),
                             fit: BoxFit.contain,
                           ),
@@ -98,7 +98,7 @@ class TampilanAwal extends StatelessWidget {
                       child: Container(
                         width: screenWidth * 0.7,
                         height: screenHeight * 0.25,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage('images/logo2.png'),
                             fit: BoxFit.contain,

@@ -24,7 +24,7 @@ class Transisi2 extends StatelessWidget {
               child: Container(
                 width: screenWidth,
                 height: screenHeight,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/Background1.png'),
                     fit: BoxFit.cover,
@@ -39,7 +39,7 @@ class Transisi2 extends StatelessWidget {
                 width: screenWidth * 0.924,
                 height: screenHeight * 0.53,
                 decoration: ShapeDecoration(
-                  image: DecorationImage(
+                  image: const DecorationImage(
                     image: AssetImage('images/transisi2.png'),
                     fit: BoxFit.fill,
                   ),
@@ -58,7 +58,7 @@ class Transisi2 extends StatelessWidget {
                   'Petualangan Seru di DisneySea!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color(0xFF1B1E28),
+                    color: const Color(0xFF1B1E28),
                     fontSize: 30,
                     fontFamily: GoogleFonts.abrilFatface().fontFamily,
                     fontWeight: FontWeight.w400,
@@ -76,7 +76,7 @@ class Transisi2 extends StatelessWidget {
                   'Hadapi sensasi luar biasa di DisneySea! Jelajahi dunia ajaib dan rasakan keseruannya bersama teman dan keluargamu.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color(0xFF7C838D),
+                    color: const Color(0xFF7C838D),
                     fontSize: 16,
                     fontFamily: GoogleFonts.abhayaLibre().fontFamily,
                     fontWeight: FontWeight.w400,
@@ -88,7 +88,7 @@ class Transisi2 extends StatelessWidget {
             Positioned(
               left: screenWidth * 0.42,
               top: screenHeight * 0.82,
-              child: Container(
+              child: SizedBox(
                 width: screenWidth * 0.16,
                 height: screenHeight * 0.008,
                 child: Stack(
@@ -100,7 +100,7 @@ class Transisi2 extends StatelessWidget {
                         width: screenWidth * 0.089,
                         height: screenHeight * 0.008,
                         decoration: ShapeDecoration(
-                          color: Color(0xFF24BAEC),
+                          color: const Color(0xFF24BAEC),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),
@@ -114,7 +114,7 @@ class Transisi2 extends StatelessWidget {
                         width: screenWidth * 0.033,
                         height: screenHeight * 0.008,
                         decoration: ShapeDecoration(
-                          color: Color(0xFFCAE9FF),
+                          color: const Color(0xFFCAE9FF),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),
@@ -128,7 +128,7 @@ class Transisi2 extends StatelessWidget {
                         width: screenWidth * 0.016,
                         height: screenHeight * 0.008,
                         decoration: ShapeDecoration(
-                          color: Color(0xFFCAE9FF),
+                          color: const Color(0xFFCAE9FF),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
                           ),
@@ -146,14 +146,14 @@ class Transisi2 extends StatelessWidget {
                 onTap: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Transisi3()),
+                    MaterialPageRoute(builder: (context) => const Transisi3()),
                   );
                 },
                 child: Container(
                   width: screenWidth * 0.85,
                   height: screenHeight * 0.07,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF24BAEC),
+                    color: const Color(0xFF24BAEC),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
                     ),

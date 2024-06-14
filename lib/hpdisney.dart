@@ -15,7 +15,7 @@ class hpdisney extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
-        body: ListView(children: [
+        body: ListView(children: const [
           Homepage(),
         ]),
       ),
@@ -24,6 +24,8 @@ class hpdisney extends StatelessWidget {
 }
 
 class Homepage extends StatelessWidget {
+  const Homepage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,18 +35,18 @@ class Homepage extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
               Positioned(
                 left: 27,
                 top: 680,
-                child: Container(
+                child: SizedBox(
                   width: 1074,
                   height: 192,
                   child: Stack(
                     children: [
-                      Positioned(
+                      const Positioned(
                         left: 884,
                         top: 158,
                         child: SizedBox(
@@ -69,7 +71,7 @@ class Homepage extends StatelessWidget {
                         child: Container(
                           width: 181,
                           height: 136,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage("images/pearlpas.png"), // Ini benar
                               fit: BoxFit.fill,
@@ -77,7 +79,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 884,
                         top: 8,
                         child: SizedBox(
@@ -96,7 +98,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 605,
                         top: 161,
                         child: SizedBox(
@@ -122,7 +124,7 @@ class Homepage extends StatelessWidget {
                           width: 216.91,
                           height: 122,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage("images/silverpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
@@ -132,7 +134,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 605,
                         top: 8,
                         child: SizedBox(
@@ -151,7 +153,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 332,
                         top: 160,
                         child: SizedBox(
@@ -177,7 +179,7 @@ class Homepage extends StatelessWidget {
                           width: 217.40,
                           height: 122,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage("images/silverpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
@@ -187,7 +189,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 331,
                         top: 8,
                         child: SizedBox(
@@ -213,11 +215,11 @@ class Homepage extends StatelessWidget {
                           width: 255,
                           height: 192,
                           decoration: ShapeDecoration(
-                            color: Color(0xFFD7E1E8),
+                            color: const Color(0xFFD7E1E8),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
                             ),
-                            shadows: [
+                            shadows: const [
                               BoxShadow(
                                 color: Color(0x3F000000),
                                 blurRadius: 4,
@@ -228,7 +230,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 68,
                         top: 15,
                         child: SizedBox(
@@ -254,7 +256,7 @@ class Homepage extends StatelessWidget {
                           width: 225,
                           height: 122,
                           decoration: ShapeDecoration(
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               image: AssetImage("images/pearlpas.png"), // Ini benar
                               fit: BoxFit.fill,
                             ),
@@ -264,7 +266,7 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 59,
                         top: 160,
                         child: SizedBox(
@@ -287,7 +289,7 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 17,
                 top: 650,
                 child: SizedBox(
@@ -339,7 +341,7 @@ class Homepage extends StatelessWidget {
           Positioned(
         left: 13,
         top: 385,
-        child: Container(
+        child: SizedBox(
           width: 400,
           height: 200,
           child: PageView(
@@ -354,7 +356,7 @@ class Homepage extends StatelessWidget {
                     width: 300,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
@@ -363,7 +365,7 @@ class Homepage extends StatelessWidget {
                           Color(0xFF45889D),
                         ],
                       ),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0x3F000000),
                           blurRadius: 4,
@@ -383,7 +385,7 @@ class Homepage extends StatelessWidget {
                             height: 40,
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 100,
                           top: 10,
                           child: Text(
@@ -396,10 +398,10 @@ class Homepage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 100,
                           top: 40,
-                          child: Container(
+                          child: SizedBox(
                             width: 190,
                             child: Text(
                               'Nikmati promo "Buy 1 Get 1" untuk tiket DisneySea menggunakan aplikasi blu by BCA. Dapatkan satu tiket gratis untuk setiap pembelian tiket.',
@@ -428,7 +430,7 @@ class Homepage extends StatelessWidget {
                     width: 300,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      gradient: LinearGradient(
+                      gradient: const LinearGradient(
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                         colors: [
@@ -437,7 +439,7 @@ class Homepage extends StatelessWidget {
                           Color(0xFF6E457C),
                         ],
                       ),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Color(0x3F000000),
                           blurRadius: 4,
@@ -457,7 +459,7 @@ class Homepage extends StatelessWidget {
                             height: 25,
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 120,
                           top: 10,
                           child: Text(
@@ -470,10 +472,10 @@ class Homepage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 120,
                           top: 40,
-                          child: Container(
+                          child: SizedBox(
                             width: 170,
                             child: Text(
                               'Dapatkan diskon 30% untuk tiket DisneySea dengan aplikasi TMRW by UOB. Nikmati pengalaman seru di DisneySea dengan harga lebih hemat!',
@@ -506,7 +508,7 @@ class Homepage extends StatelessWidget {
             Positioned(
         left: 0,
         top: 102,
-        child: Container(
+        child: SizedBox(
           width: MediaQuery.of(context).size.width, // Full width of the screen
           height: 229,
           child: PageView(
@@ -517,7 +519,7 @@ class Homepage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 40, // Full width minus padding
                   height: 229,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("images/hp3.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
@@ -533,7 +535,7 @@ class Homepage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 40, // Full width minus padding
                   height: 229,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("images/hp2.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
@@ -549,7 +551,7 @@ class Homepage extends StatelessWidget {
                   width: MediaQuery.of(context).size.width - 40, // Full width minus padding
                   height: 229,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("images/hp1.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
@@ -610,14 +612,14 @@ class Homepage extends StatelessWidget {
               Container(
               width: double.infinity,
               height: 124,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
-              child: Stack(
+              child: const Stack(
                 children: [
                   Positioned(
                     left: 16,

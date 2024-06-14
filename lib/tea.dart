@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +15,7 @@ class Tea extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
-        body: ListView(children: [
+        body: ListView(children: const [
           TeaOption(),
         ]),
       ),
@@ -25,6 +24,8 @@ class Tea extends StatelessWidget {
 }
 
 class TeaOption extends StatelessWidget {
+  const TeaOption({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,7 +34,7 @@ class TeaOption extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFFCFEBFF)),
+          decoration: const BoxDecoration(color: Color(0xFFCFEBFF)),
           child: Stack(
             children: [
               Positioned(
@@ -43,7 +44,7 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -57,7 +58,7 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -71,14 +72,14 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 172,
                 top: 790,
                 child: SizedBox(
@@ -104,14 +105,14 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: -12,
                 top: 790,
                 child: SizedBox(
@@ -137,14 +138,14 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 172,
                 top: 567,
                 child: SizedBox(
@@ -170,17 +171,17 @@ class TeaOption extends StatelessWidget {
                   width: 169,
                   height: 200,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: -12,
                 top: 345,
-                child: Container(
+                child: SizedBox(
                   width: 416,
                   height: 256,
                   child: Stack(
@@ -227,10 +228,10 @@ class TeaOption extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: -12,
                 top: 188,
-                child: Container(
+                child: SizedBox(
                   width: 231,
                   height: 190,
                   child: Stack(
@@ -277,10 +278,10 @@ class TeaOption extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 20,
                 top: 407,
-                child: Container(
+                child: SizedBox(
                   width: 367,
                   height: 49,
                   child: Stack(
@@ -327,10 +328,10 @@ class TeaOption extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 18,
                 top: 634,
-                child: Container(
+                child: SizedBox(
                   width: 369,
                   height: 49,
                   child: Stack(
@@ -377,7 +378,7 @@ class TeaOption extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 172,
                 top: 188,
                 child: SizedBox(
@@ -399,7 +400,7 @@ class TeaOption extends StatelessWidget {
               Positioned(
                 left: -18,
                 top: -86,
-                child: Container(
+                child: SizedBox(
                   width: 444,
                   height: 241,
                   child: Stack(
@@ -411,7 +412,7 @@ class TeaOption extends StatelessWidget {
                           width: 444,
                           height: 241,
                           decoration: ShapeDecoration(
-                            color: Color(0xFF71BBE4),
+                            color: const Color(0xFF71BBE4),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
                             ),
@@ -421,7 +422,7 @@ class TeaOption extends StatelessWidget {
                       Positioned(
                         left: 45,
                         top: 141,
-                        child: Container(
+                        child: SizedBox(
                           width: 44,
                           height: 44,
                           child: Stack(
@@ -432,7 +433,7 @@ class TeaOption extends StatelessWidget {
                                 child: Container(
                                   width: 44,
                                   height: 44,
-                                  decoration: ShapeDecoration(
+                                  decoration: const ShapeDecoration(
                                     color: Color(0xFFF6F6F8),
                                     shape: OvalBorder(),
                                   ),
@@ -445,8 +446,8 @@ class TeaOption extends StatelessWidget {
                                   width: 24,
                                   height: 24,
                                   clipBehavior: Clip.antiAlias,
-                                  decoration: BoxDecoration(),
-                                  child: FlutterLogo(),
+                                  decoration: const BoxDecoration(),
+                                  child: const FlutterLogo(),
                                 ),
                               ),
                             ],
@@ -460,7 +461,7 @@ class TeaOption extends StatelessWidget {
               Positioned(
                 left: 329,
                 top: 55,
-                child: Container(
+                child: SizedBox(
                   width: 44,
                   height: 44,
                   child: Stack(
@@ -471,7 +472,7 @@ class TeaOption extends StatelessWidget {
                         child: Container(
                           width: 44,
                           height: 44,
-                          decoration: ShapeDecoration(
+                          decoration: const ShapeDecoration(
                             color: Color(0xFFF6F6F8),
                             shape: OvalBorder(),
                           ),
@@ -484,14 +485,14 @@ class TeaOption extends StatelessWidget {
                           width: 24,
                           height: 24,
                           clipBehavior: Clip.antiAlias,
-                          decoration: BoxDecoration(),
+                          decoration: const BoxDecoration(),
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 118,
                 top: 61,
                 child: SizedBox(
@@ -516,7 +517,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 86,
                   height: 112,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/86x112"),
                       fit: BoxFit.fill,
@@ -530,7 +531,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 100,
                   height: 141,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/100x141"),
                       fit: BoxFit.fill,
@@ -544,7 +545,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 170,
                   height: 99,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/170x99"),
                       fit: BoxFit.fill,
@@ -558,7 +559,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 89,
                   height: 120,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/89x120"),
                       fit: BoxFit.fill,
@@ -572,7 +573,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 151,
                   height: 151,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/151x151"),
                       fit: BoxFit.fill,
@@ -586,7 +587,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 142,
                   height: 177,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/142x177"),
                       fit: BoxFit.fill,
@@ -600,7 +601,7 @@ class TeaOption extends StatelessWidget {
                 child: Container(
                   width: 210,
                   height: 234,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/210x234"),
                       fit: BoxFit.fill,

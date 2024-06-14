@@ -16,7 +16,7 @@ class SilverPass extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47), // Set background color
       ),
       home: Scaffold(
-        body: ListView(children: [
+        body: ListView(children: const [
           SapphireAnnualPass(), // Display SapphireAnnualPass widget inside a ListView
         ]),
       ),
@@ -25,6 +25,8 @@ class SilverPass extends StatelessWidget {
 }
 
 class SapphireAnnualPass extends StatelessWidget {
+  const SapphireAnnualPass({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,13 +35,13 @@ class SapphireAnnualPass extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white), // Set container background color to white
+          decoration: const BoxDecoration(color: Colors.white), // Set container background color to white
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 42,
                 top: 170,
-                child: Container(
+                child: SizedBox(
                   width: 316,
                   height: 500, // Increased height to ensure the text fits
                   child: Stack(
@@ -94,10 +96,10 @@ class SapphireAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => DiamondPass()), // Navigate to DiamondPass widget on tap
+                      MaterialPageRoute(builder: (context) => const DiamondPass()), // Navigate to DiamondPass widget on tap
                     );
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: 184.34,
                     height: 49,
                     child: Stack(
@@ -109,14 +111,14 @@ class SapphireAnnualPass extends StatelessWidget {
                             width: 184.34,
                             height: 49,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF24BAEC),
+                              color: const Color(0xFF24BAEC),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               ),
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 12,
                           top: 13,
                           child: SizedBox(
@@ -143,14 +145,14 @@ class SapphireAnnualPass extends StatelessWidget {
               Container(
               width: double.infinity,
               height: 124,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
-              child: Stack(
+              child: const Stack(
                 children: [
                   Positioned(
                     left: 16,
@@ -202,7 +204,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   width: 327,
                   height: 323,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("images/silverpas.png"), // Set image asset
                       fit: BoxFit.fill,
                     ),
@@ -212,7 +214,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 97,
                 top: 137,
                 child: Text(

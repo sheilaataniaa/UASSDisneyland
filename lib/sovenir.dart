@@ -1,6 +1,8 @@
   import 'package:flutter/material.dart';
 
   class Sovenir extends StatelessWidget {
+  const Sovenir({super.key});
+
     @override
     Widget build(BuildContext context) {
       return Scaffold(
@@ -16,14 +18,14 @@
             Container(
               width: double.infinity,
               height: 124,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
-              child: Stack(
+              child: const Stack(
                 children: [
                   Positioned(
                     left: 16,
@@ -75,7 +77,7 @@
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
-                padding: EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
                 crossAxisSpacing: 8.0,
                 mainAxisSpacing: 8.0,
                 children: [
@@ -120,7 +122,7 @@
     Widget _buildItem({required String imagePath, required String title, required String price}) {
       return Container(
         decoration: ShapeDecoration(
-          color: Color(0xFF9ED6FF),
+          color: const Color(0xFF9ED6FF),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
@@ -131,14 +133,14 @@
             Text(
               title,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
                 fontWeight: FontWeight.w400,
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Container(
               width: 100,
               height: 100,
@@ -149,11 +151,11 @@
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               price,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
@@ -166,4 +168,4 @@
     }
   }
 
-  void main() => runApp(MaterialApp(home: Sovenir()));
+  void main() => runApp(const MaterialApp(home: Sovenir()));

@@ -5,7 +5,7 @@ void main() {
 }
 
 class Shusoceanhomepage extends StatelessWidget {
-  const Shusoceanhomepage({Key? key});
+  const Shusoceanhomepage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +15,7 @@ class Shusoceanhomepage extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(
-          children: [
+          children: const [
             HomepageShusOcean(),
           ],
         ),
@@ -25,6 +25,8 @@ class Shusoceanhomepage extends StatelessWidget {
 }
 
 class HomepageShusOcean extends StatelessWidget {
+  const HomepageShusOcean({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -38,7 +40,7 @@ class HomepageShusOcean extends StatelessWidget {
             width: 393,
             height: 852,
             clipBehavior: Clip.antiAlias,
-            decoration: BoxDecoration(color: Color(0xFF71BBE4)),
+            decoration: const BoxDecoration(color: Color(0xFF71BBE4)),
             child: Stack(
               children: [
                 Positioned(
@@ -48,7 +50,7 @@ class HomepageShusOcean extends StatelessWidget {
                     width: 366,
                     height: 334,
                     decoration: ShapeDecoration(
-                      color: Color(0xFF9ED6FF),
+                      color: const Color(0xFF9ED6FF),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -61,7 +63,7 @@ class HomepageShusOcean extends StatelessWidget {
                   child: Container(
                     width: 411,
                     height: 391,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage("https://via.placeholder.com/411x391"),
                         fit: BoxFit.fill,
@@ -69,7 +71,7 @@ class HomepageShusOcean extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   left: 153,
                   top: 242,
                   child: SizedBox(
@@ -95,7 +97,7 @@ class HomepageShusOcean extends StatelessWidget {
                     width: 366,
                     height: 334,
                     decoration: ShapeDecoration(
-                      color: Color(0xFF9ED6FF),
+                      color: const Color(0xFF9ED6FF),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
@@ -108,7 +110,7 @@ class HomepageShusOcean extends StatelessWidget {
                   child: Container(
                     width: 399,
                     height: 448,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage("https://via.placeholder.com/399x448"),
                         fit: BoxFit.fill,
@@ -116,7 +118,7 @@ class HomepageShusOcean extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   left: 18,
                   top: 554,
                   child: Text(
@@ -131,10 +133,10 @@ class HomepageShusOcean extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
+                const Positioned(
                   left: 135,
                   top: 18,
-                  child: Container(
+                  child: SizedBox(
                     width: 236,
                     height: 116,
                     child: Stack(
@@ -186,7 +188,7 @@ class HomepageShusOcean extends StatelessWidget {
                     width: 121,
                     height: 129,
                     decoration: ShapeDecoration(
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage('images/logo1.png'),
                         fit: BoxFit.fill,
                       ),
