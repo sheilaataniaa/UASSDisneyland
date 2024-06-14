@@ -1,10 +1,11 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'Transisi3.dart';
-import 'SignUp.dart';
+import 'signup.dart'; 
 
 class SignIn extends StatefulWidget {
-  const SignIn ({Key? key}) : super(key: key);
+  const SignIn({Key? key}) : super(key: key);
 
   @override
   _SignInState createState() => _SignInState();
@@ -17,135 +18,177 @@ class _SignInState extends State<SignIn> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    final double screenWidth = size.width;
+    final double screenHeight = size.height;
+
     return Scaffold(
-      backgroundColor: Color(0xFF71BBE4),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 29.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: BoxDecoration(color: Color(0xFF71BBE4)),
+        child: Stack(
           children: [
-            SizedBox(height: 62),
-            IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.white),
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Transisi3()),
-                );
-              },
-            ),
-            SizedBox(height: 30),
-            Text(
-              'Sign in now',
-              style: GoogleFonts.rosarivo(
-                textStyle: TextStyle(
-                  color: Color(0xFF1B1E28),
-                  fontSize: 26,
-                ),
-              ),
-            ),
-            Text(
-              'Please sign in to continue our app',
-              style: GoogleFonts.rosarivo(
-                textStyle: TextStyle(
-                  color: Color(0xFF7C838D),
-                  fontSize: 16,
-                ),
-              ),
-            ),
-            SizedBox(height: 50),
-            TextField(
-              controller: _emailController,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFF6F6F8),
-                hintText: 'Email',
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-            SizedBox(height: 20),
-            TextField(
-              controller: _passwordController,
-              obscureText: _obscureText,
-              decoration: InputDecoration(
-                filled: true,
-                fillColor: Color(0xFFF6F6F8),
-                hintText: 'Password',
-                suffixIcon: IconButton(
-                  icon: Icon(
-                    _obscureText ? Icons.visibility_off : Icons.visibility,
-                  ),
-                  onPressed: () {
-                    setState(() {
-                      _obscureText = !_obscureText;
-                    });
-                  },
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
-            SizedBox(height: 50),
-            SizedBox(
-              width: double.infinity,
-              height: 56,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF023141),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                ),
-                onPressed: () {},
-                child: Text(
-                  'Sign In',
-                  style: GoogleFonts.rosarivo(
-                    textStyle: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16,
-                    ),
+            Positioned(
+              left: 0,
+              top: 0,
+              child: Container(
+                width: screenWidth,
+                height: screenHeight,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/background2.png'),
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
-            SizedBox(height: 30),
-            Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Don’t have an account? ',
-                    style: GoogleFonts.rosarivo(
-                      textStyle: TextStyle(
-                        color: Color(0xFF707B81),
-                        fontSize: 15,
+            Positioned(
+              left: screenWidth * 0.074,
+              top: screenHeight * 0.072,
+              child: Container(
+                width: screenWidth * 0.85,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      width: 44,
+                      height: 44,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFFF6F6F8),
+                        shape: OvalBorder(),
+                      ),
+                      child: IconButton(
+                        icon: Icon(Icons.arrow_back, color: Colors.black),
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => Transisi3()),
+                          );
+                        },
                       ),
                     ),
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SignUp()),
-                      );
-                    },
-                    child: Text(
-                      'Sign up',
-                      style: GoogleFonts.rosarivo(
-                        textStyle: TextStyle(
-                          color: Color(0xFFFF7029),
-                          fontSize: 15,
-                          decoration: TextDecoration.underline,
+                    SizedBox(height: 20),
+                    Text(
+                      'Sign in now',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFF1B1E28),
+                        fontSize: 26,
+                        fontFamily: GoogleFonts.rosarivo().fontFamily,
+                        fontWeight: FontWeight.w400,
+                        height: 1.2,
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Text(
+                      'Please sign in to continue our app',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Color(0xFF7C838D),
+                        fontSize: 16,
+                        fontFamily: GoogleFonts.rosarivo().fontFamily,
+                        fontWeight: FontWeight.w400,
+                        height: 1.5,
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    TextField(
+                      controller: _emailController,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xFFF6F6F8),
+                        hintText: 'Email',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide.none,
                         ),
                       ),
                     ),
-                  ),
-                ],
+                    SizedBox(height: 20),
+                    TextField(
+                      controller: _passwordController,
+                      obscureText: _obscureText,
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xFFF6F6F8),
+                        hintText: 'Password',
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          borderSide: BorderSide.none,
+                        ),
+                        suffixIcon: IconButton(
+                          icon: Icon(_obscureText ? Icons.visibility : Icons.visibility_off),
+                          onPressed: () {
+                            setState(() {
+                              _obscureText = !_obscureText;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    Container(
+                      width: double.infinity,
+                      height: 56,
+                      decoration: ShapeDecoration(
+                        color: Color(0xFF023141),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                      ),
+                      child: TextButton(
+                        onPressed: () {
+                          // Implement sign-in functionality here
+                        },
+                        child: Text(
+                          'Sign In',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontFamily: GoogleFonts.rosarivo().fontFamily,
+                            fontWeight: FontWeight.w400,
+                            height: 1.2,
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                    SizedBox(height: 10),
+                    Center(
+                      child: RichText(
+                        text: TextSpan(
+                          text: "Don’t have an account? ",
+                          style: TextStyle(
+                            color: Color(0xFF707B81),
+                            fontSize: 15,
+                            fontFamily: GoogleFonts.rosarivo().fontFamily,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: 'Sign up',
+                              style: TextStyle(
+                                color: Color(0xFFFF7029),
+                                fontSize: 15,
+                                fontFamily: GoogleFonts.rosarivo().fontFamily,
+                                fontWeight: FontWeight.w400,
+                              ),
+                              recognizer: TapGestureRecognizer()
+                                ..onTap = () {
+                                  Navigator.pushReplacement(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => SignUp()),
+                                  );
+                                },
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

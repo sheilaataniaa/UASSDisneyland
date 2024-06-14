@@ -19,15 +19,29 @@ class Transisi3 extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              left: screenWidth * 0.02,
-              top: screenHeight * 0.06,
+              left: 0,
+              top: 0,
               child: Container(
-                width: screenWidth * 0.96,
-                height: screenHeight * 0.5,
+                width: screenWidth,
+                height: screenHeight,
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('images/Background1.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: screenWidth * 0.038,
+              top: screenHeight * 0.05,
+              child: Container(
+                width: screenWidth * 0.924,
+                height: screenHeight * 0.53,
                 decoration: ShapeDecoration(
                   image: DecorationImage(
                     image: AssetImage('images/transisi3.png'),
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fill,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -36,17 +50,17 @@ class Transisi3 extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: screenWidth * 0.1,
-              top: screenHeight * 0.62,
+              left: screenWidth * 0.11,
+              top: screenHeight * 0.6,
               child: SizedBox(
-                width: screenWidth * 0.8,
+                width: screenWidth * 0.78,
                 child: Text(
                   'Rasakan sensasi berlayar di DisneySea!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: GoogleFonts.abrilFatface().fontFamily,
                     color: Color(0xFF1B1E28),
-                    fontSize: 24,
+                    fontSize: 30,
+                    fontFamily: GoogleFonts.abrilFatface().fontFamily,
                     fontWeight: FontWeight.w400,
                     height: 1.2,
                   ),
@@ -54,17 +68,17 @@ class Transisi3 extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: screenWidth * 0.1,
+              left: screenWidth * 0.115,
               top: screenHeight * 0.7,
               child: SizedBox(
-                width: screenWidth * 0.8,
+                width: screenWidth * 0.77,
                 child: Text(
                   'Temukan keajaiban di DisneySea bersama karakter Disney favoritmu. Jadikan momen ini berharga bersama keluarga dan teman-teman!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontFamily: GoogleFonts.belleza().fontFamily,
                     color: Color(0xFF7C838D),
                     fontSize: 16,
+                    fontFamily: GoogleFonts.belleza().fontFamily,
                     fontWeight: FontWeight.w400,
                     height: 1.5,
                   ),
@@ -72,9 +86,62 @@ class Transisi3 extends StatelessWidget {
               ),
             ),
             Positioned(
-              bottom: screenHeight * 0.05,
-              left: screenWidth * 0.1,
-              right: screenWidth * 0.1,
+              left: screenWidth * 0.42,
+              top: screenHeight * 0.82,
+              child: Container(
+                width: screenWidth * 0.16,
+                height: screenHeight * 0.008,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 0,
+                      top: 0,
+                      child: Container(
+                        width: screenWidth * 0.089,
+                        height: screenHeight * 0.008,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFF24BAEC),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: screenWidth * 0.1,
+                      top: 0,
+                      child: Container(
+                        width: screenWidth * 0.033,
+                        height: screenHeight * 0.008,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFFCAE9FF),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: screenWidth * 0.142,
+                      top: 0,
+                      child: Container(
+                        width: screenWidth * 0.016,
+                        height: screenHeight * 0.008,
+                        decoration: ShapeDecoration(
+                          color: Color(0xFFCAE9FF),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Positioned(
+              left: screenWidth * 0.074,
+              top: screenHeight * 0.88,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pushReplacement(
@@ -83,7 +150,7 @@ class Transisi3 extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: screenWidth * 0.8,
+                  width: screenWidth * 0.85,
                   height: screenHeight * 0.07,
                   decoration: ShapeDecoration(
                     color: Color(0xFF24BAEC),
@@ -96,10 +163,11 @@ class Transisi3 extends StatelessWidget {
                       'Next',
                       textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontFamily: GoogleFonts.gabriela().fontFamily,
                         color: Colors.white,
                         fontSize: 16,
+                        fontFamily: GoogleFonts.gabriela().fontFamily,
                         fontWeight: FontWeight.w400,
+                        height: 1.2,
                       ),
                     ),
                   ),
