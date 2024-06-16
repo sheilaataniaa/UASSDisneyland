@@ -129,7 +129,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
-<<<<<<< HEAD
   file:
     dependency: transitive
     description:
@@ -138,15 +137,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.0.0"
-  fixnum:
-    dependency: transitive
-    description:
-      name: fixnum
-      sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.1.0"
-=======
   firebase_auth:
     dependency: "direct main"
     description:
@@ -219,7 +209,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.9.9"
->>>>>>> cfb25db3d3c7fb3a3e900f55955eef279b85afd9
+  fixnum:
+    dependency: transitive
+    description:
+      name: fixnum
+      sha256: "25517a4deb0c03aa0f32fd12db525856438902d9c16536311e76cdc57b31d7d1"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.1.0"
   flutter:
     dependency: "direct main"
     description: flutter
