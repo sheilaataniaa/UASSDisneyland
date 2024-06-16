@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "550492232424",
+    "project_id": "uassdisneyland",
+    "storage_bucket": "uassdisneyland.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:550492232424:android:c5331ff59b1cdb8c73c75d",
+        "android_client_info": {
+          "package_name": "com.example.disneysea"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACX7hR8ClqfzbuwqP_fXks3K_pk_ZIZkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,19 +3,20 @@ import 'package:disneysea/Widgets/CategoriesWidget.dart';
 import 'package:disneysea/Widgets/NewestItemsWidget.dart';
 import 'package:disneysea/Widgets/PopularItemsWidget.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class shuhomepage extends StatelessWidget{
+  const shuhomepage({super.key});
+
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      backgroundColor: Color(0xFF9ED7FF),
+      backgroundColor: const Color(0xFF9ED7FF),
       body: ListView(
         children: [
-          AppBarWidget(),
+          const AppBarWidget(),
 
-          Padding(padding: EdgeInsets.symmetric(
+          Padding(padding: const EdgeInsets.symmetric(
             vertical:10,
             horizontal: 15,
              ),
@@ -30,32 +31,32 @@ class shuhomepage extends StatelessWidget{
                     color:Colors.grey.withOpacity(1),
                     spreadRadius: 2,
                     blurRadius: 10,
-                    offset: Offset(0, 3),
+                    offset: const Offset(0, 3),
                   ),
                 ]
               ),
-              child: Padding(padding: EdgeInsets.symmetric(
+              child: Padding(padding: const EdgeInsets.symmetric(
                 horizontal: 10,
               ),
               child: Row(children:[
-                Icon(CupertinoIcons.search,color:Color(0xFF24BAEC)
+                const Icon(CupertinoIcons.search,color:Color(0xFF24BAEC)
                 ),
-                Container(
+                SizedBox(
                   height:50,
                   width: 300,
                   child: Padding(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 15,
                       ),
                       child: TextFormField(
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           hintText: "What Would You Like To Have?",
                           border: InputBorder.none,
                          ),
                         ),
                       ),
                 ),
-                Icon(Icons.filter_list),
+                const Icon(Icons.filter_list),
                ],
                 ),
               ),
@@ -63,7 +64,7 @@ class shuhomepage extends StatelessWidget{
             ),
 
             //categories
-          Padding(
+          const Padding(
               padding: EdgeInsets.only(top:20,left:10),
             child: Text("Categories"
             ,style: TextStyle(fontWeight: FontWeight.bold,
@@ -73,10 +74,10 @@ class shuhomepage extends StatelessWidget{
           ),
 
           //categories widget
-          CategoriesWidget(),
+          const CategoriesWidget(),
 
           //popular Items
-          Padding(
+          const Padding(
               padding: EdgeInsets.only(top:20,left:10),
             child: Text("Popular"
             ,style: TextStyle(fontWeight: FontWeight.bold,
@@ -86,10 +87,10 @@ class shuhomepage extends StatelessWidget{
           ),
 
           //popular items widget
-          PopularItemsWidget(),
+          const PopularItemsWidget(),
 
           //newest items
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(top:20,left:10),
             child: Text("Newest"
             ,style: TextStyle(fontWeight: FontWeight.bold,
@@ -99,7 +100,7 @@ class shuhomepage extends StatelessWidget{
           ),
 
           //newest item widge
-          NewestItemsWidget(),
+          const NewestItemsWidget(),
         ],
       ),
     );

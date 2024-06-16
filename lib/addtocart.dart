@@ -15,7 +15,7 @@ class Cart extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(
-          children: [
+          children: const [
             AddToCart(),
           ],
         ),
@@ -25,6 +25,8 @@ class Cart extends StatelessWidget {
 }
 
 class AddToCart extends StatefulWidget {
+  const AddToCart({super.key});
+
   @override
   _AddToCartState createState() => _AddToCartState();
 }
@@ -54,7 +56,7 @@ class _AddToCartState extends State<AddToCart> {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Color(0xFFCFEBFF)),
+          decoration: const BoxDecoration(color: Color(0xFFCFEBFF)),
           child: Stack(
             children: [
               GestureDetector(
@@ -64,7 +66,7 @@ class _AddToCartState extends State<AddToCart> {
                 child: Positioned(
                   left: 19,
                   top: 21,
-                  child: Container(
+                  child: SizedBox(
                     width: 44,
                     height: 39.98,
                     child: Stack(
@@ -76,12 +78,12 @@ class _AddToCartState extends State<AddToCart> {
                             width: 44,
                             height: 39.98,
                             decoration: ShapeDecoration(
-                              color: Color(0xFFF6F6F8),
+                              color: const Color(0xFFF6F6F8),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(22),
                               ),
                             ),
-                            child: Icon(Icons.arrow_back, color: Colors.black),
+                            child: const Icon(Icons.arrow_back, color: Colors.black),
                           ),
                         ),
                       ],
@@ -96,7 +98,7 @@ class _AddToCartState extends State<AddToCart> {
                   width: 405,
                   height: 601,
                   decoration: ShapeDecoration(
-                    color: Color(0xFF9ED6FF),
+                    color: const Color(0xFF9ED6FF),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -108,7 +110,7 @@ class _AddToCartState extends State<AddToCart> {
                 top: 519,
                 child: GestureDetector(
                   onTap: removeItem,
-                  child: SizedBox(
+                  child: const SizedBox(
                     width: 38,
                     height: 27,
                     child: Text(
@@ -134,7 +136,7 @@ class _AddToCartState extends State<AddToCart> {
                   child: Text(
                     itemCount.toString(),
                     textAlign: TextAlign.center,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.black,
                       fontSize: 32,
                       fontFamily: 'Bakbak One',
@@ -149,7 +151,7 @@ class _AddToCartState extends State<AddToCart> {
                 top: 519,
                 child: GestureDetector(
                   onTap: addItem,
-                  child: SizedBox(
+                  child: const SizedBox(
                     width: 38,
                     height: 27,
                     child: Text(
@@ -174,10 +176,10 @@ class _AddToCartState extends State<AddToCart> {
                     // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(builder: (context) => Cart()),
+                      MaterialPageRoute(builder: (context) => const Cart()),
                     );
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: 407,
                     height: 166,
                     child: Stack(
@@ -189,14 +191,14 @@ class _AddToCartState extends State<AddToCart> {
                             width: 286,
                             height: 66,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF71BBE4),
+                              color: const Color(0xFF71BBE4),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30),
                               ),
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 86,
                           top: 32,
                           child: SizedBox(
@@ -226,7 +228,7 @@ class _AddToCartState extends State<AddToCart> {
                 child: Container(
                   width: 310,
                   height: 409,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/310x409"),
                       fit: BoxFit.fill,
@@ -234,10 +236,10 @@ class _AddToCartState extends State<AddToCart> {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 4,
                 top: 635,
-                child: Container(
+                child: SizedBox(
                   width: 384,
                   height: 81,
                   child: Stack(

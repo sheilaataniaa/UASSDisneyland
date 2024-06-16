@@ -17,7 +17,7 @@ class PearlPass extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(
-          children: [
+          children: const [
             PearlAnnualPass(),
           ],
         ),
@@ -27,6 +27,8 @@ class PearlPass extends StatelessWidget {
 }
 
 class PearlAnnualPass extends StatelessWidget {
+  const PearlAnnualPass({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -35,13 +37,13 @@ class PearlAnnualPass extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
-              Positioned(
+              const Positioned(
                 left: 42,
                 top: 170,
-                child: Container(
+                child: SizedBox(
                   width: 316,
                   height: 500, // Increased height to ensure the text fits
                   child: Stack(
@@ -96,10 +98,10 @@ class PearlAnnualPass extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SilverPass()),
+                      MaterialPageRoute(builder: (context) => const SilverPass()),
                     );
                   },
-                  child: Container(
+                  child: SizedBox(
                     width: 184.34,
                     height: 49,
                     child: Stack(
@@ -111,14 +113,14 @@ class PearlAnnualPass extends StatelessWidget {
                             width: 184.34,
                             height: 49,
                             decoration: ShapeDecoration(
-                              color: Color(0xFF24BAEC),
+                              color: const Color(0xFF24BAEC),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(16),
                               ),
                             ),
                           ),
                         ),
-                        Positioned(
+                        const Positioned(
                           left: 12,
                           top: 13,
                           child: SizedBox(
@@ -156,14 +158,14 @@ class PearlAnnualPass extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 124,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
                 ),
               ),
-              child: Stack(
+              child: const Stack(
                 children: [
                   Positioned(
                     left: 16,
@@ -223,7 +225,7 @@ class PearlAnnualPass extends StatelessWidget {
                   width: 327,
                   height: 323,
                   decoration: ShapeDecoration(
-                    image: DecorationImage(
+                    image: const DecorationImage(
                       image: AssetImage("images/pearlpas.png"), // Ini benar
                       fit: BoxFit.fill,
                     ),
@@ -233,7 +235,7 @@ class PearlAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 97,
                 top: 137,
                 child: Text(

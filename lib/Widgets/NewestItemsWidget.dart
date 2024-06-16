@@ -1,32 +1,31 @@
-import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class NewestItemsWidget extends StatelessWidget{
+  const NewestItemsWidget({super.key});
+
   @override
   Widget build(BuildContext context){
     return SingleChildScrollView(
-      child: Padding(padding: EdgeInsets.symmetric(vertical:10, horizontal:10),
+      child: Padding(padding: const EdgeInsets.symmetric(vertical:10, horizontal:10),
       child:Column(children: [
 
         //single items
-        Padding(padding: EdgeInsets.symmetric(vertical: 10),
+        Padding(padding: const EdgeInsets.symmetric(vertical: 10),
         child: Container(
           width: 380,
           height:150,
           decoration:BoxDecoration(
-            color: Color(0xFF24BAEC),
+            color: const Color(0xFF24BAEC),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
                  color: Colors.black.withOpacity(0.4),
                  spreadRadius: 3,
                  blurRadius: 10,
-                 offset: Offset(0,3),
+                 offset: const Offset(0,3),
               ),
             ],
           ),
@@ -41,19 +40,19 @@ class NewestItemsWidget extends StatelessWidget{
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: 190,
               child: Column(
                 crossAxisAlignment :CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height:2),
-                  Text("Blueberry Milkshake",style: TextStyle(
+                  const SizedBox(height:2),
+                  const Text("Blueberry Milkshake",style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-                  Text("Taste Our Blueberry Milkshake, We Provide Our Great Foods",
+                  const Text("Taste Our Blueberry Milkshake, We Provide Our Great Foods",
                   style: TextStyle(
                     fontSize: 14,
                   ),),
@@ -63,9 +62,9 @@ class NewestItemsWidget extends StatelessWidget{
                    direction:Axis.horizontal , 
                    itemCount: 5,
                    itemSize: 18,
-                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                   itemPadding: const EdgeInsets.symmetric(horizontal: 4),
                    itemBuilder: (context, _) => 
-                   Icon( Icons.star,
+                   const Icon( Icons.star,
                     color: Colors.amber,
                      ),
                    onRatingUpdate: (index){},
@@ -73,20 +72,20 @@ class NewestItemsWidget extends StatelessWidget{
                 ],
               ),
             ),
-                Padding(
+                const Padding(
                     padding: EdgeInsets.symmetric(vertical: 10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                              Padding(
-                        padding: const EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
                         child: Icon(
                           Icons.favorite_border,
                           size: 24,
                         ),
                       ),
                      Padding(
-                        padding: const EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
                         child: Icon(
                           CupertinoIcons.cart,
                           size: 24,
@@ -99,19 +98,19 @@ class NewestItemsWidget extends StatelessWidget{
         ),
         ),
 
-        Padding(padding: EdgeInsets.symmetric(vertical: 10),
+        Padding(padding: const EdgeInsets.symmetric(vertical: 10),
         child: Container(
           width: 380,
           height:150,
           decoration:BoxDecoration(
-            color: Color(0xFF24BAEC),
+            color: const Color(0xFF24BAEC),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
                  color: Colors.black.withOpacity(0.4),
                  spreadRadius: 3,
                  blurRadius: 10,
-                 offset: Offset(0,3),
+                 offset: const Offset(0,3),
               ),
             ],
           ),
@@ -126,19 +125,19 @@ class NewestItemsWidget extends StatelessWidget{
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: 190,
               child: Column(
                 crossAxisAlignment :CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height:2),
-                  Text("Beef Sausage",style: TextStyle(
+                  const SizedBox(height:2),
+                  const Text("Beef Sausage",style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-                  Text("Taste Our Beef Sausage, We Provide Our Great Foods",
+                  const Text("Taste Our Beef Sausage, We Provide Our Great Foods",
                   style: TextStyle(
                     fontSize: 14,
                   ),),
@@ -148,9 +147,9 @@ class NewestItemsWidget extends StatelessWidget{
                    direction:Axis.horizontal , 
                    itemCount: 5,
                    itemSize: 18,
-                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                   itemPadding: const EdgeInsets.symmetric(horizontal: 4),
                    itemBuilder: (context, _) => 
-                   Icon( Icons.star,
+                   const Icon( Icons.star,
                     color: Colors.amber,
                      ),
                    onRatingUpdate: (index){},
@@ -158,20 +157,20 @@ class NewestItemsWidget extends StatelessWidget{
                 ],
               ),
             ),
-                Padding(
+                const Padding(
                     padding: EdgeInsets.symmetric(vertical: 10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                              Padding(
-                        padding: const EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
                         child: Icon(
                           Icons.favorite_border,
                           size: 24,
                         ),
                       ),
                      Padding(
-                        padding: const EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
                         child: Icon(
                           CupertinoIcons.cart,
                           size: 24,
@@ -183,19 +182,19 @@ class NewestItemsWidget extends StatelessWidget{
           ],),
         ),
         ),
-        Padding(padding: EdgeInsets.symmetric(vertical: 10),
+        Padding(padding: const EdgeInsets.symmetric(vertical: 10),
         child: Container(
           width: 380,
           height:150,
           decoration:BoxDecoration(
-            color: Color(0xFF24BAEC),
+            color: const Color(0xFF24BAEC),
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
                  color: Colors.black.withOpacity(0.4),
                  spreadRadius: 3,
                  blurRadius: 10,
-                 offset: Offset(0,3),
+                 offset: const Offset(0,3),
               ),
             ],
           ),
@@ -210,19 +209,19 @@ class NewestItemsWidget extends StatelessWidget{
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: 190,
               child: Column(
                 crossAxisAlignment :CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  SizedBox(height:2),
-                  Text("Avocado Juice",style: TextStyle(
+                  const SizedBox(height:2),
+                  const Text("Avocado Juice",style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-                  Text("Taste Our Avocado Juice, We Provide Our Great Foods",
+                  const Text("Taste Our Avocado Juice, We Provide Our Great Foods",
                   style: TextStyle(
                     fontSize: 14,
                   ),),
@@ -232,9 +231,9 @@ class NewestItemsWidget extends StatelessWidget{
                    direction:Axis.horizontal , 
                    itemCount: 5,
                    itemSize: 18,
-                   itemPadding: EdgeInsets.symmetric(horizontal: 4),
+                   itemPadding: const EdgeInsets.symmetric(horizontal: 4),
                    itemBuilder: (context, _) => 
-                   Icon( Icons.star,
+                   const Icon( Icons.star,
                     color: Colors.amber,
                      ),
                    onRatingUpdate: (index){},
@@ -242,20 +241,20 @@ class NewestItemsWidget extends StatelessWidget{
                 ],
               ),
             ),
-                Padding(
+                const Padding(
                     padding: EdgeInsets.symmetric(vertical: 10),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                              Padding(
-                        padding: const EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
                         child: Icon(
                           Icons.favorite_border,
                           size: 24,
                         ),
                       ),
                      Padding(
-                        padding: const EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
+                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
                         child: Icon(
                           CupertinoIcons.cart,
                           size: 24,
