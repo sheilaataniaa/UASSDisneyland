@@ -1,5 +1,5 @@
 import 'package:disneysea/Widgets/AppBarWidget.dart';
-import 'package:disneysea/Widgets/CateogriesWidget.dart';
+import 'package:disneysea/Widgets/CategoriesWidget.dart';
 import 'package:disneysea/Widgets/NewestItemsWidget.dart';
 import 'package:disneysea/Widgets/PopularItemsWidget.dart';
 import 'package:flutter/cupertino.dart';
