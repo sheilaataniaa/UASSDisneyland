@@ -4,6 +4,7 @@ import 'TampilanAwal.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:disneysea/hpdisney.dart';
+import 'package:disneysea/pearlpass.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
       ),
-      home: hpdisney(),
+      home: PearlPass(),
     );
   }
 }

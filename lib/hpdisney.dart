@@ -1,4 +1,5 @@
-import 'package:disneysea/diamonpass.dart';
+
+import 'package:disneysea/pearlpass.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -66,6 +67,8 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
+
+                      
                       Positioned(
                         left: 856,
                         top: 28,
@@ -295,6 +298,9 @@ class Homepage extends StatelessWidget {
                     ],
                   ),
                 ),
+
+
+                
               ),
 
 
@@ -635,8 +641,8 @@ class Homepage extends StatelessWidget {
         child: Stack(
           children: [
             Positioned(
-              left: 16,
-              top: 44,
+              left: 19,
+              top: 55,
               child: GestureDetector(
                 onTap: () {
                   Navigator.pop(context); // Navigate back to the previous page
@@ -645,7 +651,7 @@ class Homepage extends StatelessWidget {
               ),
             ),
             Positioned(
-              left: 83,
+              left: 69,
               top: 40,
               child: Text(
                 'DISNEYSEA',
@@ -672,12 +678,12 @@ class Homepage extends StatelessWidget {
             ),
             Positioned(
               right: 16,
-              top: 44,
+              top: 49,
               child: GestureDetector(
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DiamondPass()),
+                    MaterialPageRoute(builder: (context) => PearlPass()),
                   ); // Navigate to the next page
                 },
                 child: CircleAvatar(

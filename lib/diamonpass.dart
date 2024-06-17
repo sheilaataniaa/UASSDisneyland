@@ -34,8 +34,8 @@ class DiamondAnnualPass extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 393,
-          height: 852,
+          width: 410,
+          height: 890,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
@@ -150,62 +150,75 @@ class DiamondAnnualPass extends StatelessWidget {
 
 
              
-            Container(
-              width: double.infinity,
-              height: 124,
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
-                ),
-              ),
-              child: const Stack(
-                children: [
-                  Positioned(
-                    left: 16,
-                    top: 44,
-                    child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
-                  ),
-                  Positioned(
-                    left: 83,
-                    top: 40,
-                    child: Text(
-                      'DISNEYSEA',
-                      style: TextStyle(
-                        color: Color(0x7F002DA2),
-                        fontSize: 38,
-                        fontFamily: 'Rosarivo',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    left: 69,
-                    top: 84,
-                    child: Text(
-                      'Sambut Keajaiban & Raih Petualangan',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontFamily: 'Rosarivo',
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    right: 16,
-                    top: 44,
-                    child: CircleAvatar(
-                      backgroundColor: Colors.white,
-                      radius: 20,
-                      child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
-                    ),
-                  ),
-                ],
+           
+             Container(
+        width: double.infinity,
+        height: 124,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF92ACB4), Color(0xFF24BAEC)],
+          ),
+        ),
+        child: Stack(
+          children: [
+            Positioned(
+              left: 19,
+              top: 55,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context); // Navigate back to the previous page
+                },
+                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
             ),
-
+            Positioned(
+              left: 69,
+              top: 40,
+              child: Text(
+                'DISNEYSEA',
+                style: TextStyle(
+                  color: Color(0x7F002DA2),
+                  fontSize: 38,
+                  fontFamily: 'Rosarivo',
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+            Positioned(
+              left: 69,
+              top: 84,
+              child: Text(
+                'Sambut Keajaiban & Raih Petualangan',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 14,
+                  fontFamily: 'Rosarivo',
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
+            Positioned(
+              right: 16,
+              top: 49,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Sovenir()),
+                  ); // Navigate to the next page
+                },
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                  radius: 20,
+                  child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
 
 
 
