@@ -1,4 +1,5 @@
 import 'package:disneysea/hpdisney.dart';
+import 'package:disneysea/shuhomepage.dart';
 
 import 'TampilanAwal.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
       home: PearlPass(),
