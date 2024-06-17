@@ -57,7 +57,7 @@ class Homepage extends StatelessWidget {
                       ),
                       buildPage(
                         left: 110,
-                        top: 161,
+                        top: 155,
                         width: 136,
                         height: 12,
                         text: 'Click Here',
@@ -66,7 +66,7 @@ class Homepage extends StatelessWidget {
                       ),
                       buildPage(
                         left: 110,
-                        top: 160,
+                        top: 155,
                         width: 136,
                         height: 12,
                         text: 'Click Here',
@@ -75,7 +75,7 @@ class Homepage extends StatelessWidget {
                       ),
                       buildPage(
                         left: 110,
-                        top: 160,
+                        top: 155,
                         width: 136,
                         height: 12,
                         text: 'Click Here',
