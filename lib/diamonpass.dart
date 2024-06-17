@@ -1,3 +1,4 @@
+import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
 
@@ -174,10 +175,12 @@ class DiamondAnnualPass extends StatelessWidget {
               top: 55,
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pop(context); // Navigate back to the previous page
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  ); // Navigate back to the previous page
                 },
                 child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
+
             ),
             Positioned(
               left: 69,

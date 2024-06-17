@@ -26,12 +26,13 @@ class Souvenir extends StatelessWidget {
                 Positioned(
                   left: 19,
                   top: 55,
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.pop(context); // Navigate back to the previous page
-                    },
-                    child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
-                  ),
+                   child: GestureDetector(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  ); // Navigate back to the previous page
+                },
+                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+              ),
                 ),
                 Positioned(
                   left: 69,

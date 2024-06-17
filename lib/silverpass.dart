@@ -1,4 +1,5 @@
 import 'package:disneysea/diamonpass.dart'; // Import file containing DiamondPass widget
+import 'package:disneysea/hpdisney.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -144,9 +145,10 @@ class SapphireAnnualPass extends StatelessWidget {
             Positioned(
               left: 19,
               top: 55,
-              child: GestureDetector(
+             child: GestureDetector(
                 onTap: () {
-                  Navigator.pop(context); // Navigate back to the previous page
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  ); // Navigate back to the previous page
                 },
                 child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),

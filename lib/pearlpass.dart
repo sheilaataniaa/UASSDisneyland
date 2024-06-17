@@ -1,3 +1,4 @@
+import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
 
@@ -152,9 +153,10 @@ class PearlAnnualPass extends StatelessWidget {
             Positioned(
               left: 19,
               top: 55,
-              child: GestureDetector(
+               child: GestureDetector(
                 onTap: () {
-                  Navigator.pop(context); // Navigate back to the previous page
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  ); // Navigate back to the previous page
                 },
                 child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
