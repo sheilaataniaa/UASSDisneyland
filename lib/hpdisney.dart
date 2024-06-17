@@ -32,23 +32,23 @@ class Homepage extends StatelessWidget {
       
       children: [
         Container(
-          width: 393,
-          height: 852,
+          width: 410,
+          height: 890,
           clipBehavior: Clip.antiAlias,
-          decoration: const BoxDecoration(color: Colors.white),
+          decoration: const BoxDecoration(color: Color.fromARGB(255, 240, 243, 245)),
           child: Stack(
             children: [
               Positioned(
                 left: 27,
                 top: 680,
                 child: SizedBox(
-                  width: 1074,
+                  width: 1100,
                   height: 192,
                   child: Stack(
                     children: [
                       const Positioned(
                         left: 884,
-                        top: 158,
+                        top: 167,
                         child: SizedBox(
                           width: 136,
                           height: 12,
@@ -230,6 +230,12 @@ class Homepage extends StatelessWidget {
                           ),
                         ),
                       ),
+
+
+
+
+
+                      
                       const Positioned(
                         left: 68,
                         top: 15,
@@ -289,6 +295,12 @@ class Homepage extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
+              
               const Positioned(
                 left: 17,
                 top: 650,
@@ -340,7 +352,7 @@ class Homepage extends StatelessWidget {
               
           Positioned(
         left: 13,
-        top: 385,
+        top: 420,
         child: SizedBox(
           width: 400,
           height: 200,
@@ -378,21 +390,21 @@ class Homepage extends StatelessWidget {
                       children: [
                         Positioned(
                           left: 10,
-                          top: 10,
+                          top: 35,
                           child: Image.asset(
                             'images/blu.png',
                             width: 80,
-                            height: 40,
+                            height: 70,
                           ),
                         ),
                         const Positioned(
                           left: 100,
-                          top: 10,
+                          top: 20,
                           child: Text(
                             'BUY 1 GET 1 FREE',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: 22,
                               fontFamily: 'Abhaya Libre Medium',
                               fontWeight: FontWeight.w500,
                             ),
@@ -400,7 +412,7 @@ class Homepage extends StatelessWidget {
                         ),
                         const Positioned(
                           left: 100,
-                          top: 40,
+                          top: 65,
                           child: SizedBox(
                             width: 190,
                             child: Text(
@@ -452,7 +464,7 @@ class Homepage extends StatelessWidget {
                       children: [
                         Positioned(
                           left: 10,
-                          top: 10,
+                          top: 80,
                           child: Image.asset(
                             'images/tmrw.png',
                             width: 100,
@@ -461,12 +473,12 @@ class Homepage extends StatelessWidget {
                         ),
                         const Positioned(
                           left: 120,
-                          top: 10,
+                          top: 20,
                           child: Text(
                             'DISCOUNT 30%',
                             style: TextStyle(
                               color: Colors.black,
-                              fontSize: 16,
+                              fontSize: 22,
                               fontFamily: 'Abhaya Libre Medium',
                               fontWeight: FontWeight.w500,
                             ),
@@ -474,7 +486,7 @@ class Homepage extends StatelessWidget {
                         ),
                         const Positioned(
                           left: 120,
-                          top: 40,
+                          top: 65,
                           child: SizedBox(
                             width: 170,
                             child: Text(
@@ -507,7 +519,7 @@ class Homepage extends StatelessWidget {
               
             Positioned(
         left: 0,
-        top: 102,
+        top: 135,
         child: SizedBox(
           width: MediaQuery.of(context).size.width, // Full width of the screen
           height: 229,
