@@ -1,5 +1,9 @@
+import 'package:disneysea/addtocart.dart';
+import 'package:disneysea/coffee.dart';
+import 'package:disneysea/dessert.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/tea.dart';
 
 import 'TampilanAwal.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -24,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: hpdisney(),
+      home: Cart(),
     );
   }
 }

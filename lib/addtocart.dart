@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const Cart());
-}
-
 class Cart extends StatelessWidget {
   const Cart({Key? key}) : super(key: key);
 
@@ -200,7 +196,7 @@ class _AddToCartState extends State<AddToCart> {
                         ),
                         const Positioned(
                           left: 86,
-                          top: 32,
+                          top: 50,
                           child: SizedBox(
                             width: 227,
                             height: 36,
@@ -223,14 +219,14 @@ class _AddToCartState extends State<AddToCart> {
                 ),
               ),
               Positioned(
-                left: 79,
-                top: 52,
+                left: 80,
+                top: 50,
                 child: Container(
-                  width: 310,
-                  height: 409,
+                  width: 300,
+                  height: 400,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage("https://via.placeholder.com/310x409"),
+                      image: AssetImage("images/strawberry.png"),
                       fit: BoxFit.fill,
                     ),
                   ),
@@ -251,7 +247,7 @@ class _AddToCartState extends State<AddToCart> {
                           width: 384,
                           height: 40.50,
                           child: Text(
-                            'Strawberry Bubble Milk Tea',
+                            'Strawberry Milk Tea',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               color: Color(0xFF001A3E),
