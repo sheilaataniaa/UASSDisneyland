@@ -35,7 +35,7 @@ class PearlAnnualPass extends StatelessWidget {
       children: [
         Container(
           width: 410,
-          height: 890,
+          height: 850,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
@@ -49,26 +49,7 @@ class PearlAnnualPass extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
-                        top: 0,
-                        child: SizedBox(
-                          width: 309,
-                          height: 43.29,
-                          child: Text(
-                            'PEARL PASS',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontFamily: 'Abril Fatface',
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 5,
+                        left: 15,
                         top: 380, // Adjusted position to fit within the container
                         child: SizedBox(
                           width: 311,
@@ -92,7 +73,7 @@ class PearlAnnualPass extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 104,
+                left: 110,
                 top: 707,
                 child: InkWell(
                   onTap: () {
@@ -232,11 +213,11 @@ class PearlAnnualPass extends StatelessWidget {
 
 
               Positioned(
-                left: 39,
+                left: 45,
                 top: 170,
                 child: Container(
                   width: 327,
-                  height: 323,
+                  height: 340,
                   decoration: ShapeDecoration(
                     image: const DecorationImage(
                       image: AssetImage("images/pearlpas.png"), // Ini benar
@@ -249,8 +230,8 @@ class PearlAnnualPass extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left: 97,
-                top: 137,
+                left: 130,
+                top: 132,
                 child: Text(
                   'Pearl Annual Pass',
                   textAlign: TextAlign.center,

@@ -35,7 +35,7 @@ class DiamondAnnualPass extends StatelessWidget {
       children: [
         Container(
           width: 410,
-          height: 890,
+          height: 850,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white),
           child: Stack(
@@ -69,7 +69,7 @@ class DiamondAnnualPass extends StatelessWidget {
                       ),
                       Positioned(
                         left: 5,
-                        top: 380, // Adjusted position to fit within the container
+                        top: 385, // Adjusted position to fit within the container
                         child: SizedBox(
                           width: 311,
                           height: 140, // Increased height to ensure the text fits
@@ -91,14 +91,20 @@ class DiamondAnnualPass extends StatelessWidget {
                   ),
                 ),
               ),
+
+
+
+
+
+
               Positioned(
-                left: 104,
-                top: 707,
+                left: 110,
+                top: 715,
                 child: InkWell(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const Sovenir()),
+                      MaterialPageRoute(builder: (context) => const Souvenir()),
                     );
                   },
                   child: SizedBox(
@@ -206,7 +212,7 @@ class DiamondAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Sovenir()),
+                    MaterialPageRoute(builder: (context) => Souvenir()),
                   ); // Navigate to the next page
                 },
                 child: CircleAvatar(
@@ -230,10 +236,10 @@ class DiamondAnnualPass extends StatelessWidget {
 
               Positioned(
                 left: 39,
-                top: 170,
+                top: 180,
                 child: Container(
-                  width: 327,
-                  height: 323,
+                  width: 335,
+                  height: 340,
                   decoration: ShapeDecoration(
                     image: const DecorationImage(
                       image: AssetImage("images/diamondpas.png"), // Ini benar
@@ -246,7 +252,7 @@ class DiamondAnnualPass extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left: 97,
+                left: 115,
                 top: 137,
                 child: Text(
                   'Diamond Annual Pass',
@@ -268,18 +274,4 @@ class DiamondAnnualPass extends StatelessWidget {
   }
 }
 
-class BuyPage extends StatelessWidget {
-  const BuyPage({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Buy Page'),
-      ),
-      body: const Center(
-        child: Text('Welcome to the Buy Page!'),
-      ),
-    );
-  }
-}

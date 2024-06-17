@@ -33,7 +33,7 @@ class SapphireAnnualPass extends StatelessWidget {
       children: [
         Container(
           width: 410,
-          height: 890,
+          height: 850,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white), // Set container background color to white
           child: Stack(
@@ -47,26 +47,7 @@ class SapphireAnnualPass extends StatelessWidget {
                   child: Stack(
                     children: [
                       Positioned(
-                        left: 0,
-                        top: 0,
-                        child: SizedBox(
-                          width: 309,
-                          height: 43.29,
-                          child: Text(
-                            'DIAMOND PASS',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 30,
-                              fontFamily: 'Abril Fatface',
-                              fontWeight: FontWeight.w400,
-                              height: 1.2,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Positioned(
-                        left: 5,
+                        left: 15,
                         top: 380, // Adjusted position to fit within the container
                         child: SizedBox(
                           width: 311,
@@ -90,7 +71,7 @@ class SapphireAnnualPass extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 104,
+                left: 110,
                 top: 707,
                 child: InkWell(
                   onTap: () {
@@ -222,11 +203,11 @@ class SapphireAnnualPass extends StatelessWidget {
 
 
               Positioned(
-                left: 39,
+                left: 40,
                 top: 170,
                 child: Container(
                   width: 327,
-                  height: 323,
+                  height: 340,
                   decoration: ShapeDecoration(
                     image: const DecorationImage(
                       image: AssetImage("images/silverpas.png"), // Set image asset
@@ -239,8 +220,8 @@ class SapphireAnnualPass extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left: 97,
-                top: 137,
+                left: 110,
+                top: 132,
                 child: Text(
                   'Sapphire Annual Pass',
                   textAlign: TextAlign.center,
