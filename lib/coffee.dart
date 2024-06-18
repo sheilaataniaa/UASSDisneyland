@@ -1,3 +1,9 @@
+import 'package:disneysea/americanocart.dart';
+import 'package:disneysea/cappucinocart.dart';
+import 'package:disneysea/caramelcart.dart';
+import 'package:disneysea/cinnamoncart.dart';
+import 'package:disneysea/frappucinocart.dart';
+import 'package:disneysea/lattecart.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -91,11 +97,23 @@ class CoffeeGrid extends StatelessWidget {
                 imageAsset: 'images/americano.png',
                 name: "Ice Americano",
                 price: "Rp.55.000",
+                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Americanocart()),
+                  );
+                 },
               ),
               CoffeeCard(
                 imageAsset: "images/frappucino.png",
                 name: "Frappucino Blend",
                 price: "Rp.65.000",
+                 onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Frappucinocart()),
+                  );
+                 },
               ),
             ],
           ),
@@ -107,11 +125,23 @@ class CoffeeGrid extends StatelessWidget {
                 imageAsset: "images/caramel.png",
                 name: "Caramel Mocchiato",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Caramelcart()),
+                  );
+                 },
               ),
               CoffeeCard(
                 imageAsset: "images/cappucino.png",
                 name: "Cappucino Coffee",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cappucinocart()),
+                  );
+                 },
               ),
             ],
           ),
@@ -123,11 +153,23 @@ class CoffeeGrid extends StatelessWidget {
                 imageAsset: "images/latte.png",
                 name: "Coffee Latte",
                 price: "Rp.65.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Lattecart()),
+                  );
+                },
               ),
               CoffeeCard(
                 imageAsset: "images/cinnamon.png",
                 name: "Cinnamon Coffee",
                 price: "Rp.60.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cinnamoncart()),
+                  );
+                },
               ),
             ],
           ),
@@ -141,52 +183,56 @@ class CoffeeCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  CoffeeCard({required this.imageAsset, required this.name, required this.price});
+  CoffeeCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
-  @override
+   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 169,
-      height: 220,
-      decoration: BoxDecoration(
-        color: Color(0xFF9ED6FF),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            imageAsset,
-            width: 150,
-            height: 150,
-            fit: BoxFit.cover,
-            errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-              return Icon(Icons.error); // Show error icon if image fails to load
-            },
-          ),
-          SizedBox(height: 15),
-          Text(
-            name,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 169,
+        height: 220,
+        decoration: BoxDecoration(
+          color: Color(0xFF9ED6FF),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imageAsset,
+              width: 150,
+              height: 150,
+              fit: BoxFit.cover,
+              errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                return Icon(Icons.error); // Show error icon if image fails to load
+              },
             ),
-          ),
-          Text(
-            price,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+            SizedBox(height: 8),
+            Text(
+              name,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
-        ],
+            Text(
+              price,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

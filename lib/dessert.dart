@@ -1,4 +1,10 @@
+import 'package:disneysea/blueberriescart.dart';
+import 'package:disneysea/cupcart.dart';
+import 'package:disneysea/donatcart.dart';
+import 'package:disneysea/macaroncart.dart';
+import 'package:disneysea/mochicart.dart';
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/tangyuancart.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
@@ -91,11 +97,23 @@ class DessertGrid extends StatelessWidget {
                 imageAsset: 'images/macaron.png',
                 name: "Macaron Mix 6 pcs",
                 price: "Rp.105.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Macaroncart()),
+                  );
+                },
               ),
               DessertCard(
                 imageAsset: "images/blueberries.png",
-                name: "Blueberries Cheese ",
+                name: "Blueberries Cheese",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Blueberriescart()),
+                  );
+                },
               ),
             ],
           ),
@@ -107,11 +125,23 @@ class DessertGrid extends StatelessWidget {
                 imageAsset: "images/donut.png",
                 name: "Signature Doughnut",
                 price: "Rp.35.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Donatcart()),
+                  );
+                },
               ),
               DessertCard(
                 imageAsset: "images/mochi.png",
-                name: "Blueberry Milkshake",
+                name: "Mochi Mix 5 pcs",
                 price: "Rp.85.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Mochicart()),
+                  );
+                },
               ),
             ],
           ),
@@ -123,11 +153,23 @@ class DessertGrid extends StatelessWidget {
                 imageAsset: "images/tangyuan.png",
                 name: "Mochi TangYuan",
                 price: "Rp.45.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Tangyuancart()),
+                  );
+                },
               ),
               DessertCard(
                 imageAsset: "images/cup.png",
                 name: "Strawberry Cake Cup",
                 price: "Rp.45.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cupcart()),
+                  );
+                },
               ),
             ],
           ),
@@ -141,8 +183,9 @@ class DessertCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  DessertCard({required this.imageAsset, required this.name, required this.price});
+  DessertCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
   @override
   Widget build(BuildContext context) {

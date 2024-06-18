@@ -1,8 +1,8 @@
-import 'package:disneysea/tea.dart';
+import 'package:disneysea/coffee.dart';
 import 'package:flutter/material.dart';
 
-class Lemoncart extends StatelessWidget {
-  const Lemoncart({Key? key}) : super(key: key);
+class Caramelcart extends StatelessWidget {
+  const Caramelcart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,20 +12,20 @@ class Lemoncart extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart5(),
+        body: const AddToCart6(),
       ),
     );
   }
 }
 
-class AddToCart5 extends StatefulWidget {
-  const AddToCart5({super.key});
+class AddToCart6 extends StatefulWidget {
+  const AddToCart6({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart5> {
+class _AddToCartState extends State<AddToCart6> {
   int itemCount = 1;
 
   void addItem() {
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart5> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => CoffeeOption()),
                   );
                 },
               ),
@@ -154,7 +154,7 @@ class _AddToCartState extends State<AddToCart5> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Lemoncart()),
+                  MaterialPageRoute(builder: (context) => Caramelcart()),
                 );
               },
               child: SizedBox(
@@ -201,14 +201,14 @@ class _AddToCartState extends State<AddToCart5> {
             ),
           ),
           Positioned(
-            left: 15,
-            top: 50,
+            left: 5,
+            top: 70,
             child: Container(
               width: 400,
-              height: 500,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/lemon.png"),
+                  image: AssetImage("images/caramel.png"),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -229,7 +229,7 @@ class _AddToCartState extends State<AddToCart5> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Ice Lemon Tea',
+                        'Caramel Mocchiato',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
@@ -248,7 +248,7 @@ class _AddToCartState extends State<AddToCart5> {
                       width: 231,
                       height: 40.50,
                       child: Text(
-                        'Rp.40.000',
+                        'Rp.75.000',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
