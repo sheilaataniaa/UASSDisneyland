@@ -1,3 +1,9 @@
+import 'package:disneysea/MilkshakeOreo.dart';
+import 'package:disneysea/Milkshakevanilla.dart';
+import 'package:disneysea/milkshakebanana.dart';
+import 'package:disneysea/milkshakeblueberry.dart';
+import 'package:disneysea/milkshakecoklat.dart';
+import 'package:disneysea/milkshakestrawberry.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -94,7 +100,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkcoklatcart()),
                   );
                 },
               ),
@@ -105,7 +111,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkvanilacart()),
                   );
                 },
               ),
@@ -122,7 +128,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkstrawcart()),
                   );
                 },
               ),
@@ -133,7 +139,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkblucart()),
                   );
                 },
               ),
@@ -150,7 +156,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkbananacart()),
                   );
                 },
               ),
@@ -161,7 +167,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                    MaterialPageRoute(builder: (context) => mkoreocart()),
                   );
                 },
               ),
