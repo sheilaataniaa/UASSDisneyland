@@ -1,4 +1,7 @@
+import 'package:disneysea/MilkshakeOreo.dart';
 import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/snackcstrip.dart';
+import 'package:disneysea/snackkentang.dart';
 import 'package:flutter/material.dart';
 
 class PopularItemsWidget extends StatelessWidget{
@@ -21,7 +24,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MilkshakeOption()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => snackkentang()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
@@ -88,7 +91,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MilkshakeOption()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => mkoreocart()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
@@ -156,7 +159,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => MilkshakeOption()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => snackcstrip()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
