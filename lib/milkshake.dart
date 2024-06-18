@@ -91,12 +91,23 @@ class MilkshakeGrid extends StatelessWidget {
                 imageAsset: 'images/milkshake1.png',
                 name: "Chocolate Milkshake",
                 price: "Rp.55.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               MilkshakeCard(
                 imageAsset: "images/mkvremovebg2.png",
                 name: "Vanilla Milkshake",
                 price: "Rp.55.000",
-                
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -119,6 +130,12 @@ class MilkshakeGrid extends StatelessWidget {
                 imageAsset: "images/bluberrbg.png",
                 name: "Blueberry Milkshake",
                 price: "Rp.55.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -130,11 +147,23 @@ class MilkshakeGrid extends StatelessWidget {
                 imageAsset: "images/banamilkrbg.png",
                 name: "Banana Milkshake",
                 price: "Rp.65.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               MilkshakeCard(
                 imageAsset: "images/oremkremovebg.png",
                 name: "Oreo Milkshake",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),

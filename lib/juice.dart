@@ -1,4 +1,5 @@
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/strawberrycart.dart';
 import 'package:flutter/material.dart';
 
 class JuiceOption extends StatelessWidget {
@@ -89,11 +90,23 @@ class JuiceGrid extends StatelessWidget {
                 imageAsset: 'images/juskjeruk.png',
                 name: "Orange Juice",
                 price: "Rp.50.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               JuiceCard(
                 imageAsset: "images/jussemangka.png",
                 name: "Watermelon Juice",
                 price: "Rp.50.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -105,11 +118,23 @@ class JuiceGrid extends StatelessWidget {
                 imageAsset: "images/jusmentimun.png",
                 name: "Cucumber Juice",
                 price: "Rp.40.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               JuiceCard(
                 imageAsset: "images/jusapel.png",
                 name: "Apple Juice",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -121,11 +146,23 @@ class JuiceGrid extends StatelessWidget {
                 imageAsset: "images/jussirsak.png",
                 name: "Soursop Juice",
                 price: "Rp.80.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               JuiceCard(
                 imageAsset: "images/jusmangga.png",
                 name: "Manggo Juice",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -139,8 +176,9 @@ class JuiceCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  JuiceCard({required this.imageAsset, required this.name, required this.price});
+  JuiceCard({required this.imageAsset, required this.name, required this.price,this.onTap});
 
   @override
   Widget build(BuildContext context) {
