@@ -1,4 +1,5 @@
 import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/sovenir.dart';
 import 'package:disneysea/strawberrycart.dart';
 import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: CoffeeOption(),
+      home: Souvenir(),
     );
   }
 }
