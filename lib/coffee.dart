@@ -100,7 +100,7 @@ class CoffeeGrid extends StatelessWidget {
                  onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Americanocart()),
+                    MaterialPageRoute(builder: (context) => americanocart()),
                   );
                  },
               ),

@@ -1,31 +1,35 @@
 import 'package:disneysea/coffee.dart';
+import 'package:disneysea/juice.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
-class Americanocart extends StatelessWidget {
-  const Americanocart({Key? key}) : super(key: key);
+class americanocart extends StatelessWidget {
+  const americanocart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart(),
+        body: const AddToCart3(),
       ),
     );
   }
 }
 
-class AddToCart extends StatefulWidget {
-  const AddToCart({super.key});
+class AddToCart3 extends StatefulWidget {
+  const AddToCart3({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart> {
+class _AddToCartState extends State<AddToCart3> {
   int itemCount = 1;
 
   void addItem() {
@@ -154,7 +158,7 @@ class _AddToCartState extends State<AddToCart> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Americanocart()),
+                  MaterialPageRoute(builder: (context) => americanocart()),
                 );
               },
               child: SizedBox(
@@ -201,11 +205,11 @@ class _AddToCartState extends State<AddToCart> {
             ),
           ),
           Positioned(
-            left: -45,
-            top: 10,
+            left: 65,
+            top: 100,
             child: Container(
-              width: 500,
-              height: 500,
+              width: 290,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/americano.png"),
@@ -248,7 +252,7 @@ class _AddToCartState extends State<AddToCart> {
                       width: 231,
                       height: 40.50,
                       child: Text(
-                        'Rp.65.000',
+                        'Rp.55.000',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
