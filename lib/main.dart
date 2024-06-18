@@ -1,4 +1,5 @@
-import 'package:disneysea/addtocart.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/strawberrycart.dart';
 import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
 import 'package:disneysea/hpdisney.dart';
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: Cart(),
+      home: TeaOption(),
     );
   }
 }

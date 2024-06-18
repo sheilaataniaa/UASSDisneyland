@@ -1,7 +1,7 @@
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-
+import 'package:disneysea/strawberrycart.dart'; 
 
 class TeaOption extends StatelessWidget {
   @override
@@ -91,6 +91,12 @@ class TeaGrid extends StatelessWidget {
                 imageAsset: 'images/strawberry.png',
                 name: "Strawberry Milk Tea",
                 price: "Rp.65.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               TeaCard(
                 imageAsset: "images/original.png",
@@ -141,52 +147,56 @@ class TeaCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  TeaCard({required this.imageAsset, required this.name, required this.price});
+  TeaCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 169,
-      height: 220,
-      decoration: BoxDecoration(
-        color: Color(0xFF9ED6FF),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            imageAsset,
-            width: 150,
-            height: 150,
-            fit: BoxFit.cover,
-            errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-              return Icon(Icons.error); // Show error icon if image fails to load
-            },
-          ),
-          SizedBox(height: 8),
-          Text(
-            name,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 169,
+        height: 220,
+        decoration: BoxDecoration(
+          color: Color(0xFF9ED6FF),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imageAsset,
+              width: 150,
+              height: 150,
+              fit: BoxFit.cover,
+              errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                return Icon(Icons.error); // Show error icon if image fails to load
+              },
             ),
-          ),
-          Text(
-            price,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+            SizedBox(height: 8),
+            Text(
+              name,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
-        ],
+            Text(
+              price,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
