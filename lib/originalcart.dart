@@ -205,7 +205,7 @@ class _AddToCartState extends State<AddToCart2> {
             top: 70,
             child: Container(
               width: 300,
-              height: 600,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/original.png"),
