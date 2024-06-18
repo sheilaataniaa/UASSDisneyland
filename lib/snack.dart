@@ -1,4 +1,5 @@
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/strawberrycart.dart';
 import 'package:flutter/material.dart';
 
 class SnackOption extends StatelessWidget {
@@ -89,11 +90,23 @@ class SnackGrid extends StatelessWidget {
                 imageAsset: 'images/ffremovebg.png',
                 name: "French Fries",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/hdr.png",
                 name: "Hot Dog",
                 price: "Rp.80.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -105,11 +118,23 @@ class SnackGrid extends StatelessWidget {
                 imageAsset: "images/corndog.png",
                 name: "Corndog",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/beefsarbg.png",
                 name: "Beef Sausage",
                 price: "Rp.45.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -121,11 +146,23 @@ class SnackGrid extends StatelessWidget {
                 imageAsset: "images/chickremovebg.png",
                 name: "Chicken Strips",
                 price: "Rp.65.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/burrger.png",
                 name: "Burger",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Strawberrycart()),
+                  );
+                },
               ),
             ],
           ),
@@ -139,8 +176,9 @@ class SnackCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  SnackCard({required this.imageAsset, required this.name, required this.price});
+  SnackCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
   @override
   Widget build(BuildContext context) {
