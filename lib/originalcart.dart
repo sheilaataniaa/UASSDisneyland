@@ -1,8 +1,8 @@
 import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
-class Strawberrycart extends StatelessWidget {
-  const Strawberrycart({Key? key}) : super(key: key);
+class Originalcart extends StatelessWidget {
+  const Originalcart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,20 +11,20 @@ class Strawberrycart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
-        body: const AddToCart(),
+        body: const AddToCart2(),
       ),
     );
   }
 }
 
-class AddToCart extends StatefulWidget {
-  const AddToCart({super.key});
+class AddToCart2 extends StatefulWidget {
+  const AddToCart2({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart> {
+class _AddToCartState extends State<AddToCart2> {
   int itemCount = 1;
 
   void addItem() {
@@ -153,7 +153,7 @@ class _AddToCartState extends State<AddToCart> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Strawberrycart()),
+                  MaterialPageRoute(builder: (context) => Originalcart()),
                 );
               },
               child: SizedBox(
@@ -200,21 +200,21 @@ class _AddToCartState extends State<AddToCart> {
             ),
           ),
           Positioned(
-            left: 90,
-            top: 50,
+            left: 10,
+            top: 70,
             child: Container(
               width: 300,
-              height: 400,
+              height: 600,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/strawberry.png"),
+                  image: AssetImage("images/original.png"),
                   fit: BoxFit.fill,
                 ),
               ),
             ),
           ),
           const Positioned(
-            left: 8,
+            left: 15,
             top: 635,
             child: SizedBox(
               width: 384,
@@ -228,7 +228,7 @@ class _AddToCartState extends State<AddToCart> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Strawberry Milk Tea',
+                        'Original Milk Tea',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
@@ -247,7 +247,7 @@ class _AddToCartState extends State<AddToCart> {
                       width: 231,
                       height: 40.50,
                       child: Text(
-                        'Rp.65.000',
+                        'Rp.45.000',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),

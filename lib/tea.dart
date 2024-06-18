@@ -1,3 +1,8 @@
+import 'package:disneysea/chocbubblecart.dart';
+import 'package:disneysea/jasmincart.dart';
+import 'package:disneysea/lemoncart.dart';
+import 'package:disneysea/matcha.dart';
+import 'package:disneysea/originalcart.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
@@ -102,6 +107,12 @@ class TeaGrid extends StatelessWidget {
                 imageAsset: "images/original.png",
                 name: "Original Milk Tea",
                 price: "Rp.45.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Originalcart()),
+                  );
+                },
               ),
             ],
           ),
@@ -113,11 +124,23 @@ class TeaGrid extends StatelessWidget {
                 imageAsset: "images/chocbubble.png",
                 name: "Chocolate Milk Tea",
                 price: "Rp.55.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Chocbubblecart()),
+                  );
+                },
               ),
               TeaCard(
                 imageAsset: "images/matcha.png",
                 name: "Matcha Milk Tea",
                 price: "Rp.55.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Matchacart()),
+                  );
+                },
               ),
             ],
           ),
@@ -126,14 +149,26 @@ class TeaGrid extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TeaCard(
-                imageAsset: "images/lemon.png",
+                imageAsset: "images/lemon.png", 
                 name: "Ice Lemon Tea",
                 price: "Rp.40.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Lemoncart()),
+                  );
+                },
               ),
               TeaCard(
                 imageAsset: "images/jasmin.png",
                 name: "Ice Jasmine Tea",
                 price: "Rp.40.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Jasmincart()),
+                  );
+                },
               ),
             ],
           ),
