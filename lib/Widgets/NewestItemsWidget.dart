@@ -84,13 +84,6 @@ class NewestItemsWidget extends StatelessWidget{
                           size: 24,
                         ),
                       ),
-                     Padding(
-                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
-                        child: Icon(
-                          CupertinoIcons.cart,
-                          size: 24,
-                        ),
-                      ),
                         ],
                       )
                     )
@@ -169,13 +162,6 @@ class NewestItemsWidget extends StatelessWidget{
                           size: 24,
                         ),
                       ),
-                     Padding(
-                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
-                        child: Icon(
-                          CupertinoIcons.cart,
-                          size: 24,
-                        ),
-                      ),
                         ],
                       )
                     )
@@ -250,13 +236,6 @@ class NewestItemsWidget extends StatelessWidget{
                         padding: EdgeInsets.only(top: 10,left:30), // Adjust this value to align the icon
                         child: Icon(
                           Icons.favorite_border,
-                          size: 24,
-                        ),
-                      ),
-                     Padding(
-                        padding: EdgeInsets.only(left: 30.0), // Adjust this value to align the icon
-                        child: Icon(
-                          CupertinoIcons.cart,
                           size: 24,
                         ),
                       ),
