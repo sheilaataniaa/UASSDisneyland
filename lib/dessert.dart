@@ -189,13 +189,15 @@ class DessertCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 169,
-      height: 220,
-      decoration: BoxDecoration(
-        color: Color(0xFF9ED6FF),
-        borderRadius: BorderRadius.circular(20),
-      ),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 169,
+        height: 220,
+        decoration: BoxDecoration(
+          color: Color(0xFF9ED6FF),
+          borderRadius: BorderRadius.circular(20),
+        ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -231,6 +233,7 @@ class DessertCard extends StatelessWidget {
           ),
         ],
       ),
+    ),
     );
   }
 }
