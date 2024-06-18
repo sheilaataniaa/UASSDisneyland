@@ -1,8 +1,8 @@
-import 'package:disneysea/tea.dart';
+import 'package:disneysea/dessert.dart';
 import 'package:flutter/material.dart';
 
-class Lemoncart extends StatelessWidget {
-  const Lemoncart({Key? key}) : super(key: key);
+class Tangyuancart extends StatelessWidget {
+  const Tangyuancart({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart5> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => Dessert()),
                   );
                 },
               ),
@@ -154,7 +154,7 @@ class _AddToCartState extends State<AddToCart5> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Lemoncart()),
+                  MaterialPageRoute(builder: (context) => Tangyuancart()),
                 );
               },
               child: SizedBox(
@@ -208,7 +208,7 @@ class _AddToCartState extends State<AddToCart5> {
               height: 500,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/lemon.png"),
+                  image: AssetImage("images/tangyuan.png"),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -229,7 +229,7 @@ class _AddToCartState extends State<AddToCart5> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Ice Lemon Tea',
+                        'Mochi TangYuan',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
@@ -248,7 +248,7 @@ class _AddToCartState extends State<AddToCart5> {
                       width: 231,
                       height: 40.50,
                       child: Text(
-                        'Rp.40.000',
+                        'Rp.45.000',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
