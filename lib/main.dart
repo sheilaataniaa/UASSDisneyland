@@ -1,3 +1,4 @@
+import 'package:disneysea/addtocart.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/shuhomepage.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: hpdisney(),
+      home: AddToCart(),
     );
   }
 }
