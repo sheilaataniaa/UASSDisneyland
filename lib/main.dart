@@ -31,11 +31,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-<<<<<<< HEAD
+
       home:Direct(),
-=======
-      home: hpdisney(),
->>>>>>> e4844527f051d68e0a5cf9fcfab76455fb15ef67
-    );
+
+   );
   }
 }

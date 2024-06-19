@@ -217,7 +217,7 @@ class QrisPage extends StatelessWidget {
                 Text('Scan QRIS untuk melakukan pembayaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 SizedBox(height: 20),
                 Image.network(
-                  'https://dummyimage.com/200x200/000/fff&text=QR+Code', // Replace URL with your QR code URL
+                  'https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png', // Replace URL with your QR code URL
                   width: 200,
                   height: 200,
                 ),
