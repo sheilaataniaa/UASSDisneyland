@@ -14,7 +14,7 @@ class SilverPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Disable debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47), // Set background color
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0), // Set background color
       ),
       home: Scaffold(
         body: ListView(children: const [
@@ -32,11 +32,19 @@ class SapphireAnnualPass extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+
+
+
+
+
         Container(
           width: 410,
           height: 850,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Colors.white), // Set container background color to white
+
+
+          
           child: Stack(
             children: [
               const Positioned(
