@@ -1,5 +1,6 @@
 import 'package:disneysea/diamonpass.dart';
 import 'package:disneysea/pearlpass.dart';
+import 'package:disneysea/shusoceanhomepage.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
@@ -190,8 +191,11 @@ class Homepage extends StatelessWidget {
                       left: 19,
                       top: 55,
                       child: GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context); // Navigate back to the previous page
+                        onTap: ()  {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Shusoceanhomepage()),
+                          ); // Navigate to the next page
                         },
                         child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
                       ),
@@ -230,7 +234,7 @@ class Homepage extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => PearlPass()),
-                          ); // Navigate to the next page
+                          ); // KE HALAMAN FERDI YANG BLOM KELARR INI PEARL HANYA UNTUK FORMALITAS
                         },
                         child: CircleAvatar(
                           backgroundColor: Colors.white,
@@ -273,11 +277,7 @@ class Homepage extends StatelessWidget {
               gradient: const LinearGradient(
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 255, 0, 0),
-                  Color.fromARGB(255, 246, 255, 0),
-                  Color.fromARGB(255, 13, 255, 0),
-                ],
+                colors:  [Color(0xFF92ACB4), Color(0xFF24BAEC)],
               ),
             ),
           ),
@@ -362,11 +362,8 @@ class Homepage extends StatelessWidget {
             gradient: const LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,
-              colors: [
-                Color.fromARGB(255, 77, 200, 32),
-                Color.fromARGB(255, 24, 104, 162),
-                Color.fromARGB(255, 48, 39, 226),
-              ],
+              colors:  [Color(0xFF92ACB4), Color(0xFF24BAEC)],
+              
             ),
             boxShadow: const [
               BoxShadow(
