@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: CartAndPaymentMethod(),
+      home:Direct(),
     );
   }
 }

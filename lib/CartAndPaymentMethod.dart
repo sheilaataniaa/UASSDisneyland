@@ -1,217 +1,262 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(Direct());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({Key? key}) : super(key: key);
-
+class Direct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 209, 245, 255),
-      ),
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/', // Initial route
       routes: {
-        '/qris': (context) => const QrisScreen(),
-        '/success': (context) => const SuccessScreen(),
+        '/': (context) => OrderPage(), // Route for OrderPage
+        '/qris': (context) => QrisPage(), // Route for QrisPage
+        '/success': (context) => SuccessPage(), // Route for SuccessPage
       },
-      home: Scaffold(
-        body: const CartAndPaymentMethod(),
-      ),
     );
   }
 }
 
-class CartAndPaymentMethod extends StatelessWidget {
-  const CartAndPaymentMethod({Key? key}) : super(key: key);
-
+class OrderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const SizedBox(height: 16),
-              Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(Icons.arrow_back),
-                    onPressed: () {},
-                  ),
-                  const SizedBox(width: 16),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: const [
-                      Text(
-                        'Your Order',
-                        style: TextStyle(
-                          color: Color(0x7F002DA2),
-                          fontSize: 30,
-                          fontFamily: 'Rosarivo',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                      Text(
-                        'Sambut Keajaiban & Raih Petualangan',
-                        style: TextStyle(
-                          color: Color(0x7F002DA2),
-                          fontSize: 14,
-                          fontFamily: 'Rosarivo',
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
-              ),
-              const SizedBox(height: 16),
-              sectionTitle('Shu\'s Magic'),
-              const SizedBox(height: 8),
-              orderItem('French Fries', 'Rp.50.000'),
-              orderItem('Hotdog', 'Rp.45.000'),
-              orderItem('Burger', 'Rp.65.000'),
-              const SizedBox(height: 16),
-              sectionTitle('Ocean'),
-              const SizedBox(height: 8),
-              orderItem('Payung', 'Rp.120.000'),
-              orderItem('Topi', 'Rp.75.000'),
-              orderItem('Jaket', 'Rp.200.000'),
-              orderItem('Gantungan Kunci', 'Rp.50.000'),
-              orderItem('Sendal', 'Rp.100.000'),
-              orderItem('Silver Pass', 'Rp.1.000.000'),
-              const SizedBox(height: 32),
-              const Text(
-                'Grand Total',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontFamily: 'Oleo Script',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              Container(
-                width: double.infinity,
-                margin: const EdgeInsets.only(top: 8),
-                padding: const EdgeInsets.symmetric(vertical: 15),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFE9E9E9),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0x26000000),
-                      blurRadius: 15,
-                      offset: const Offset(2, 2),
-                    )
-                  ],
-                ),
-                child: const Center(
-                  child: Text(
-                    'Rp. 5.300.000',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontFamily: 'OFL Sorts Mill Goudy TT',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(height: 32),
-              const Text(
-                'PAYMENT METHOD',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontFamily: 'Oleo Script',
-                  fontWeight: FontWeight.w700,
-                ),
-              ),
-              const SizedBox(height: 16),
-              paymentMethodButton(context, 'Qris'),
-              const SizedBox(height: 8),
-              paymentMethodButton(context, 'Cash'),
-            ],
-          ),
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.lightBlue[100],
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () {},
+        ),
+        title: Column(
+          children: [
+            Text("Disneyland", style: TextStyle(color: Colors.blue)),
+            Text("Sambut Keajaiban & Raih Petualangan", style: TextStyle(color: Colors.black54, fontSize: 12)),
+          ],
+        ),
+        centerTitle: true,
+      ),
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        color: Colors.lightBlue[50],
+        child: ListView(
+          children: [
+            SectionTitle(title: "Shu's Magic"),
+            OrderItem(name: "French Fries", price: "Rp.50.000"),
+            OrderItem(name: "Hotdog", price: "Rp.45.000"),
+            OrderItem(name: "Burger", price: "Rp.65.000"),
+            OrderItem(name: "French Fries", price: "Rp.50.000"),
+            OrderItem(name: "Hotdog", price: "Rp.45.000"),
+            OrderItem(name: "Burger", price: "Rp.65.000"),
+            SizedBox(height: 20),
+            SectionTitle(title: "Ocean"),
+            OrderItem(name: "Payung", price: "Rp.120.000"),
+            OrderItem(name: "Topi", price: "Rp.75.000"),
+            OrderItem(name: "Jaket", price: "Rp.200.000"),
+            OrderItem(name: "Gantungan Kunci", price: "Rp.50.000"),
+            OrderItem(name: "Sendal", price: "Rp.100.000"),
+            OrderItem(name: "Silver Pass", price: "Rp.1.000.000"),
+            SizedBox(height: 20),
+            GrandTotal(total: "Rp.5.300.000"),
+            SizedBox(height: 20),
+            PaymentMethod(),
+          ],
         ),
       ),
     );
   }
+}
 
-  Widget sectionTitle(String title) {
-    return Text(
-      title,
-      style: const TextStyle(
-        color: Colors.black,
-        fontSize: 16,
-        fontFamily: 'Oleo Script',
-        fontWeight: FontWeight.w700,
+class SectionTitle extends StatelessWidget {
+  final String title;
+
+  SectionTitle({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Text(
+        title,
+        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
       ),
     );
   }
+}
 
-  Widget orderItem(String name, String price) {
+class OrderItem extends StatelessWidget {
+  final String name;
+  final String price;
+
+  OrderItem({required this.name, required this.price});
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
-      margin: const EdgeInsets.symmetric(vertical: 4.0),
-      decoration: BoxDecoration(
-        color: const Color(0xFFE9E9E9),
-        borderRadius: BorderRadius.circular(10),
-      ),
+      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(
-            name,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontFamily: 'Rosarivo',
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          Text(
-            price,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 14,
-              fontFamily: 'Inria Serif',
-              fontWeight: FontWeight.w700,
-            ),
-          ),
+          Text(name, style: TextStyle(fontSize: 16)),
+          Text(price, style: TextStyle(fontSize: 16)),
         ],
       ),
     );
   }
+}
 
-  Widget paymentMethodButton(BuildContext context, String method) {
+class GrandTotal extends StatelessWidget {
+  final String total;
+
+  GrandTotal({required this.total});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(16.0),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(8.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 5,
+            offset: Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text('Grand Total', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text(total, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        ],
+      ),
+    );
+  }
+}
+
+class PaymentMethod extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text('PAYMENT METHOD', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        SizedBox(height: 10),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            PaymentButton(label: 'Qris', route: '/qris'),
+            PaymentButton(label: 'Cash', route: '/success'),
+          ],
+        ),
+      ],
+    );
+  }
+}
+
+class PaymentButton extends StatelessWidget {
+  final String label;
+  final String route;
+
+  PaymentButton({required this.label, required this.route});
+
+  @override
+  Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        if (method == 'Qris') {
-          Navigator.pushNamed(context, '/qris');
-        } else if (method == 'Cash') {
-          Navigator.pushNamed(context, '/success');
-        }
+        Navigator.pushNamed(context, route);
       },
+      child: Text(label),
       style: ElevatedButton.styleFrom(
-        padding: const EdgeInsets.symmetric(vertical: 15),
+        backgroundColor: Colors.lightBlue[100], // Using backgroundColor
+        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(8.0),
         ),
-        // Mengatur warna latar belakang tombol
       ),
-      child: Center(
-        child: Text(
-          method,
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 20,
-            fontFamily: 'OFL Sorts Mill Goudy TT',
-            fontWeight: FontWeight.w500,
+    );
+  }
+}
+
+class QrisPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Qris Payment', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.blue,
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Card(
+          elevation: 5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12.0),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text('Scan QRIS untuk melakukan pembayaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                SizedBox(height: 20),
+                Image.network(
+                  'https://dummyimage.com/200x200/000/fff&text=QR+Code', // Replace URL with your QR code URL
+                  width: 200,
+                  height: 200,
+                ),
+                SizedBox(height: 20),
+                Text('Pastikan Anda telah menyiapkan aplikasi pembayaran.', style: TextStyle(fontSize: 16)),
+                SizedBox(height: 30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text('Batal', style: TextStyle(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.red,
+                        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                    ),
+                    ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/success');
+                      },
+                      child: Text('Selesai', style: TextStyle(color: Colors.white)),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.green,
+                        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -219,67 +264,42 @@ class CartAndPaymentMethod extends StatelessWidget {
   }
 }
 
-class QrisScreen extends StatelessWidget {
-  const QrisScreen({Key? key}) : super(key: key);
-
+class SuccessPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.green[100],
       appBar: AppBar(
-        title: const Text('QRIS Payment'),
+        title: Text('Terima Kasih!', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.green,
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(
-              Icons.qr_code,
-              size: 100,
-              color: Colors.blue,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Scan QR Code to Pay',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+        child: Padding(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.check_circle_outline, color: Colors.green, size: 100),
+              SizedBox(height: 20),
+              Text('Pembayaran Berhasil!', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green)),
+              SizedBox(height: 20),
+              Text('Pesanan Anda sudah kami terima dan sedang diproses.', textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
+              SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: Text('Kembali ke Beranda'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                ),
               ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class SuccessScreen extends StatelessWidget {
-  const SuccessScreen({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Payment Success'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Icon(
-              Icons.check_circle,
-              size: 100,
-              color: Colors.green,
-            ),
-            SizedBox(height: 20),
-            Text(
-              'Payment Successful!',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.green,
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
