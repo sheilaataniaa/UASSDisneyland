@@ -14,7 +14,7 @@ class PearlPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
       ),
       home: Scaffold(
         body: ListView(

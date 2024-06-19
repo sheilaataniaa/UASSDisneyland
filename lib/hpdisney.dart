@@ -13,7 +13,7 @@ class hpdisney extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
       ),
       home: Scaffold(
         body: ListView(children: const [
@@ -32,7 +32,7 @@ class Homepage extends StatelessWidget {
     return Column(
       children: [
         Container(
-          width: 400,
+          width: 410,
           height: 890,
           clipBehavior: Clip.antiAlias,
           decoration: const BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
