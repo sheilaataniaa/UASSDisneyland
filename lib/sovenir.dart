@@ -1,3 +1,6 @@
+import 'package:disneysea/diamonpass.dart';
+import 'package:disneysea/pearlpass.dart';
+import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
 import 'package:disneysea/hpdisney.dart';
 
@@ -102,6 +105,7 @@ class Souvenir extends StatelessWidget {
                         title: "PAYUNG",
                         price: "Rp.120.000",
                         alignment: Alignment.center,
+                        destination: const hpdisney(),       // FERDIII INI TOMBOL BELII 
                       ),
                       _buildItem(
                         context,
@@ -109,6 +113,7 @@ class Souvenir extends StatelessWidget {
                         title: "TOPI",
                         price: "Rp.75.000",
                         alignment: Alignment.center,
+                        destination: const PearlPass(),       /// ini juga tombol beli 
                       ),
                       _buildItem(
                         context,
@@ -116,6 +121,7 @@ class Souvenir extends StatelessWidget {
                         title: "Sandal",
                         price: "Rp.100.000",
                         alignment: Alignment.center,
+                        destination: const SilverPass(),      // ini jugaaaa 
                       ),
                       _buildItem(
                         context,
@@ -123,6 +129,7 @@ class Souvenir extends StatelessWidget {
                         title: "T-Shirt",
                         price: "Rp.175.000",
                         alignment: Alignment.center,
+                        destination: const DiamondPass(),   // ini juga
                       ),
                       _buildItem(
                         context,
@@ -130,6 +137,7 @@ class Souvenir extends StatelessWidget {
                         title: "Jacket",
                         price: "Rp.200.000",
                         alignment: Alignment.center,
+                        destination: const hpdisney(),  // ini jugaa
                       ),
                       _buildItem(
                         context,
@@ -137,6 +145,7 @@ class Souvenir extends StatelessWidget {
                         title: "Keychain",
                         price: "Rp.50.000",
                         alignment: Alignment.center,
+                        destination: const hpdisney(),  // ini jugaaaa
                       ),
                     ],
                   ),
@@ -149,13 +158,13 @@ class Souvenir extends StatelessWidget {
     );
   }
 
-  Widget _buildItem(BuildContext context, {required String imagePath, required String title, required String price, required Alignment alignment}) {
+  Widget _buildItem(BuildContext context, {required String imagePath, required String title, required String price, required Alignment alignment, required Widget destination}) {
     return GestureDetector(
       onTap: () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ItemDetailPage(title: title, imagePath: imagePath, price: price),
+            builder: (context) => destination,
           ),
         );
       },
@@ -238,6 +247,14 @@ class ItemDetailPage extends StatelessWidget {
               child: Image.asset(imagePath),
             ),
             SizedBox(height: 20),  // Space between the image and title
+           
+
+            SizedBox(height: 20),  // Add some space at the top
+            Align(
+              alignment: Alignment.topCenter,
+              child: Image.asset(imagePath),
+            ),
+            SizedBox(height: 20),  // Space between the image and title
             Align(
               alignment: Alignment.center,
               child: Text(
@@ -260,3 +277,4 @@ class ItemDetailPage extends StatelessWidget {
     );
   }
 }
+
