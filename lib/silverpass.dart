@@ -14,7 +14,7 @@ class SilverPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Disable debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 136, 136, 136), // Set background color
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0), // Set background color
       ),
       home: Scaffold(
         body: ListView(children: const [

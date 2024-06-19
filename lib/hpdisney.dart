@@ -17,7 +17,7 @@ class hpdisney extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 136, 136, 136),
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       home: Scaffold(
         body: ListView(children: const [
