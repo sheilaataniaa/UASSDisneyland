@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/milkshake.dart';
 import 'package:disneysea/sovenir.dart';
 import 'package:disneysea/strawberrycart.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: Souvenir(),
+      home: CartAndPaymentMethod(),
     );
   }
 }
