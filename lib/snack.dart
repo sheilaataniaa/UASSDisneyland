@@ -1,4 +1,11 @@
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/snackburger.dart';
+import 'package:disneysea/snackcorndog.dart';
+import 'package:disneysea/snackcstrip.dart';
+import 'package:disneysea/snackhotdog.dart';
+import 'package:disneysea/snackkentang.dart';
+import 'package:disneysea/snacksosis.dart';
+import 'package:disneysea/strawberrycart.dart';
 import 'package:flutter/material.dart';
 
 class SnackOption extends StatelessWidget {
@@ -89,11 +96,23 @@ class SnackGrid extends StatelessWidget {
                 imageAsset: 'images/ffremovebg.png',
                 name: "French Fries",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snackkentang()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/hdr.png",
                 name: "Hot Dog",
                 price: "Rp.80.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snackhotdog()),
+                  );
+                },
               ),
             ],
           ),
@@ -105,11 +124,23 @@ class SnackGrid extends StatelessWidget {
                 imageAsset: "images/corndog.png",
                 name: "Corndog",
                 price: "Rp.70.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snackcorndog()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/beefsarbg.png",
                 name: "Beef Sausage",
                 price: "Rp.45.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snacksosis()),
+                  );
+                },
               ),
             ],
           ),
@@ -120,12 +151,24 @@ class SnackGrid extends StatelessWidget {
               SnackCard(
                 imageAsset: "images/chickremovebg.png",
                 name: "Chicken Strips",
-                price: "Rp.65.000",
+                price: "Rp.105.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snackcstrip()),
+                  );
+                },
               ),
               SnackCard(
                 imageAsset: "images/burrger.png",
                 name: "Burger",
                 price: "Rp.75.000",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => snackburger()),
+                  );
+                },
               ),
             ],
           ),
@@ -139,52 +182,56 @@ class SnackCard extends StatelessWidget {
   final String imageAsset;
   final String name;
   final String price;
+  final VoidCallback? onTap;
 
-  SnackCard({required this.imageAsset, required this.name, required this.price});
+  SnackCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
-  @override
+   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 169,
-      height: 220,
-      decoration: BoxDecoration(
-        color: Color(0xFF9ED6FF),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            imageAsset,
-            width: 150,
-            height: 150,
-            fit: BoxFit.cover,
-            errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-              return Icon(Icons.error); // Show error icon if image fails to load
-            },
-          ),
-          SizedBox(height: 8),
-          Text(
-            name,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 169,
+        height: 220,
+        decoration: BoxDecoration(
+          color: Color(0xFF9ED6FF),
+          borderRadius: BorderRadius.circular(20),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              imageAsset,
+              width: 150,
+              height: 150,
+              fit: BoxFit.cover,
+              errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+                return Icon(Icons.error); // Show error icon if image fails to load
+              },
             ),
-          ),
-          Text(
-            price,
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Color(0xFF001A3E),
-              fontSize: 16,
-              fontFamily: 'Averia Gruesa Libre',
-              fontWeight: FontWeight.w400,
+            SizedBox(height: 8),
+            Text(
+              name,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
-        ],
+            Text(
+              price,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF001A3E),
+                fontSize: 16,
+                fontFamily: 'Averia Gruesa Libre',
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }

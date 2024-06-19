@@ -143,7 +143,7 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => DessertOption()),
+                  MaterialPageRoute(builder: (context) => Dessert()),
                 );
               },
               child: Padding(

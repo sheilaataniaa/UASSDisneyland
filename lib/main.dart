@@ -1,6 +1,12 @@
-import 'package:disneysea/addtocart.dart';
+import 'package:disneysea/CartAndPaymentMethod.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/sovenir.dart';
+import 'package:disneysea/strawberrycart.dart';
+import 'package:disneysea/coffee.dart';
+import 'package:disneysea/dessert.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/tea.dart';
 
 import 'TampilanAwal.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -25,7 +31,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
       ),
-      home: AddToCart(),
+      home: CartAndPaymentMethod(),
     );
   }
 }
