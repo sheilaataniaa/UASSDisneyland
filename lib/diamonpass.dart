@@ -14,7 +14,7 @@ class DiamondPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 255, 255, 255),
+        scaffoldBackgroundColor: Color.fromARGB(255, 136, 136, 136),
       ),
       home: Scaffold(
         body: ListView(
