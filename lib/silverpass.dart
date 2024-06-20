@@ -15,7 +15,7 @@ class SilverPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Disable debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0), // Set background color
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0), // Set background color
       ),
       home: Scaffold(
         body: ListView(children: const [
@@ -156,13 +156,13 @@ class SapphireAnnualPass extends StatelessWidget {
               top: 55,
              child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const hpdisney())
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
                   ); // Navigate back to the previous page
                 },
-                child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 69,
               top: 40,
               child: Text(
@@ -175,7 +175,7 @@ class SapphireAnnualPass extends StatelessWidget {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 69,
               top: 84,
               child: Text(
@@ -198,7 +198,7 @@ class SapphireAnnualPass extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()),
                   ); // Navigate to cart
                 },
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 20,
                   child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),

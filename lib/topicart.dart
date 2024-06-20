@@ -12,8 +12,8 @@ class Topicart extends StatelessWidget {
         
       ),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: AddToCart1()
+      home: Scaffold(
+        body: const AddToCart1()
         ),
       );
   }
@@ -77,7 +77,7 @@ class _AddToCartState extends State<AddToCart1> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const Souvenir()),
+                    MaterialPageRoute(builder: (context) => Souvenir()),
                   );
                 },
               ),
@@ -155,7 +155,7 @@ class _AddToCartState extends State<AddToCart1> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Topicart()),
+                  MaterialPageRoute(builder: (context) => Topicart()),
                 );
               },
               child: SizedBox(

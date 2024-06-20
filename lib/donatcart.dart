@@ -1,5 +1,9 @@
+import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
+import 'shuhomepage.dart';
 
 class Donatcart extends StatelessWidget {
   const Donatcart({Key? key}) : super(key: key);
@@ -7,20 +11,19 @@ class Donatcart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
-        
       ),
       debugShowCheckedModeBanner: false,
-      home: const Scaffold(
-        body: AddToCart3(),
+      home: Scaffold(
+        body: const AddToCart3(),
       ),
     );
   }
 }
 
 class AddToCart3 extends StatefulWidget {
-  const AddToCart3({super.key});
+  const AddToCart3({Key? key}) : super(key: key);
 
   @override
   _AddToCartState createState() => _AddToCartState();
@@ -49,7 +52,7 @@ class _AddToCartState extends State<AddToCart3> {
       width: double.infinity,
       height: double.infinity,
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(color: Color(0xFFCFEBFF)),
+      decoration: BoxDecoration(color: Color(0xFFCFEBFF)),
       child: Stack(
         children: [
           Positioned(
@@ -59,7 +62,7 @@ class _AddToCartState extends State<AddToCart3> {
               width: 420,
               height: 601,
               decoration: ShapeDecoration(
-                color: const Color(0xFF9ED6FF),
+                color: Color(0xFF9ED6FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -69,21 +72,20 @@ class _AddToCartState extends State<AddToCart3> {
           Positioned(
             left: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Dessert()),
-                  );
-                },
+            child: InkWell(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => Dessert()),
+                );
+              },
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFF6F6F8),
+                radius: 22,
+                child: Icon(Icons.arrow_back, color: Colors.black),
               ),
             ),
           ),
-          
           Positioned(
             left: 98,
             top: 519,
@@ -152,10 +154,10 @@ class _AddToCartState extends State<AddToCart3> {
             top: 745,
             child: GestureDetector(
               onTap: () {
-                // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
+                // Function to be called when "Add to Cart" is pressed.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const Donatcart()),
+                  MaterialPageRoute(builder: (context) => Donatcart()),
                 );
               },
               child: SizedBox(
@@ -202,10 +204,10 @@ class _AddToCartState extends State<AddToCart3> {
             ),
           ),
           Positioned(
-            left: 10,
-            top: 100,
+            left: 65,
+            top: 80,
             child: Container(
-              width: 400,
+              width: 300,
               height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
@@ -230,7 +232,7 @@ class _AddToCartState extends State<AddToCart3> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Signature Dougnut',
+                        'Signature Doughnut',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),

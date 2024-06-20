@@ -15,7 +15,7 @@ class FigmaToCodeApp extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       home: Scaffold(
-        body: ListView(children: const [
+        body: ListView(children: [
           Success(),
         ]),
       ),
@@ -24,8 +24,6 @@ class FigmaToCodeApp extends StatelessWidget {
 }
 
 class Success extends StatelessWidget {
-  const Success({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -34,7 +32,7 @@ class Success extends StatelessWidget {
           width: 393,
           height: 852,
           clipBehavior: Clip.antiAlias,
-          decoration: const BoxDecoration(color: Color(0xFF71BBE4)),
+          decoration: BoxDecoration(color: Color(0xFF71BBE4)),
           child: Stack(
             children: [
               Positioned(
@@ -46,7 +44,7 @@ class Success extends StatelessWidget {
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      side: const BorderSide(width: 1, color: Colors.white),
+                      side: BorderSide(width: 1, color: Colors.white),
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -58,7 +56,7 @@ class Success extends StatelessWidget {
                 child: Container(
                   width: 375,
                   height: 485,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/375x485"),
                       fit: BoxFit.fill,
@@ -66,7 +64,7 @@ class Success extends StatelessWidget {
                   ),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 61,
                 top: 192,
                 child: SizedBox(
@@ -92,11 +90,11 @@ class Success extends StatelessWidget {
                   height: 45,
                   padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 15),
                   decoration: ShapeDecoration(
-                    color: const Color(0xFFE9E9E9),
+                    color: Color(0xFFE9E9E9),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
-                    shadows: const [
+                    shadows: [
                       BoxShadow(
                         color: Color(0x26000000),
                         blurRadius: 15,
@@ -105,7 +103,7 @@ class Success extends StatelessWidget {
                       )
                     ],
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisSize: MainAxisSize.min,
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -125,7 +123,7 @@ class Success extends StatelessWidget {
                   ),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: -24,
                 top: 150,
                 child: SizedBox(
@@ -153,7 +151,7 @@ class Success extends StatelessWidget {
                   decoration: BoxDecoration(color: Colors.white.withOpacity(0)),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 186,
                 top: 68,
                 child: SizedBox(
@@ -171,7 +169,7 @@ class Success extends StatelessWidget {
                   ),
                 ),
               ),
-              const Positioned(
+              Positioned(
                 left: 181,
                 top: 30,
                 child: SizedBox(
@@ -192,7 +190,7 @@ class Success extends StatelessWidget {
               Positioned(
                 left: 11,
                 top: 34,
-                child: SizedBox(
+                child: Container(
                   width: 44,
                   height: 44,
                   child: Stack(
@@ -203,7 +201,7 @@ class Success extends StatelessWidget {
                         child: Container(
                           width: 44,
                           height: 44,
-                          decoration: const ShapeDecoration(
+                          decoration: ShapeDecoration(
                             color: Color(0xFFF6F6F8),
                             shape: OvalBorder(),
                           ),
@@ -216,8 +214,8 @@ class Success extends StatelessWidget {
                           width: 24,
                           height: 24,
                           clipBehavior: Clip.antiAlias,
-                          decoration: const BoxDecoration(),
-                          child: const FlutterLogo(),
+                          decoration: BoxDecoration(),
+                          child: FlutterLogo(),
                         ),
                       ),
                     ],
@@ -230,7 +228,7 @@ class Success extends StatelessWidget {
                 child: Container(
                   width: 118,
                   height: 101,
-                  decoration: const BoxDecoration(
+                  decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage("https://via.placeholder.com/118x101"),
                       fit: BoxFit.fill,

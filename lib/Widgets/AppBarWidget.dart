@@ -1,5 +1,7 @@
+import 'package:disneysea/juice.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/shusoceanhomepage.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget{
@@ -15,11 +17,14 @@ class AppBarWidget extends StatelessWidget{
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           InkWell(
-            onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const HomepageShusOcean()));
+             IconButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => ShusOceanHomepage()),
+              );
             },
-            child: Container(
+            icon: Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -33,18 +38,17 @@ class AppBarWidget extends StatelessWidget{
                   ),
                 ],
               ),
-              child: const Icon(
+              child: Icon(
                 Icons.arrow_back,
                 color: Colors.black,
               ),
             ),
           ),
-
           InkWell(
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const shuhomepage()),
+              MaterialPageRoute(builder: (context) => shuhomepage()),
             );
           },
           child: Container(

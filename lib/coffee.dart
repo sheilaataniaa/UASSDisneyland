@@ -13,11 +13,9 @@ import 'db_helper.dart';
 
 
 class CoffeeOption extends StatelessWidget {
-  const CoffeeOption({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xFFCFEBFF),
       body: SingleChildScrollView(
         child: Column(
@@ -32,14 +30,12 @@ class CoffeeOption extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
-  const Header({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 150, // Menambahkan tinggi untuk mengatasi overflow
-      color: const Color(0xFF71BBE4),
+      color: Color(0xFF71BBE4),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -47,20 +43,20 @@ class Header extends StatelessWidget {
             left: 20,
             top: 55,
             child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
+              backgroundColor: Color(0xFFF6F6F8),
               radius: 22,
               child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
+                icon: Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => const shuhomepage()), // Arahkan ke ShuHomePage
+                    MaterialPageRoute(builder: (context) => shuhomepage()), // Arahkan ke ShuHomePage
                   );
                 },
               ),
             ),
           ),
-          const Text(
+          Text(
             'COFFEE',
             style: TextStyle(
               color: Color(0xFF060056),
@@ -74,10 +70,10 @@ class Header extends StatelessWidget {
             right: 20,
             top: 55,
             child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
+              backgroundColor: Color(0xFFF6F6F8),
               radius: 22,
               child: IconButton(
-                icon: const Icon(Icons.shopping_cart, color: Colors.black),
+                icon: Icon(Icons.shopping_cart, color: Colors.black),
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
@@ -136,7 +132,7 @@ class CoffeeGrid extends StatelessWidget {
                  onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const americanocart()),
+                    MaterialPageRoute(builder: (context) => Americanocart()),
                   );
                  },
               ),
@@ -147,13 +143,13 @@ class CoffeeGrid extends StatelessWidget {
                  onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Frappucinocart()),
+                    MaterialPageRoute(builder: (context) => Frappucinocart()),
                   );
                  },
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -164,7 +160,7 @@ class CoffeeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Caramelcart()),
+                    MaterialPageRoute(builder: (context) => Caramelcart()),
                   );
                  },
               ),
@@ -175,13 +171,13 @@ class CoffeeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Cappucinocart()),
+                    MaterialPageRoute(builder: (context) => Cappucinocart()),
                   );
                  },
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -192,7 +188,7 @@ class CoffeeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Lattecart()),
+                    MaterialPageRoute(builder: (context) => Lattecart()),
                   );
                 },
               ),
@@ -203,7 +199,7 @@ class CoffeeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Cinnamoncart()),
+                    MaterialPageRoute(builder: (context) => Cinnamoncart()),
                   );
                 },
               ),
@@ -221,7 +217,7 @@ class CoffeeCard extends StatelessWidget {
   final String price;
   final VoidCallback? onTap;
 
-  const CoffeeCard({super.key, required this.imageAsset, required this.name, required this.price, this.onTap});
+  CoffeeCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
    @override
   Widget build(BuildContext context) {
@@ -231,7 +227,7 @@ class CoffeeCard extends StatelessWidget {
         width: 169,
         height: 220,
         decoration: BoxDecoration(
-          color: const Color(0xFF9ED6FF),
+          color: Color(0xFF9ED6FF),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -243,14 +239,14 @@ class CoffeeCard extends StatelessWidget {
               height: 150,
               fit: BoxFit.cover,
               errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-                return const Icon(Icons.error); // Show error icon if image fails to load
+                return Icon(Icons.error); // Show error icon if image fails to load
               },
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               name,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
@@ -260,7 +256,7 @@ class CoffeeCard extends StatelessWidget {
             Text(
               price,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',

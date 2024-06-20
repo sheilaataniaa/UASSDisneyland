@@ -7,14 +7,12 @@ import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesWidget extends StatelessWidget{
-  const CategoriesWidget({super.key});
-
   @override
   Widget build(BuildContext context){
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical:15, horizontal:5),
+        padding: EdgeInsets.symmetric(vertical:15, horizontal:5),
         child: Row(
           children: [
 
@@ -25,22 +23,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const CoffeeOption()),
+                  MaterialPageRoute(builder: (context) => CoffeeOption()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(
@@ -55,22 +53,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const TeaOption()),
+                  MaterialPageRoute(builder: (context) => TeaOption()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(
@@ -85,22 +83,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const MilkshakeOption()),
+                  MaterialPageRoute(builder: (context) => MilkshakeOption()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(
@@ -115,22 +113,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const JuiceOption()),
+                  MaterialPageRoute(builder: (context) => JuiceOption()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(
@@ -145,22 +143,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const Dessert()),
+                  MaterialPageRoute(builder: (context) => Dessert()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(
@@ -175,22 +173,22 @@ class CategoriesWidget extends StatelessWidget{
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SnackOption()),
+                  MaterialPageRoute(builder: (context) => SnackOption()),
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 10),
                 child: Container(
-                  padding: const EdgeInsets.all(8),
+                  padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
-                      color: const Color(0xFF24BAEC),
+                      color: Color(0xFF24BAEC),
                       borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(
                           color: Colors.black.withOpacity(0.4),
                           spreadRadius: 2,
                           blurRadius: 10,
-                          offset: const Offset(0, 3),
+                          offset: Offset(0, 3),
                         )
                       ]),
                   child: Image.asset(

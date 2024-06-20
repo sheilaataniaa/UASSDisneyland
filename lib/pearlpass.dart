@@ -1,4 +1,3 @@
-import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class PearlPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
+        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
       ),
       home: Scaffold(
         body: ListView(
@@ -208,13 +207,13 @@ class PearlAnnualPass extends StatelessWidget {
               top: 55,
                child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const hpdisney())
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
                   ); // Navigate back to the previous page
                 },
-                child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 69,
               top: 40,
               child: Text(
@@ -227,7 +226,7 @@ class PearlAnnualPass extends StatelessWidget {
                 ),
               ),
             ),
-            const Positioned(
+            Positioned(
               left: 69,
               top: 84,
               child: Text(
@@ -247,10 +246,10 @@ class PearlAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
+                    MaterialPageRoute(builder: (context) => SilverPass()),
                   ); // Navigate to the next page
                 },
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 20,
                   child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),

@@ -5,15 +5,15 @@ import 'package:disneysea/milkshakeblueberry.dart';
 import 'package:disneysea/milkshakecoklat.dart';
 import 'package:disneysea/milkshakestrawberry.dart';
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/shusoceanhomepage.dart';
 import 'package:flutter/material.dart';
-// Pastikan mengimpor halaman strawberrycart.dart
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:disneysea/strawberrycart.dart'; // Pastikan mengimpor halaman strawberrycart.dart
 
 class MilkshakeOption extends StatelessWidget {
-  const MilkshakeOption({super.key});
-
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       backgroundColor: Color(0xFFCFEBFF),
       body: SingleChildScrollView(
         child: Column(
@@ -28,55 +28,71 @@ class MilkshakeOption extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
-  const Header({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 150, // Menambahkan tinggi untuk mengatasi overflow
-      color: const Color(0xFF71BBE4),
+      height: 150,
+      color: Color(0xFF71BBE4),
       child: Stack(
         alignment: Alignment.center,
         children: [
           Positioned(
             left: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => const shuhomepage()), // Arahkan ke ShuHomePage
-                  );
-                },
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => shuhomepage()),
+                );
+              },
+              icon: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
-          const Text(
-            'MILKSHAKE',
-            style: TextStyle(
-              color: Color(0xFF060056),
-              fontSize: 40,
-              fontFamily: 'Charm',
-              fontWeight: FontWeight.w400,
-              height: 1.1,
+          Positioned(
+            left: 110, // Adjusted position for the text
+            top: 55,
+            child: Text(
+              'MILKSHAKE',
+              style: TextStyle(
+                color: Color(0xFF060056),
+                fontSize: 40,
+                fontFamily: 'Charm',
+                fontWeight: FontWeight.w400,
+                height: 1.1,
+              ),
             ),
           ),
           Positioned(
             right: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: const Icon(Icons.shopping_cart, color: Colors.black),
-                onPressed: () {
-                  // Aksi keranjang
-                },
+            child: GestureDetector(
+              onTap: () {
+                // Aksi keranjang
+              },
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFF6F6F8),
+                radius: 22,
+                child: Icon(Icons.shopping_cart, color: Colors.black),
               ),
             ),
           ),
@@ -86,9 +102,9 @@ class Header extends StatelessWidget {
   }
 }
 
-class MilkshakeGrid extends StatelessWidget {
-  const MilkshakeGrid({super.key});
 
+
+class MilkshakeGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -105,7 +121,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkcoklatcart()),
+                    MaterialPageRoute(builder: (context) => mkcoklatcart()),
                   );
                 },
               ),
@@ -116,13 +132,13 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkvanilacart()),
+                    MaterialPageRoute(builder: (context) => mkvanilacart()),
                   );
                 },
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -133,7 +149,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkstrawcart()),
+                    MaterialPageRoute(builder: (context) => mkstrawcart()),
                   );
                 },
               ),
@@ -144,13 +160,13 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkblucart()),
+                    MaterialPageRoute(builder: (context) => mkblucart()),
                   );
                 },
               ),
             ],
           ),
-          const SizedBox(height: 16),
+          SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -161,7 +177,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkbananacart()),
+                    MaterialPageRoute(builder: (context) => mkbananacart()),
                   );
                 },
               ),
@@ -172,7 +188,7 @@ class MilkshakeGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const mkoreocart()),
+                    MaterialPageRoute(builder: (context) => mkoreocart()),
                   );
                 },
               ),
@@ -190,7 +206,7 @@ class MilkshakeCard extends StatelessWidget {
   final String price;
   final VoidCallback? onTap;
 
-  const MilkshakeCard({super.key, required this.imageAsset, required this.name, required this.price, this.onTap});
+  MilkshakeCard({required this.imageAsset, required this.name, required this.price, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -200,7 +216,7 @@ class MilkshakeCard extends StatelessWidget {
         width: 169,
         height: 220,
         decoration: BoxDecoration(
-          color: const Color(0xFF9ED6FF),
+          color: Color(0xFF9ED6FF),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -212,14 +228,14 @@ class MilkshakeCard extends StatelessWidget {
               height: 150,
               fit: BoxFit.cover,
               errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-                return const Icon(Icons.error); // Show error icon if image fails to load
+                return Icon(Icons.error); // Show error icon if image fails to load
               },
             ),
-            const SizedBox(height: 8),
+            SizedBox(height: 8),
             Text(
               name,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
@@ -229,7 +245,7 @@ class MilkshakeCard extends StatelessWidget {
             Text(
               price,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
