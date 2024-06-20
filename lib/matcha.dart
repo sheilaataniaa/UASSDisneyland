@@ -1,5 +1,8 @@
+import 'package:disneysea/coffee.dart';
+import 'package:disneysea/milkshake.dart';
 import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
+import 'shuhomepage.dart';
 
 class Matchacart extends StatelessWidget {
   const Matchacart({Key? key}) : super(key: key);
@@ -7,25 +10,25 @@ class Matchacart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart4(),
+        body: const AddToCart3(),
       ),
     );
   }
 }
 
-class AddToCart4 extends StatefulWidget {
-  const AddToCart4({super.key});
+class AddToCart3 extends StatefulWidget {
+  const AddToCart3({Key? key}) : super(key: key);
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart4> {
+class _AddToCartState extends State<AddToCart3> {
   int itemCount = 1;
 
   void addItem() {
@@ -48,7 +51,7 @@ class _AddToCartState extends State<AddToCart4> {
       width: double.infinity,
       height: double.infinity,
       clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(color: Color(0xFFCFEBFF)),
+      decoration: BoxDecoration(color: Color(0xFFCFEBFF)),
       child: Stack(
         children: [
           Positioned(
@@ -58,7 +61,7 @@ class _AddToCartState extends State<AddToCart4> {
               width: 420,
               height: 601,
               decoration: ShapeDecoration(
-                color: const Color(0xFF9ED6FF),
+                color: Color(0xFF9ED6FF),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -68,21 +71,20 @@ class _AddToCartState extends State<AddToCart4> {
           Positioned(
             left: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: const Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: const Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
-                  );
-                },
+            child: InkWell(
+              onTap: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => TeaOption()),
+                );
+              },
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFF6F6F8),
+                radius: 22,
+                child: Icon(Icons.arrow_back, color: Colors.black),
               ),
             ),
           ),
-          
           Positioned(
             left: 98,
             top: 519,
@@ -151,7 +153,7 @@ class _AddToCartState extends State<AddToCart4> {
             top: 745,
             child: GestureDetector(
               onTap: () {
-                // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
+                // Function to be called when "Add to Cart" is pressed.
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => Matchacart()),
@@ -202,7 +204,7 @@ class _AddToCartState extends State<AddToCart4> {
           ),
           Positioned(
             left: 65,
-            top: 50,
+            top: 80,
             child: Container(
               width: 300,
               height: 400,
@@ -229,7 +231,7 @@ class _AddToCartState extends State<AddToCart4> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Matcha Milk Tea',
+                        'Matcha Bubble Milk Tea',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),
