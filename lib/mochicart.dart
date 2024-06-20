@@ -1,8 +1,4 @@
-import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
-import 'package:disneysea/juice.dart';
-import 'package:disneysea/milkshake.dart';
-import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class Mochicart extends StatelessWidget {
@@ -16,8 +12,8 @@ class Mochicart extends StatelessWidget {
         
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart3(),
+      home: const Scaffold(
+        body: AddToCart3(),
       ),
     );
   }
@@ -81,7 +77,7 @@ class _AddToCartState extends State<AddToCart3> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Dessert()),
+                    MaterialPageRoute(builder: (context) => const Dessert()),
                   );
                 },
               ),
@@ -159,7 +155,7 @@ class _AddToCartState extends State<AddToCart3> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Mochicart()),
+                  MaterialPageRoute(builder: (context) => const Mochicart()),
                 );
               },
               child: SizedBox(

@@ -11,8 +11,8 @@ class Strawberrycart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart(),
+      home: const Scaffold(
+        body: AddToCart(),
       ),
     );
   }
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => const TeaOption()),
                   );
                 },
               ),

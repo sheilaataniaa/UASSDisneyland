@@ -18,7 +18,7 @@ class ShusOceanHomepage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: ListView(
-          children: [
+          children: const [
             HomepageShusOcean(),
           ],
         ),
@@ -28,6 +28,8 @@ class ShusOceanHomepage extends StatelessWidget {
 }
 
 class HomepageShusOcean extends StatelessWidget {
+  const HomepageShusOcean({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -56,7 +58,7 @@ class HomepageShusOcean extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
-                  color: Color(0xFF9ED6FF),
+                  color: const Color(0xFF9ED6FF),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -65,7 +67,7 @@ class HomepageShusOcean extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => shuhomepage()),
+                          MaterialPageRoute(builder: (context) => const shuhomepage()),
                         );
                       },
                       child: Transform.scale(
@@ -91,7 +93,7 @@ class HomepageShusOcean extends StatelessWidget {
                 width: double.infinity,
                 padding: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
-                  color: Color(0xFF9ED6FF),
+                  color: const Color(0xFF9ED6FF),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Column(
@@ -100,7 +102,7 @@ class HomepageShusOcean extends StatelessWidget {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => hpdisney()),
+                          MaterialPageRoute(builder: (context) => const hpdisney()),
                         );
                       },
                       child: Transform.scale(

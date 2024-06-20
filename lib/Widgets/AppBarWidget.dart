@@ -1,6 +1,5 @@
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/shusoceanhomepage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget{
@@ -18,7 +17,7 @@ class AppBarWidget extends StatelessWidget{
         children: [
            InkWell(
             onTap: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (_) => HomepageShusOcean()));
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const HomepageShusOcean()));
             },
             child: Container(
               padding: const EdgeInsets.all(8),
@@ -34,7 +33,7 @@ class AppBarWidget extends StatelessWidget{
                   ),
                 ],
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back,
                 color: Colors.black,
               ),
@@ -45,7 +44,7 @@ class AppBarWidget extends StatelessWidget{
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => shuhomepage()),
+              MaterialPageRoute(builder: (context) => const shuhomepage()),
             );
           },
           child: Container(

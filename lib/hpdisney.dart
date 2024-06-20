@@ -18,7 +18,7 @@ class hpdisney extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       home: Scaffold(
         body: ListView(children: const [
@@ -60,7 +60,7 @@ class Homepage extends StatelessWidget {
                         text: 'Click Here',
                         imagePath: 'images/pearlpas.png',
                         title: 'Pearl Annual Pass',
-                        targetPage: PearlPass(),
+                        targetPage: const PearlPass(),
                       ),
                       buildPage(
                         context: context,
@@ -71,7 +71,7 @@ class Homepage extends StatelessWidget {
                         text: 'Click Here',
                         imagePath: 'images/silverpas.png',
                         title: 'Sapphire Annual Pass',
-                        targetPage: SilverPass(),
+                        targetPage: const SilverPass(),
                       ),
                       buildPage(
                         context: context,
@@ -82,7 +82,7 @@ class Homepage extends StatelessWidget {
                         text: 'Click Here',
                         imagePath: 'images/diamondpas.png',
                         title: 'Diamond Annual Pass',
-                        targetPage: DiamondPass(),
+                        targetPage: const DiamondPass(),
                       ),
                       buildPage(
                         context: context,
@@ -93,7 +93,7 @@ class Homepage extends StatelessWidget {
                         text: 'Click Here',
                         imagePath: 'images/merchandise.png',
                         title: 'Merchandise',
-                        targetPage: Souvenir(),
+                        targetPage: const Souvenir(),
                       ),
                     ],
                   ),
@@ -195,13 +195,13 @@ class Homepage extends StatelessWidget {
                         onTap: ()  {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => ShusOceanHomepage()),
+                            MaterialPageRoute(builder: (context) => const ShusOceanHomepage()),
                           ); // Navigate to the next page
                         },
-                        child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                        child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 69,
                       top: 40,
                       child: Text(
@@ -214,7 +214,7 @@ class Homepage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 69,
                       top: 84,
                       child: Text(
@@ -237,7 +237,7 @@ class Homepage extends StatelessWidget {
                             MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
                           ); // KE HALAMAN FERDI YANG BLOM KELARR INI PEARL HANYA UNTUK FORMALITAS
                         },
-                        child: CircleAvatar(
+                        child: const CircleAvatar(
                           backgroundColor: Colors.white,
                           radius: 20,
                           child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
@@ -299,7 +299,7 @@ class Homepage extends StatelessWidget {
               child: Text(
                 text,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   color: Colors.black,
                   fontSize: 12,
                   fontFamily: 'Abhaya Libre Medium',
@@ -333,7 +333,7 @@ class Homepage extends StatelessWidget {
             child: Text(
               title,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
                 fontSize: 13,
                 fontFamily: 'Abhaya Libre Medium',
@@ -391,7 +391,7 @@ class Homepage extends StatelessWidget {
                 top: 20,
                 child: Text(
                   promoText,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: Color.fromARGB(255, 0, 0, 0),
                     fontSize: 24,
                     fontFamily: 'Abhaya Libre Medium',
@@ -406,7 +406,7 @@ class Homepage extends StatelessWidget {
                   width: 220,
                   child: Text(
                     description,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Color.fromARGB(255, 0, 0, 0),
                       fontSize: 14,
                       fontFamily: 'Abhaya Libre Medium',

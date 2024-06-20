@@ -5,13 +5,14 @@ import 'package:disneysea/snackcstrip.dart';
 import 'package:disneysea/snackhotdog.dart';
 import 'package:disneysea/snackkentang.dart';
 import 'package:disneysea/snacksosis.dart';
-import 'package:disneysea/strawberrycart.dart';
 import 'package:flutter/material.dart';
 
 class SnackOption extends StatelessWidget {
+  const SnackOption({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: Color(0xFFCFEBFF),
       body: SingleChildScrollView(
         child: Column(
@@ -26,12 +27,14 @@ class SnackOption extends StatelessWidget {
 }
 
 class Header extends StatelessWidget {
+  const Header({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
       height: 150, // Menambahkan tinggi untuk mengatasi overflow
-      color: Color(0xFF71BBE4),
+      color: const Color(0xFF71BBE4),
       child: Stack(
         alignment: Alignment.center,
         children: [
@@ -39,20 +42,20 @@ class Header extends StatelessWidget {
             left: 20,
             top: 55,
             child: CircleAvatar(
-              backgroundColor: Color(0xFFF6F6F8),
+              backgroundColor: const Color(0xFFF6F6F8),
               radius: 22,
               child: IconButton(
-                icon: Icon(Icons.arrow_back, color: Colors.black),
+                icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => shuhomepage()), 
+                    MaterialPageRoute(builder: (context) => const shuhomepage()), 
                   );
                 },
               ),
             ),
           ),
-          Text(
+          const Text(
             'SNACK',
             style: TextStyle(
               color: Color(0xFF060056),
@@ -66,10 +69,10 @@ class Header extends StatelessWidget {
             right: 20,
             top: 55,
             child: CircleAvatar(
-              backgroundColor: Color(0xFFF6F6F8),
+              backgroundColor: const Color(0xFFF6F6F8),
               radius: 22,
               child: IconButton(
-                icon: Icon(Icons.shopping_cart, color: Colors.black),
+                icon: const Icon(Icons.shopping_cart, color: Colors.black),
                 onPressed: () {
                   // Aksi keranjang
                 },
@@ -83,6 +86,8 @@ class Header extends StatelessWidget {
 }
 
 class SnackGrid extends StatelessWidget {
+  const SnackGrid({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -99,7 +104,7 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snackkentang()),
+                    MaterialPageRoute(builder: (context) => const snackkentang()),
                   );
                 },
               ),
@@ -110,13 +115,13 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snackhotdog()),
+                    MaterialPageRoute(builder: (context) => const snackhotdog()),
                   );
                 },
               ),
             ],
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -127,7 +132,7 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snackcorndog()),
+                    MaterialPageRoute(builder: (context) => const snackcorndog()),
                   );
                 },
               ),
@@ -138,13 +143,13 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snacksosis()),
+                    MaterialPageRoute(builder: (context) => const snacksosis()),
                   );
                 },
               ),
             ],
           ),
-          SizedBox(height: 16),
+          const SizedBox(height: 16),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -155,7 +160,7 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snackcstrip()),
+                    MaterialPageRoute(builder: (context) => const snackcstrip()),
                   );
                 },
               ),
@@ -166,7 +171,7 @@ class SnackGrid extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => snackburger()),
+                    MaterialPageRoute(builder: (context) => const snackburger()),
                   );
                 },
               ),
@@ -184,7 +189,7 @@ class SnackCard extends StatelessWidget {
   final String price;
   final VoidCallback? onTap;
 
-  SnackCard({required this.imageAsset, required this.name, required this.price, this.onTap});
+  const SnackCard({super.key, required this.imageAsset, required this.name, required this.price, this.onTap});
 
    @override
   Widget build(BuildContext context) {
@@ -194,7 +199,7 @@ class SnackCard extends StatelessWidget {
         width: 169,
         height: 220,
         decoration: BoxDecoration(
-          color: Color(0xFF9ED6FF),
+          color: const Color(0xFF9ED6FF),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(
@@ -206,14 +211,14 @@ class SnackCard extends StatelessWidget {
               height: 150,
               fit: BoxFit.cover,
               errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
-                return Icon(Icons.error); // Show error icon if image fails to load
+                return const Icon(Icons.error); // Show error icon if image fails to load
               },
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               name,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',
@@ -223,7 +228,7 @@ class SnackCard extends StatelessWidget {
             Text(
               price,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Color(0xFF001A3E),
                 fontSize: 16,
                 fontFamily: 'Averia Gruesa Libre',

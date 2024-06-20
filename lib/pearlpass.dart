@@ -15,7 +15,7 @@ class PearlPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // This line removes the debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0),
       ),
       home: Scaffold(
         body: ListView(
@@ -156,13 +156,13 @@ class PearlAnnualPass extends StatelessWidget {
               top: 55,
                child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const hpdisney())
                   ); // Navigate back to the previous page
                 },
-                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 69,
               top: 40,
               child: Text(
@@ -175,7 +175,7 @@ class PearlAnnualPass extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 69,
               top: 84,
               child: Text(
@@ -198,7 +198,7 @@ class PearlAnnualPass extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
                   ); // Navigate to the next page
                 },
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 20,
                   child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),

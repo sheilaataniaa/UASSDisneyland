@@ -1,5 +1,4 @@
 import 'package:disneysea/MilkshakeOreo.dart';
-import 'package:disneysea/milkshake.dart';
 import 'package:disneysea/snackcstrip.dart';
 import 'package:disneysea/snackkentang.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => snackkentang()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => const snackkentang()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
@@ -64,9 +63,9 @@ class PopularItemsWidget extends StatelessWidget{
                   style: TextStyle(fontSize: 9),
                 ),
                 const SizedBox(height: 8),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       "Rp 35.000",
                       style: TextStyle(
@@ -91,7 +90,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => mkoreocart()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => const mkoreocart()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
@@ -131,9 +130,9 @@ class PopularItemsWidget extends StatelessWidget{
                   style: TextStyle(fontSize: 9),
                 ),
                 const SizedBox(height: 8),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       "Rp 75.000",
                       style: TextStyle(
@@ -159,7 +158,7 @@ class PopularItemsWidget extends StatelessWidget{
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => snackcstrip()), // Ganti dengan nama kelas halaman coffeoption
+            MaterialPageRoute(builder: (context) => const snackcstrip()), // Ganti dengan nama kelas halaman coffeoption
           );
         },
         child: Container(
@@ -199,9 +198,9 @@ class PopularItemsWidget extends StatelessWidget{
                   style: TextStyle(fontSize: 9),
                 ),
                 const SizedBox(height: 8),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       "Rp 70.000",
                       style: TextStyle(

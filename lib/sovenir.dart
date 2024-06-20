@@ -1,11 +1,8 @@
 import 'package:disneysea/bajucart.dart';
-import 'package:disneysea/diamonpass.dart';
 import 'package:disneysea/gantungancart.dart';
 import 'package:disneysea/jaketcart.dart';
 import 'package:disneysea/payungcart.dart';
-import 'package:disneysea/pearlpass.dart';
 import 'package:disneysea/sendalcart.dart';
-import 'package:disneysea/silverpass.dart';
 import 'package:disneysea/topicart.dart';
 import 'package:flutter/material.dart';
 import 'package:disneysea/hpdisney.dart';
@@ -46,13 +43,13 @@ class Souvenir extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => hpdisney()),
+                              MaterialPageRoute(builder: (context) => const hpdisney()),
                             ); // Navigate back to the previous page
                           },
-                          child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                          child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 69,
                         top: 40,
                         child: Text(
@@ -65,7 +62,7 @@ class Souvenir extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 69,
                         top: 84,
                         child: Text(
@@ -85,10 +82,10 @@ class Souvenir extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => hpdisney()),
+                              MaterialPageRoute(builder: (context) => const hpdisney()),
                             ); // Navigate to the next page
                           },
-                          child: CircleAvatar(
+                          child: const CircleAvatar(
                             backgroundColor: Colors.white,
                             radius: 20,
                             child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),
@@ -247,36 +244,36 @@ class ItemDetailPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,  // Start at the top
           crossAxisAlignment: CrossAxisAlignment.center,  // Center horizontally
           children: [
-            SizedBox(height: 20),  // Add some space at the top
+            const SizedBox(height: 20),  // Add some space at the top
             Align(
               alignment: Alignment.topCenter,
               child: Image.asset(imagePath),
             ),
-            SizedBox(height: 20),  // Space between the image and title
+            const SizedBox(height: 20),  // Space between the image and title
            
 
-            SizedBox(height: 20),  // Add some space at the top
+            const SizedBox(height: 20),  // Add some space at the top
             Align(
               alignment: Alignment.topCenter,
               child: Image.asset(imagePath),
             ),
-            SizedBox(height: 20),  // Space between the image and title
+            const SizedBox(height: 20),  // Space between the image and title
             Align(
               alignment: Alignment.center,
               child: Text(
                 title,
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(height: 10),  // Space between title and price
+            const SizedBox(height: 10),  // Space between title and price
             Align(
               alignment: Alignment.center,
               child: Text(
                 price,
-                style: TextStyle(fontSize: 20),
+                style: const TextStyle(fontSize: 20),
               ),
             ),
-            SizedBox(height: 20),  // Add some space at the bottom
+            const SizedBox(height: 20),  // Add some space at the bottom
           ],
         ),
       ),
