@@ -36,30 +36,35 @@ class AppBarWidget extends StatelessWidget{
               ),
               child: Icon(
                 Icons.arrow_back,
-                color: Colors.black, // Sesuaikan dengan warna ikon yang diinginkan
+                color: Colors.black,
               ),
             ),
           ),
 
           InkWell(
-            onTap:(){},
-            child:Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(1),
-                    spreadRadius: 2,
-                    blurRadius: 10,
-                    offset: const Offset(0, 3),
-                  )
-                ],
-              ),
-              child: const Icon(Icons.notifications),
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => shuhomepage()),
+            );
+          },
+          child: Container(
+            padding: const EdgeInsets.all(8),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(20),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(1),
+                  spreadRadius: 2,
+                  blurRadius: 10,
+                  offset: const Offset(0, 3),
+                )
+              ],
             ),
+            child: const Icon(Icons.shopping_cart),
           ),
+        ),
         ]
       ),
       );
