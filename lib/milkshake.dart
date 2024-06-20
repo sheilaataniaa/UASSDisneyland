@@ -5,6 +5,7 @@ import 'package:disneysea/milkshakeblueberry.dart';
 import 'package:disneysea/milkshakecoklat.dart';
 import 'package:disneysea/milkshakestrawberry.dart';
 import 'package:disneysea/shuhomepage.dart';
+import 'package:disneysea/shusoceanhomepage.dart';
 import 'package:flutter/material.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:disneysea/strawberrycart.dart'; // Pastikan mengimpor halaman strawberrycart.dart
@@ -31,7 +32,7 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      height: 150, // Menambahkan tinggi untuk mengatasi overflow
+      height: 150,
       color: Color(0xFF71BBE4),
       child: Stack(
         alignment: Alignment.center,
@@ -39,41 +40,59 @@ class Header extends StatelessWidget {
           Positioned(
             left: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: Icon(Icons.arrow_back, color: Colors.black),
-                onPressed: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(builder: (context) => shuhomepage()), // Arahkan ke ShuHomePage
-                  );
-                },
+            child: IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => shuhomepage()),
+                );
+              },
+              icon: Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: Icon(
+                  Icons.arrow_back,
+                  color: Colors.black,
+                ),
               ),
             ),
           ),
-          Text(
-            'MILKSHAKE',
-            style: TextStyle(
-              color: Color(0xFF060056),
-              fontSize: 40,
-              fontFamily: 'Charm',
-              fontWeight: FontWeight.w400,
-              height: 1.1,
+          Positioned(
+            left: 110, // Adjusted position for the text
+            top: 55,
+            child: Text(
+              'MILKSHAKE',
+              style: TextStyle(
+                color: Color(0xFF060056),
+                fontSize: 40,
+                fontFamily: 'Charm',
+                fontWeight: FontWeight.w400,
+                height: 1.1,
+              ),
             ),
           ),
           Positioned(
             right: 20,
             top: 55,
-            child: CircleAvatar(
-              backgroundColor: Color(0xFFF6F6F8),
-              radius: 22,
-              child: IconButton(
-                icon: Icon(Icons.shopping_cart, color: Colors.black),
-                onPressed: () {
-                  // Aksi keranjang
-                },
+            child: GestureDetector(
+              onTap: () {
+                // Aksi keranjang
+              },
+              child: CircleAvatar(
+                backgroundColor: Color(0xFFF6F6F8),
+                radius: 22,
+                child: Icon(Icons.shopping_cart, color: Colors.black),
               ),
             ),
           ),
@@ -82,6 +101,8 @@ class Header extends StatelessWidget {
     );
   }
 }
+
+
 
 class MilkshakeGrid extends StatelessWidget {
   @override

@@ -5,9 +5,9 @@ import 'package:disneysea/Widgets/PopularItemsWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class shuhomepage extends StatelessWidget{
-  const shuhomepage({super.key});
 
+class shuhomepage extends StatelessWidget {
+  const shuhomepage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context){
     return Scaffold(
