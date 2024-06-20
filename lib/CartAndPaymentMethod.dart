@@ -1,6 +1,12 @@
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 
+import 'cartmodel.dart';
+import 'db_helper.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'cart_provider.dart';
+
 void main() {
   runApp(const Cartandpaymentmethod());
 }
@@ -23,22 +29,36 @@ class Cartandpaymentmethod extends StatelessWidget {
   }
 }
 
+DBHelper? dbHelper = DBHelper();
+
 class OrderPage extends StatelessWidget {
   const OrderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
+    Future<List<Cart>> cartItemsFuture =
+        cart.getDataShu(); // Mengambil daftar produk dalam keranjang dari _cart
+    Future<List<Cart>> cartItemsFutureOcean =
+        cart.getDataOcean(); 
+    int totalPrice = cart
+        .getTotalPrice()
+        .toInt(); // Total harga termasuk tax dan biaya pengiriman
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue[100],
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () { Navigator.pushNamed(context, '/Menu');},
+          onPressed: () {
+            Navigator.pushNamed(context, '/Menu');
+          },
         ),
         title: const Column(
           children: [
             Text("Disneyland", style: TextStyle(color: Colors.blue)),
-            Text("Sambut Keajaiban & Raih Petualangan", style: TextStyle(color: Colors.black54, fontSize: 12)),
+            Text("Sambut Keajaiban & Raih Petualangan",
+                style: TextStyle(color: Colors.black54, fontSize: 12)),
           ],
         ),
         centerTitle: true,
@@ -47,26 +67,80 @@ class OrderPage extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         color: Colors.lightBlue[50],
         child: ListView(
-          children: const [
-            SectionTitle(title: "Shu's Magic"),
-            OrderItem(name: "French Fries", price: "Rp.50.000"),
-            OrderItem(name: "Hotdog", price: "Rp.45.000"),
-            OrderItem(name: "Burger", price: "Rp.65.000"),
-            OrderItem(name: "French Fries", price: "Rp.50.000"),
-            OrderItem(name: "Hotdog", price: "Rp.45.000"),
-            OrderItem(name: "Burger", price: "Rp.65.000"),
-            SizedBox(height: 20),
-            SectionTitle(title: "Ocean"),
-            OrderItem(name: "Payung", price: "Rp.120.000"),
-            OrderItem(name: "Topi", price: "Rp.75.000"),
-            OrderItem(name: "Jaket", price: "Rp.200.000"),
-            OrderItem(name: "Gantungan Kunci", price: "Rp.50.000"),
-            OrderItem(name: "Sendal", price: "Rp.100.000"),
-            OrderItem(name: "Silver Pass", price: "Rp.1.000.000"),
-            SizedBox(height: 20),
-            GrandTotal(total: "Rp.5.300.000"),
-            SizedBox(height: 20),
-            PaymentMethod(),
+          children: [
+            const SectionTitle(title: "Shu's Magic"),
+            //tampilkan data shu's magic
+            FutureBuilder(
+                future: cartItemsFuture,
+                builder: (context, AsyncSnapshot<List<Cart>> snapshot) {
+                  if (snapshot.hasData) {
+                    if (snapshot.data!.isEmpty) {
+                      return Text("");
+                    } else {
+                      return Column(
+                        children: [
+                          ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: snapshot.data!.length,
+                            itemBuilder: (context, index) {
+                              var item = snapshot.data![index];
+                              return OrderItem(
+                                name: item.productName ?? 'Unknown Product',
+                                price:
+                                    'Rp. ${item.productPrice}', // Ensure price matches your data
+                                quantity: '${item.quantity}',
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                    }
+                  }
+
+                  return Text("");
+                  // return const SectionTitle(title: "");
+                }),
+
+
+            //tampilkan data ocean
+            const SectionTitle(title: "Ocean"),
+            FutureBuilder(
+                future: cartItemsFutureOcean,
+                builder: (context, AsyncSnapshot<List<Cart>> snapshot) {
+                  if (snapshot.hasData) {
+                    if (snapshot.data!.isEmpty) {
+                      return Text("");
+                    } else {
+                      return Column(
+                        children: [
+                          ListView.builder(
+                            shrinkWrap: true,
+                            physics: const NeverScrollableScrollPhysics(),
+                            itemCount: snapshot.data!.length,
+                            itemBuilder: (context, index) {
+                              var item = snapshot.data![index];
+                              return OrderItem(
+                                name: item.productName ?? 'Unknown Product',
+                                price:
+                                    'Rp. ${item.productPrice}', // Ensure price matches your data
+                                quantity: '${item.quantity}',
+                              );
+                            },
+                          ),
+                        ],
+                      );
+                    }
+                  }
+
+                  return Text("");
+                  // return const SectionTitle(title: "");
+                }),
+                
+            const SizedBox(height: 20),
+            GrandTotal(total: 'Rp. $totalPrice'),
+            // const SizedBox(height: 20),
+            const PaymentMethod(),
           ],
         ),
       ),
@@ -83,6 +157,7 @@ class SectionTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(8.0),
+      width: double.infinity,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -106,8 +181,13 @@ class SectionTitle extends StatelessWidget {
 class OrderItem extends StatelessWidget {
   final String name;
   final String price;
+  final String quantity;
 
-  const OrderItem({super.key, required this.name, required this.price});
+  const OrderItem(
+      {super.key,
+      required this.name,
+      required this.price,
+      required this.quantity});
 
   @override
   Widget build(BuildContext context) {
@@ -117,6 +197,7 @@ class OrderItem extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(name, style: const TextStyle(fontSize: 16)),
+          Text(quantity, style: const TextStyle(fontSize: 16)),
           Text(price, style: const TextStyle(fontSize: 16)),
         ],
       ),
@@ -148,8 +229,11 @@ class GrandTotal extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text('Grand Total', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Text(total, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text('Grand Total',
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text(total,
+              style:
+                  const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -163,7 +247,8 @@ class PaymentMethod extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Text('PAYMENT METHOD', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+        Text('PAYMENT METHOD',
+            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         SizedBox(height: 10),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -208,7 +293,8 @@ class QrisPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Qris Payment', style: TextStyle(color: Colors.white)),
+        title:
+            const Text('Qris Payment', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue,
       ),
       body: Padding(
@@ -224,7 +310,9 @@ class QrisPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const Text('Scan QRIS untuk melakukan pembayaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                const Text('Scan QRIS untuk melakukan pembayaran',
+                    style:
+                        TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                 const SizedBox(height: 20),
                 Image.network(
                   'https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png', // Replace URL with your QR code URL
@@ -232,7 +320,9 @@ class QrisPage extends StatelessWidget {
                   height: 200,
                 ),
                 const SizedBox(height: 20),
-                const Text('Pastikan Anda telah menyiapkan aplikasi pembayaran.', style: TextStyle(fontSize: 16)),
+                const Text(
+                    'Pastikan Anda telah menyiapkan aplikasi pembayaran.',
+                    style: TextStyle(fontSize: 16)),
                 const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -243,12 +333,14 @@ class QrisPage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
-                      child: const Text('Batal', style: TextStyle(color: Colors.white)),
+                      child: const Text('Batal',
+                          style: TextStyle(color: Colors.white)),
                     ),
                     ElevatedButton(
                       onPressed: () {
@@ -256,12 +348,14 @@ class QrisPage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green,
-                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
-                      child: const Text('Selesai', style: TextStyle(color: Colors.white)),
+                      child: const Text('Selesai',
+                          style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 ),
@@ -279,10 +373,12 @@ class SuccessPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
     return Scaffold(
       backgroundColor: Colors.green[100],
       appBar: AppBar(
-        title: const Text('Terima Kasih!', style: TextStyle(color: Colors.white)),
+        title:
+            const Text('Terima Kasih!', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
       ),
       body: Center(
@@ -291,19 +387,28 @@ class SuccessPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.check_circle_outline, color: Colors.green, size: 100),
+              const Icon(Icons.check_circle_outline,
+                  color: Colors.green, size: 100),
               const SizedBox(height: 20),
-              const Text('Pembayaran Berhasil!', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green)),
+              const Text('Pembayaran Berhasil!',
+                  style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.green)),
               const SizedBox(height: 20),
-              const Text('Pesanan Anda sudah kami terima dan sedang diproses.', textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
+              const Text('Pesanan Anda sudah kami terima dan sedang diproses.',
+                  textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
               const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
+                  dbHelper!.deleteAll();
+                  cart.resetTotalPrice();
                   Navigator.pushNamed(context, '/');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
-                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),

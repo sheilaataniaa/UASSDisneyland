@@ -45,6 +45,7 @@ class _AddToCartState extends State<AddToCart3> {
 
   @override
   Widget build(BuildContext context) {
+    // final cart = Provider.of<CartProvider>(context);
     return Container(
       width: double.infinity,
       height: double.infinity,

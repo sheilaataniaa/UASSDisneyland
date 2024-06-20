@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
@@ -215,7 +216,7 @@ class DiamondAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const Souvenir()),
+                    MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()),
                   ); // Navigate to the next page
                 },
                 child: const CircleAvatar(

@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/diamonpass.dart'; // Import file containing DiamondPass widget
 import 'package:disneysea/hpdisney.dart';
 import 'package:flutter/material.dart';
@@ -194,8 +195,8 @@ class SapphireAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const DiamondPass()),
-                  ); // Navigate to the next page
+                    MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()),
+                  ); // Navigate to cart
                 },
                 child: const CircleAvatar(
                   backgroundColor: Colors.white,

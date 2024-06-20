@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/bajucart.dart';
 import 'package:disneysea/gantungancart.dart';
 import 'package:disneysea/jaketcart.dart';
@@ -82,7 +83,7 @@ class Souvenir extends StatelessWidget {
                           onTap: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => const hpdisney()),
+                              MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()),
                             ); // Navigate to the next page
                           },
                           child: const CircleAvatar(

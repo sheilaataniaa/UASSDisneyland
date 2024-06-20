@@ -2,6 +2,11 @@ import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
+import 'package:disneysea/cart_provider.dart';
+import 'package:disneysea/cartmodel.dart';
+import 'package:disneysea/db_helper.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const PearlPass());
@@ -28,11 +33,26 @@ class PearlPass extends StatelessWidget {
   }
 }
 
+DBHelper? dbHelper = DBHelper();
+
+Cart product = Cart(
+  id: null,
+  productId: '2', //product id dalam database
+  productName: 'Pearl Annual Pass',
+  initialPrice: 1000,
+  productPrice: 1000,
+  quantity: 1,
+  image: 'images/frappucino.png',
+  category: 2
+);
+
+
 class PearlAnnualPass extends StatelessWidget {
   const PearlAnnualPass({super.key});
 
   @override
   Widget build(BuildContext context) {
+     final cart = Provider.of<CartProvider>(context);
     return Column(
       children: [
         Container(
@@ -79,10 +99,42 @@ class PearlAnnualPass extends StatelessWidget {
                 top: 707,
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SilverPass()),
+                     product.quantity;
+                dbHelper!.insert(
+                    product
+                  ) .then((value) {
+                    cart.addTotalPrice(product
+                        .productPrice!
+                        .toDouble(), product.quantity!);
+                    cart.addCounter();
+
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.green,
+                      content: Text(
+                          'Product is added to cart'),
+                      duration: Duration(seconds: 1),
                     );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  }).onError((error, stackTrace) {
+
+                     print('Error: $error');
+                     
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.red,
+                      content: Text(
+                          'Product is already added in cart'),
+                      duration: Duration(seconds: 1),
+                    );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  });
+                    // Navigator.push(
+                    //   context,
+                    //   MaterialPageRoute(builder: (context) => const SilverPass()),
+                    // );
                   },
                   child: SizedBox(
                     width: 184.34,

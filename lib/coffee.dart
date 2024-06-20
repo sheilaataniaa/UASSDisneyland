@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/americanocart.dart';
 import 'package:disneysea/cappucinocart.dart';
 import 'package:disneysea/caramelcart.dart';
@@ -6,6 +7,9 @@ import 'package:disneysea/frappucinocart.dart';
 import 'package:disneysea/lattecart.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
+import 'cartmodel.dart';
+import 'cart_provider.dart';
+import 'db_helper.dart';
 
 
 class CoffeeOption extends StatelessWidget {
@@ -75,7 +79,10 @@ class Header extends StatelessWidget {
               child: IconButton(
                 icon: const Icon(Icons.shopping_cart, color: Colors.black),
                 onPressed: () {
-                  // Aksi keranjang
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()), // Arahkan ke Cart
+                  );
                 },
               ),
             ),
@@ -86,7 +93,31 @@ class Header extends StatelessWidget {
   }
 }
 
+List<Cart> products = [
+    Cart(
+      id: null,
+      productId: '16', //product id dalam database
+      productName: 'Ice Americano',
+      initialPrice: 55000,
+      productPrice: 55000,
+      quantity: 1,
+      image: 'images/americano.png',
+      category: 1
+    ),
+    Cart(
+      id: null,
+      productId: '17', //product id dalam database
+      productName: 'Frappucino Blend',
+      initialPrice: 65000,
+      productPrice: 65000,
+      quantity: 1,
+      image: 'images/frappucino.png',
+      category: 1
+    ),
+  ];
+
 class CoffeeGrid extends StatelessWidget {
+  
   const CoffeeGrid({super.key});
 
   @override
