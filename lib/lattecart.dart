@@ -1,4 +1,7 @@
 import 'package:disneysea/coffee.dart';
+import 'package:disneysea/juice.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class Lattecart extends StatelessWidget {
@@ -9,23 +12,24 @@ class Lattecart extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart6(),
+        body: const AddToCart3(),
       ),
     );
   }
 }
 
-class AddToCart6 extends StatefulWidget {
-  const AddToCart6({super.key});
+class AddToCart3 extends StatefulWidget {
+  const AddToCart3({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart6> {
+class _AddToCartState extends State<AddToCart3> {
   int itemCount = 1;
 
   void addItem() {
@@ -201,11 +205,11 @@ class _AddToCartState extends State<AddToCart6> {
             ),
           ),
           Positioned(
-            left: -5,
-            top: 50,
+            left: 65,
+            top: 100,
             child: Container(
-              width: 450,
-              height: 450,
+              width: 290,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/latte.png"),
@@ -229,7 +233,7 @@ class _AddToCartState extends State<AddToCart6> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Coffe Latte',
+                        'Coffee Latte',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),

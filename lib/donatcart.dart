@@ -1,4 +1,8 @@
+import 'package:disneysea/coffee.dart';
 import 'package:disneysea/dessert.dart';
+import 'package:disneysea/juice.dart';
+import 'package:disneysea/milkshake.dart';
+import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class Donatcart extends StatelessWidget {
@@ -9,23 +13,24 @@ class Donatcart extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
+        
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart5(),
+        body: const AddToCart3(),
       ),
     );
   }
 }
 
-class AddToCart5 extends StatefulWidget {
-  const AddToCart5({super.key});
+class AddToCart3 extends StatefulWidget {
+  const AddToCart3({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart5> {
+class _AddToCartState extends State<AddToCart3> {
   int itemCount = 1;
 
   void addItem() {
@@ -201,11 +206,11 @@ class _AddToCartState extends State<AddToCart5> {
             ),
           ),
           Positioned(
-            left: 15,
-            top: 50,
+            left: 10,
+            top: 100,
             child: Container(
               width: 400,
-              height: 500,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/donut.png"),
@@ -229,7 +234,7 @@ class _AddToCartState extends State<AddToCart5> {
                       width: 384,
                       height: 40.50,
                       child: Text(
-                        'Signature Doughnut',
+                        'Signature Dougnut',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Color(0xFF001A3E),

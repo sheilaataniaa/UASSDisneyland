@@ -157,7 +157,7 @@ class _SignInState extends State<SignIn> {
                               .then((value) {
                             Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(builder: (context) =>  Shusoceanhomepage()),
+                              MaterialPageRoute(builder: (context) =>  ShusOceanHomepage()),
                             );
                           }).catchError((error) {
                             // Handle error

@@ -12,20 +12,20 @@ class Lemoncart extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart5(),
+        body: const AddToCart2(),
       ),
     );
   }
 }
 
-class AddToCart5 extends StatefulWidget {
-  const AddToCart5({super.key});
+class AddToCart2 extends StatefulWidget {
+  const AddToCart2({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart5> {
+class _AddToCartState extends State<AddToCart2> {
   int itemCount = 1;
 
   void addItem() {
@@ -201,11 +201,11 @@ class _AddToCartState extends State<AddToCart5> {
             ),
           ),
           Positioned(
-            left: 15,
-            top: 50,
+            left: 50,
+            top: 70,
             child: Container(
-              width: 400,
-              height: 500,
+              width: 300,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/lemon.png"),
@@ -215,7 +215,7 @@ class _AddToCartState extends State<AddToCart5> {
             ),
           ),
           const Positioned(
-            left: 8,
+            left: 15,
             top: 635,
             child: SizedBox(
               width: 384,

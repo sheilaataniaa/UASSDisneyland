@@ -12,20 +12,20 @@ class Jasmincart extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: const AddToCart6(),
+        body: const AddToCart2(),
       ),
     );
   }
 }
 
-class AddToCart6 extends StatefulWidget {
-  const AddToCart6({super.key});
+class AddToCart2 extends StatefulWidget {
+  const AddToCart2({super.key});
 
   @override
   _AddToCartState createState() => _AddToCartState();
 }
 
-class _AddToCartState extends State<AddToCart6> {
+class _AddToCartState extends State<AddToCart2> {
   int itemCount = 1;
 
   void addItem() {
@@ -201,11 +201,11 @@ class _AddToCartState extends State<AddToCart6> {
             ),
           ),
           Positioned(
-            left: -90,
-            top: -10,
+            left: 50,
+            top: 70,
             child: Container(
-              width: 600,
-              height: 600,
+              width: 300,
+              height: 400,
               decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("images/jasmin.png"),
@@ -215,7 +215,7 @@ class _AddToCartState extends State<AddToCart6> {
             ),
           ),
           const Positioned(
-            left: 8,
+            left: 15,
             top: 635,
             child: SizedBox(
               width: 384,

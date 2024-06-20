@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
       ),
 
-      home:Cartandpaymentmethod(),
+      home: ShusOceanHomepage(),
 
    );
   }

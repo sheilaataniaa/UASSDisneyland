@@ -201,7 +201,7 @@ class _AddToCartState extends State<AddToCart2> {
             ),
           ),
           Positioned(
-            left: 10,
+            left: 50,
             top: 70,
             child: Container(
               width: 300,

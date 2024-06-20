@@ -194,7 +194,7 @@ class Homepage extends StatelessWidget {
                         onTap: ()  {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => Shusoceanhomepage()),
+                            MaterialPageRoute(builder: (context) => ShusOceanHomepage()),
                           ); // Navigate to the next page
                         },
                         child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
