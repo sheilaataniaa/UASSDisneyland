@@ -1,10 +1,11 @@
+import 'package:disneysea/shusoceanhomepage.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart'; // Import FirebaseAuth
 import 'Transisi3.dart';
 import 'signup.dart';
-import 'dessert.dart';  // Import halaman Dessert
+
 
 class SignIn extends StatefulWidget {
   const SignIn({Key? key}) : super(key: key);
@@ -156,7 +157,7 @@ class _SignInState extends State<SignIn> {
                               .then((value) {
                             Navigator.pushReplacement(
                               context,
-                              MaterialPageRoute(builder: (context) =>  Dessert()),
+                              MaterialPageRoute(builder: (context) =>  Shusoceanhomepage()),
                             );
                           }).catchError((error) {
                             // Handle error
