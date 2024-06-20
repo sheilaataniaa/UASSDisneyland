@@ -11,8 +11,8 @@ class Chocbubblecart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart3(),
+      home: const Scaffold(
+        body: AddToCart3(),
       ),
     );
   }
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart3> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => const TeaOption()),
                   );
                 },
               ),
@@ -154,7 +154,7 @@ class _AddToCartState extends State<AddToCart3> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Chocbubblecart()),
+                  MaterialPageRoute(builder: (context) => const Chocbubblecart()),
                 );
               },
               child: SizedBox(

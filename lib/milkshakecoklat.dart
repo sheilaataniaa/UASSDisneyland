@@ -1,5 +1,4 @@
 import 'package:disneysea/milkshake.dart';
-import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class mkcoklatcart extends StatelessWidget {
@@ -12,8 +11,8 @@ class mkcoklatcart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart3(),
+      home: const Scaffold(
+        body: AddToCart3(),
       ),
     );
   }
@@ -77,7 +76,7 @@ class _AddToCartState extends State<AddToCart3> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => MilkshakeOption()),
+                    MaterialPageRoute(builder: (context) => const MilkshakeOption()),
                   );
                 },
               ),
@@ -155,7 +154,7 @@ class _AddToCartState extends State<AddToCart3> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => mkcoklatcart()),
+                  MaterialPageRoute(builder: (context) => const mkcoklatcart()),
                 );
               },
               child: SizedBox(

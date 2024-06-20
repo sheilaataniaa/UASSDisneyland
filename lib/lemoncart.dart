@@ -11,8 +11,8 @@ class Lemoncart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart2(),
+      home: const Scaffold(
+        body: AddToCart2(),
       ),
     );
   }
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart2> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => const TeaOption()),
                   );
                 },
               ),
@@ -154,7 +154,7 @@ class _AddToCartState extends State<AddToCart2> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Lemoncart()),
+                  MaterialPageRoute(builder: (context) => const Lemoncart()),
                 );
               },
               child: SizedBox(

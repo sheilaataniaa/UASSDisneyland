@@ -11,8 +11,8 @@ class Matchacart extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 18, 32, 47),
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart4(),
+      home: const Scaffold(
+        body: AddToCart4(),
       ),
     );
   }
@@ -76,7 +76,7 @@ class _AddToCartState extends State<AddToCart4> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => TeaOption()),
+                    MaterialPageRoute(builder: (context) => const TeaOption()),
                   );
                 },
               ),
@@ -154,7 +154,7 @@ class _AddToCartState extends State<AddToCart4> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Matchacart()),
+                  MaterialPageRoute(builder: (context) => const Matchacart()),
                 );
               },
               child: SizedBox(

@@ -1,35 +1,39 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Cartandpaymentmethod());
+  runApp(const Cartandpaymentmethod());
 }
 
 class Cartandpaymentmethod extends StatelessWidget {
+  const Cartandpaymentmethod({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/', // Initial route
       routes: {
-        '/': (context) => OrderPage(), // Route for OrderPage
-        '/qris': (context) => QrisPage(), // Route for QrisPage
-        '/success': (context) => SuccessPage(), // Route for SuccessPage
+        '/': (context) => const OrderPage(), // Route for OrderPage
+        '/qris': (context) => const QrisPage(), // Route for QrisPage
+        '/success': (context) => const SuccessPage(), // Route for SuccessPage
       },
     );
   }
 }
 
 class OrderPage extends StatelessWidget {
+  const OrderPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue[100],
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {},
         ),
-        title: Column(
+        title: const Column(
           children: [
             Text("Disneyland", style: TextStyle(color: Colors.blue)),
             Text("Sambut Keajaiban & Raih Petualangan", style: TextStyle(color: Colors.black54, fontSize: 12)),
@@ -38,10 +42,10 @@ class OrderPage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Container(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         color: Colors.lightBlue[50],
         child: ListView(
-          children: [
+          children: const [
             SectionTitle(title: "Shu's Magic"),
             OrderItem(name: "French Fries", price: "Rp.50.000"),
             OrderItem(name: "Hotdog", price: "Rp.45.000"),
@@ -71,12 +75,12 @@ class OrderPage extends StatelessWidget {
 class SectionTitle extends StatelessWidget {
   final String title;
 
-  SectionTitle({required this.title});
+  const SectionTitle({super.key, required this.title});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -85,13 +89,13 @@ class SectionTitle extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
       child: Text(
         title,
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -101,17 +105,17 @@ class OrderItem extends StatelessWidget {
   final String name;
   final String price;
 
-  OrderItem({required this.name, required this.price});
+  const OrderItem({super.key, required this.name, required this.price});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(name, style: TextStyle(fontSize: 16)),
-          Text(price, style: TextStyle(fontSize: 16)),
+          Text(name, style: const TextStyle(fontSize: 16)),
+          Text(price, style: const TextStyle(fontSize: 16)),
         ],
       ),
     );
@@ -121,12 +125,12 @@ class OrderItem extends StatelessWidget {
 class GrandTotal extends StatelessWidget {
   final String total;
 
-  GrandTotal({required this.total});
+  const GrandTotal({super.key, required this.total});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(16.0),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(8.0),
@@ -135,15 +139,15 @@ class GrandTotal extends StatelessWidget {
             color: Colors.grey.withOpacity(0.5),
             spreadRadius: 2,
             blurRadius: 5,
-            offset: Offset(0, 3),
+            offset: const Offset(0, 3),
           ),
         ],
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text('Grand Total', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-          Text(total, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          const Text('Grand Total', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+          Text(total, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         ],
       ),
     );
@@ -151,9 +155,11 @@ class GrandTotal extends StatelessWidget {
 }
 
 class PaymentMethod extends StatelessWidget {
+  const PaymentMethod({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         Text('PAYMENT METHOD', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
         SizedBox(height: 10),
@@ -173,7 +179,7 @@ class PaymentButton extends StatelessWidget {
   final String label;
   final String route;
 
-  PaymentButton({required this.label, required this.route});
+  const PaymentButton({super.key, required this.label, required this.route});
 
   @override
   Widget build(BuildContext context) {
@@ -181,24 +187,26 @@ class PaymentButton extends StatelessWidget {
       onPressed: () {
         Navigator.pushNamed(context, route);
       },
-      child: Text(label),
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.lightBlue[100], // Using backgroundColor
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8.0),
         ),
       ),
+      child: Text(label),
     );
   }
 }
 
 class QrisPage extends StatelessWidget {
+  const QrisPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Qris Payment', style: TextStyle(color: Colors.white)),
+        title: const Text('Qris Payment', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.blue,
       ),
       body: Padding(
@@ -214,16 +222,16 @@ class QrisPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text('Scan QRIS untuk melakukan pembayaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                SizedBox(height: 20),
+                const Text('Scan QRIS untuk melakukan pembayaran', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                const SizedBox(height: 20),
                 Image.network(
                   'https://upload.wikimedia.org/wikipedia/commons/d/d7/Commons_QR_code.png', // Replace URL with your QR code URL
                   width: 200,
                   height: 200,
                 ),
-                SizedBox(height: 20),
-                Text('Pastikan Anda telah menyiapkan aplikasi pembayaran.', style: TextStyle(fontSize: 16)),
-                SizedBox(height: 30),
+                const SizedBox(height: 20),
+                const Text('Pastikan Anda telah menyiapkan aplikasi pembayaran.', style: TextStyle(fontSize: 16)),
+                const SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -231,27 +239,27 @@ class QrisPage extends StatelessWidget {
                       onPressed: () {
                         Navigator.pop(context);
                       },
-                      child: Text('Batal', style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.red,
-                        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
+                      child: const Text('Batal', style: TextStyle(color: Colors.white)),
                     ),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/success');
                       },
-                      child: Text('Selesai', style: TextStyle(color: Colors.white)),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.green,
-                        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(8.0),
                         ),
                       ),
+                      child: const Text('Selesai', style: TextStyle(color: Colors.white)),
                     ),
                   ],
                 ),
@@ -265,12 +273,14 @@ class QrisPage extends StatelessWidget {
 }
 
 class SuccessPage extends StatelessWidget {
+  const SuccessPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.green[100],
       appBar: AppBar(
-        title: Text('Terima Kasih!', style: TextStyle(color: Colors.white)),
+        title: const Text('Terima Kasih!', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.green,
       ),
       body: Center(
@@ -279,24 +289,24 @@ class SuccessPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.check_circle_outline, color: Colors.green, size: 100),
-              SizedBox(height: 20),
-              Text('Pembayaran Berhasil!', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green)),
-              SizedBox(height: 20),
-              Text('Pesanan Anda sudah kami terima dan sedang diproses.', textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
-              SizedBox(height: 30),
+              const Icon(Icons.check_circle_outline, color: Colors.green, size: 100),
+              const SizedBox(height: 20),
+              const Text('Pembayaran Berhasil!', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.green)),
+              const SizedBox(height: 20),
+              const Text('Pesanan Anda sudah kami terima dan sedang diproses.', textAlign: TextAlign.center, style: TextStyle(fontSize: 16)),
+              const SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/');
                 },
-                child: Text('Kembali ke Beranda'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
-                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                 ),
+                child: const Text('Kembali ke Beranda'),
               ),
             ],
           ),

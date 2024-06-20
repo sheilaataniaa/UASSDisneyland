@@ -14,7 +14,7 @@ class SilverPass extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false, // Disable debug banner
       theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: Color.fromARGB(255, 0, 0, 0), // Set background color
+        scaffoldBackgroundColor: const Color.fromARGB(255, 0, 0, 0), // Set background color
       ),
       home: Scaffold(
         body: ListView(children: const [
@@ -155,13 +155,13 @@ class SapphireAnnualPass extends StatelessWidget {
               top: 55,
              child: GestureDetector(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> hpdisney())
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const hpdisney())
                   ); // Navigate back to the previous page
                 },
-                child: Icon(Icons.arrow_back, color: Colors.white, size: 28),
+                child: const Icon(Icons.arrow_back, color: Colors.white, size: 28),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 69,
               top: 40,
               child: Text(
@@ -174,7 +174,7 @@ class SapphireAnnualPass extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
+            const Positioned(
               left: 69,
               top: 84,
               child: Text(
@@ -194,10 +194,10 @@ class SapphireAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => DiamondPass()),
+                    MaterialPageRoute(builder: (context) => const DiamondPass()),
                   ); // Navigate to the next page
                 },
-                child: CircleAvatar(
+                child: const CircleAvatar(
                   backgroundColor: Colors.white,
                   radius: 20,
                   child: Icon(Icons.shopping_cart, color: Color(0xFF24BAEC)),

@@ -74,7 +74,7 @@ class shuhomepage extends StatelessWidget{
           ),
 
           //categories widget
-          CategoriesWidget(),
+          const CategoriesWidget(),
 
           //popular Items
           const Padding(

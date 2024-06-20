@@ -1,7 +1,4 @@
-import 'package:disneysea/juice.dart';
-import 'package:disneysea/milkshake.dart';
 import 'package:disneysea/sovenir.dart';
-import 'package:disneysea/tea.dart';
 import 'package:flutter/material.dart';
 
 class Payungcart extends StatelessWidget {
@@ -15,8 +12,8 @@ class Payungcart extends StatelessWidget {
         
       ),
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: const AddToCart1()
+      home: const Scaffold(
+        body: AddToCart1()
         ),
       );
   }
@@ -80,7 +77,7 @@ class _AddToCartState extends State<AddToCart1> {
                 onPressed: () {
                   Navigator.pushReplacement(
                     context,
-                    MaterialPageRoute(builder: (context) => Souvenir()),
+                    MaterialPageRoute(builder: (context) => const Souvenir()),
                   );
                 },
               ),
@@ -158,7 +155,7 @@ class _AddToCartState extends State<AddToCart1> {
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => Payungcart()),
+                  MaterialPageRoute(builder: (context) => const Payungcart()),
                 );
               },
               child: SizedBox(
