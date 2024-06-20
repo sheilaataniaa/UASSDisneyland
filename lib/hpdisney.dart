@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/diamonpass.dart';
 import 'package:disneysea/pearlpass.dart';
 import 'package:disneysea/shusoceanhomepage.dart';
@@ -233,7 +234,7 @@ class Homepage extends StatelessWidget {
                         onTap: () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => PearlPass()),
+                            MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
                           ); // KE HALAMAN FERDI YANG BLOM KELARR INI PEARL HANYA UNTUK FORMALITAS
                         },
                         child: CircleAvatar(

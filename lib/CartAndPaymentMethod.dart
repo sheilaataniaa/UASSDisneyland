@@ -1,3 +1,4 @@
+import 'package:disneysea/shuhomepage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,6 +15,7 @@ class Cartandpaymentmethod extends StatelessWidget {
         '/': (context) => OrderPage(), // Route for OrderPage
         '/qris': (context) => QrisPage(), // Route for QrisPage
         '/success': (context) => SuccessPage(), // Route for SuccessPage
+        '/Menu': (context) => shuhomepage(), // Route for SuccessPage
       },
     );
   }
@@ -27,7 +29,7 @@ class OrderPage extends StatelessWidget {
         backgroundColor: Colors.lightBlue[100],
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () {},
+          onPressed: () { Navigator.pushNamed(context, '/Menu');},
         ),
         title: Column(
           children: [

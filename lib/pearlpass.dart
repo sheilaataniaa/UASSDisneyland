@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
@@ -194,7 +195,7 @@ class PearlAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SilverPass()),
+                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
                   ); // Navigate to the next page
                 },
                 child: CircleAvatar(
