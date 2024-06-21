@@ -53,8 +53,8 @@
       id: null,
       productId: '1', //product id dalam database
       productName: 'Payung',
-      initialPrice: 55000,
-      productPrice: 55000,
+      initialPrice: 120000,
+      productPrice: 120000,
       quantity: 1,
       image: 'images/americano.png',
       category: 2

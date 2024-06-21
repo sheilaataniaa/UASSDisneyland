@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/MilkshakeOreo.dart';
 import 'package:disneysea/Milkshakevanilla.dart';
 import 'package:disneysea/milkshakebanana.dart';
@@ -87,8 +88,11 @@ class Header extends StatelessWidget {
             top: 55,
             child: GestureDetector(
               onTap: () {
-                // Aksi keranjang
-              },
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
+                  );
+                },
               child: CircleAvatar(
                 backgroundColor: Color(0xFFF6F6F8),
                 radius: 22,

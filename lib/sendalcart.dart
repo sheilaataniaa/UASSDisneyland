@@ -1,5 +1,9 @@
 import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
+import 'package:disneysea/db_helper.dart';
+import 'package:provider/provider.dart';
+import 'package:disneysea/cart_provider.dart';
+import 'package:disneysea/cartmodel.dart';
 
 class Sendalcart extends StatelessWidget {
   const Sendalcart({Key? key}) : super(key: key);
@@ -42,9 +46,22 @@ class _AddToCartState extends State<AddToCart1> {
       });
     }
   }
+DBHelper? dbHelper = DBHelper();
+
+    Cart product = Cart(
+      id: null,
+      productId: '6', //product id dalam database
+      productName: 'Sandal',
+      initialPrice: 100000,
+      productPrice: 100000,
+      quantity: 1,
+      image: 'images/americano.png',
+      category: 2
+    );
 
   @override
   Widget build(BuildContext context) {
+     final cart = Provider.of<CartProvider>(context);
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -152,11 +169,43 @@ class _AddToCartState extends State<AddToCart1> {
             top: 745,
             child: GestureDetector(
               onTap: () {
+                 product.quantity = itemCount;
+                  dbHelper!.insert(
+                      product
+                    ) .then((value) {
+                      cart.addTotalPrice(product
+                          .productPrice!
+                          .toDouble(), product.quantity!);
+                      cart.addCounter();
+
+                      const snackBar = SnackBar(
+                        backgroundColor: Colors.green,
+                        content: Text(
+                            'Product is added to cart'),
+                        duration: Duration(seconds: 1),
+                      );
+
+                      ScaffoldMessenger.of(context)
+                          .showSnackBar(snackBar);
+                    }).onError((error, stackTrace) {
+
+                      print('Error: $error');
+                      
+                      const snackBar = SnackBar(
+                        backgroundColor: Colors.red,
+                        content: Text(
+                            'Product is already added in cart'),
+                        duration: Duration(seconds: 1),
+                      );
+
+                      ScaffoldMessenger.of(context)
+                          .showSnackBar(snackBar);
+                    });
                 // Fungsi yang akan dipanggil saat "Add to Cart" ditekan.
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => Sendalcart()),
-                );
+                //Navigator.pushReplacement(
+                  //context,
+                  //MaterialPageRoute(builder: (context) => Sendalcart()),
+               // );
               },
               child: SizedBox(
                 width: 407,

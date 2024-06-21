@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/jusapel.dart';
 import 'package:disneysea/jusisrsak.dart';
 import 'package:disneysea/jusmangga.dart';
@@ -71,7 +72,10 @@ class Header extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.shopping_cart, color: Colors.black),
                 onPressed: () {
-                  // Aksi keranjang
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()), // Arahkan ke Cart
+                  );
                 },
               ),
             ),

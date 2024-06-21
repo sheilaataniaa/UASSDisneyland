@@ -2,6 +2,11 @@ import 'package:disneysea/coffee.dart';
 import 'package:disneysea/milkshake.dart';
 import 'package:flutter/material.dart';
 import 'shuhomepage.dart';
+import 'package:disneysea/cart_provider.dart';
+import 'package:disneysea/cartmodel.dart';
+import 'package:disneysea/db_helper.dart';
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class Cappucinocart extends StatelessWidget {
   const Cappucinocart({Key? key}) : super(key: key);
@@ -43,9 +48,22 @@ class _AddToCartState extends State<AddToCart3> {
       });
     }
   }
+   DBHelper? dbHelper = DBHelper();
+
+  Cart product = Cart(
+    id: null,
+    productId: '11', //product id dalam database
+    productName: 'Cappucino Coffe',
+    initialPrice: 70000,
+    productPrice: 70000,
+    quantity: 1,
+    image: 'images/frappucino.png',
+    category: 1
+  );
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
     return Container(
       width: double.infinity,
       height: double.infinity,
@@ -152,11 +170,43 @@ class _AddToCartState extends State<AddToCart3> {
             top: 745,
             child: GestureDetector(
               onTap: () {
-                // Function to be called when "Add to Cart" is pressed.
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => Cappucinocart()),
-                );
+                  product.quantity = itemCount;
+                dbHelper!.insert(
+                    product
+                  ) .then((value) {
+                    cart.addTotalPrice(product
+                        .productPrice!
+                        .toDouble(), product.quantity!);
+                    cart.addCounter();
+
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.green,
+                      content: Text(
+                          'Product is added to cart'),
+                      duration: Duration(seconds: 1),
+                    );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  }).onError((error, stackTrace) {
+
+                     print('Error: $error');
+                     
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.red,
+                      content: Text(
+                          'Product is already added in cart'),
+                      duration: Duration(seconds: 1),
+                    );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  });
+                // // Function to be called when "Add to Cart" is pressed.
+                // Navigator.pushReplacement(
+                //   context,
+                //   MaterialPageRoute(builder: (context) => Cappucinocart()),
+                // );
               },
               child: SizedBox(
                 width: 407,

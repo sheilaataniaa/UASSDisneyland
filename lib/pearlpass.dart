@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/silverpass.dart';
 import 'package:flutter/material.dart';
@@ -38,8 +39,8 @@ Cart product = Cart(
   id: null,
   productId: '2', //product id dalam database
   productName: 'Pearl Annual Pass',
-  initialPrice: 1000,
-  productPrice: 1000,
+  initialPrice: 1000000,
+  productPrice: 1000000,
   quantity: 1,
   image: 'images/frappucino.png',
   category: 2
@@ -246,8 +247,8 @@ class PearlAnnualPass extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => SilverPass()),
-                  ); // Navigate to the next page
+                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
+                  ); // Navigate to cart
                 },
                 child: CircleAvatar(
                   backgroundColor: Colors.white,

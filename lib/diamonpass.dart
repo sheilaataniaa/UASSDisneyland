@@ -2,6 +2,10 @@ import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/hpdisney.dart';
 import 'package:disneysea/sovenir.dart';
 import 'package:flutter/material.dart';
+import 'package:disneysea/cart_provider.dart';
+import 'package:disneysea/cartmodel.dart';
+import 'package:disneysea/db_helper.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const DiamondPass());
@@ -27,12 +31,25 @@ class DiamondPass extends StatelessWidget {
     );
   }
 }
+DBHelper? dbHelper = DBHelper();
+
+Cart product = Cart(
+  id: null,
+  productId: '4', //product id dalam database
+  productName: 'Diamond Annual Pass',
+  initialPrice: 2500000,
+  productPrice: 2500000,
+  quantity: 1,
+  image: 'images/frappucino.png',
+  category: 2
+);
 
 class DiamondAnnualPass extends StatelessWidget {
   const DiamondAnnualPass({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final cart = Provider.of<CartProvider>(context);
     return Column(
       children: [
         Container(
@@ -104,10 +121,42 @@ class DiamondAnnualPass extends StatelessWidget {
                 top: 715,
                 child: InkWell(
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Souvenir()),
+                     product.quantity;
+                dbHelper!.insert(
+                    product
+                  ) .then((value) {
+                    cart.addTotalPrice(product
+                        .productPrice!
+                        .toDouble(), product.quantity!);
+                    cart.addCounter();
+
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.green,
+                      content: Text(
+                          'Product is added to cart'),
+                      duration: Duration(seconds: 1),
                     );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  }).onError((error, stackTrace) {
+
+                     print('Error: $error');
+                     
+                    const snackBar = SnackBar(
+                      backgroundColor: Colors.red,
+                      content: Text(
+                          'Product is already added in cart'),
+                      duration: Duration(seconds: 1),
+                    );
+
+                    ScaffoldMessenger.of(context)
+                        .showSnackBar(snackBar);
+                  });
+                   // Navigator.push(
+                     // context,
+                      //MaterialPageRoute(builder: (context) => const Souvenir()),
+                    //);
                   },
                   child: SizedBox(
                     width: 184.34,
@@ -217,7 +266,7 @@ class DiamondAnnualPass extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const Cartandpaymentmethod()),
-                  ); // Navigate to the next page
+                  ); // Navigate to the cart page
                 },
                 child: CircleAvatar(
                   backgroundColor: Colors.white,

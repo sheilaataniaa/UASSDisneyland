@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/juice.dart';
 import 'package:disneysea/shuhomepage.dart';
 import 'package:disneysea/shusoceanhomepage.dart';
@@ -48,7 +49,7 @@ class AppBarWidget extends StatelessWidget{
           onTap: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => shuhomepage()),
+              MaterialPageRoute(builder: (context) => Cartandpaymentmethod()),
             );
           },
           child: Container(

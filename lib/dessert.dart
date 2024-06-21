@@ -1,3 +1,4 @@
+import 'package:disneysea/CartAndPaymentMethod.dart';
 import 'package:disneysea/blueberriescart.dart';
 import 'package:disneysea/cupcart.dart';
 import 'package:disneysea/donatcart.dart';
@@ -72,7 +73,10 @@ class Header extends StatelessWidget {
               child: IconButton(
                 icon: Icon(Icons.shopping_cart, color: Colors.black),
                 onPressed: () {
-                  // Aksi keranjang
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => Cartandpaymentmethod()), // Arahkan ke ShuHomePage
+                  );
                 },
               ),
             ),
